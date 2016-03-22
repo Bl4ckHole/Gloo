@@ -45,7 +45,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Backgrounds\init.cs" />
+     <Compile Include="Assets\Menus\init.cs" />
+     <Compile Include="Assets\Prefabs\init.cs" />
      <Compile Include="Assets\Scripts\glooScript.cs" />
+     <Compile Include="Assets\Sounds\init.cs" />
+     <Compile Include="Assets\Sprites\init.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
