@@ -6,12 +6,16 @@ public class glooScript : MonoBehaviour {
 
     private Animator animator;
     private Rigidbody2D rbody;
-    private float speed = 1.5f;
+    private float speed = 3.0f;
+    private float jumpForce = 7.0f;
     private int hashLeft = Animator.StringToHash("run_left");
     private int hashRight = Animator.StringToHash("run_right");
     private int hashJumpL = Animator.StringToHash("jump_left");
     private int hashJumpR = Animator.StringToHash("jump_right");
     bool inJump = false;
+    public bool recording = false;
+
+    public GameObject div;
 
     // Use this for initialization
     void Start() {
@@ -21,11 +25,18 @@ public class glooScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        bool right = Input.GetKey(GlooConstants.keyRight);
-        bool left = Input.GetKey(GlooConstants.keyLeft);
-        animator.SetBool("GoLeft", left);
-        animator.SetBool("GoRight", right && !left);
-        animator.SetBool("Jump", inJump);
+        if (!recording) {
+            if (Input.GetKeyDown(GlooConstants.keyDivide)) {
+                recording = true;
+                GameObject div_instance = (GameObject) Instantiate(div, transform.position, new Quaternion());
+                div_instance.GetComponent<divScript>().parent = gameObject;
+            }
+            bool right = Input.GetKey(GlooConstants.keyRight);
+            bool left = Input.GetKey(GlooConstants.keyLeft);
+            animator.SetBool("GoLeft", left);
+            animator.SetBool("GoRight", right && !left);
+            animator.SetBool("Jump", inJump);
+        }        
     }
 
     void FixedUpdate() {
@@ -37,8 +48,8 @@ public class glooScript : MonoBehaviour {
         if (currentHash == hashRight || (currentHash == hashJumpR && Input.GetKey(GlooConstants.keyRight))) {
             move += new Vector2(1, 0);
         }
-        if (Input.GetKey(GlooConstants.keyJump) && !inJump) {
-            rbody.AddForce(new Vector2(0, 3.5f), ForceMode2D.Impulse);
+        if (Input.GetKey(GlooConstants.keyJump) && !inJump && !recording) {
+            rbody.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
             inJump = true;
         }
         move *= speed;
