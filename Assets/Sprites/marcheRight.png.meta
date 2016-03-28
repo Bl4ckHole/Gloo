@@ -1,0 +1,312 @@
+fileFormatVersion: 2
+guid: a837f19e76f8e3447bdf63725623c2e9
+timeCreated: 1459171638
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: marcheRight_0
+    21300002: marcheRight_1
+    21300004: marcheRight_2
+    21300006: marcheRight_3
+    21300008: marcheRight_4
+    21300010: marcheRight_5
+    21300012: marcheRight_6
+    21300014: marcheRight_7
+    21300016: marcheRight_8
+    21300018: marcheRight_9
+    21300020: marcheRight_10
+    21300022: marcheRight_11
+    21300024: marcheRight_12
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: marcheRight_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 8
+        width: 270
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -63, y: -49.45268}
+        - {x: 42, y: -49.45268}
+        - {x: 42, y: -8.452679}
+        - {x: 23, y: 41.54732}
+        - {x: -30, y: 41.54732}
+        - {x: -63, y: -13.452679}
+    - name: marcheRight_1
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 8
+        width: 270
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -23.527893, y: 41.54732}
+        - {x: -57.527893, y: -22.452679}
+        - {x: -57.527893, y: -46.45268}
+        - {x: -56.527893, y: -49.45268}
+        - {x: 47.472107, y: -49.45268}
+        - {x: 48.472107, y: -46.45268}
+        - {x: 48.472107, y: -11.452679}
+        - {x: 32.472107, y: 41.54732}
+    - name: marcheRight_2
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 8
+        width: 270
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -0.55578613, y: 41.54732}
+        - {x: -51.555786, y: -9.452679}
+        - {x: -52.555786, y: -18.452679}
+        - {x: -52.555786, y: -48.45268}
+        - {x: 55.444214, y: -48.45268}
+        - {x: 55.444214, y: -11.452679}
+        - {x: 45.444214, y: 24.547321}
+        - {x: 29.444214, y: 41.54732}
+    - name: marcheRight_3
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 8
+        width: 270
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 41.41632, y: 41.54732}
+        - {x: -1.5836792, y: 41.54732}
+        - {x: -45.58368, y: -10.452679}
+        - {x: -45.58368, y: -48.45268}
+        - {x: 62.41632, y: -48.45268}
+        - {x: 63.41632, y: -47.45268}
+        - {x: 63.41632, y: 0.5473213}
+        - {x: 58.41632, y: 33.54732}
+    - name: marcheRight_4
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 8
+        width: 270
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0.38842773, y: 41.54732}
+        - {x: -38.611572, y: -21.452679}
+        - {x: -38.611572, y: -46.45268}
+        - {x: -34.611572, y: -48.45268}
+        - {x: 66.38843, y: -48.45268}
+        - {x: 69.38843, y: -44.45268}
+        - {x: 69.38843, y: -17.452679}
+        - {x: 48.388428, y: 41.54732}
+    - name: marcheRight_5
+      rect:
+        serializedVersion: 2
+        x: 1350
+        y: 8
+        width: 270
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 47.360535, y: 41.54732}
+        - {x: 23.360535, y: 41.54732}
+        - {x: 7.3605347, y: 34.54732}
+        - {x: -32.639465, y: -24.452679}
+        - {x: -32.639465, y: -44.45268}
+        - {x: -30.639465, y: -48.45268}
+        - {x: 68.360535, y: -48.45268}
+        - {x: 72.360535, y: -46.45268}
+        - {x: 72.360535, y: -21.452679}
+        - {x: 60.360535, y: 24.547321}
+    - name: marcheRight_6
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 8
+        width: 270
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 49.33264, y: 41.54732}
+        - {x: 27.332642, y: 41.54732}
+        - {x: 17.332642, y: 39.54732}
+        - {x: -28.667358, y: -19.452679}
+        - {x: -28.667358, y: -48.45268}
+        - {x: 69.33264, y: -48.45268}
+        - {x: 75.33264, y: -46.45268}
+        - {x: 75.33264, y: -17.452679}
+        - {x: 65.33264, y: 31.547321}
+    - name: marcheRight_7
+      rect:
+        serializedVersion: 2
+        x: 1890
+        y: 8
+        width: 270
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 60.30481, y: 41.54732}
+        - {x: 6.3048096, y: 41.54732}
+        - {x: -26.69519, y: -26.452679}
+        - {x: -26.69519, y: -44.45268}
+        - {x: 72.30481, y: -44.45268}
+        - {x: 74.30481, y: -37.45268}
+        - {x: 74.30481, y: 13.547321}
+        - {x: 72.30481, y: 38.54732}
+    - name: marcheRight_8
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 8
+        width: 270
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 7.2768555, y: 41.54732}
+        - {x: -26.723145, y: -23.452679}
+        - {x: -26.723145, y: -43.45268}
+        - {x: 72.276855, y: -43.45268}
+        - {x: 72.276855, y: 16.547321}
+        - {x: 51.276855, y: 41.54732}
+    - name: marcheRight_9
+      rect:
+        serializedVersion: 2
+        x: 2430
+        y: 8
+        width: 270
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 20.249023, y: 41.54732}
+        - {x: -29.750977, y: -15.452679}
+        - {x: -29.750977, y: -44.45268}
+        - {x: 63.249023, y: -44.45268}
+        - {x: 68.24902, y: -42.45268}
+        - {x: 68.24902, y: 26.547321}
+        - {x: 49.249023, y: 41.54732}
+    - name: marcheRight_10
+      rect:
+        serializedVersion: 2
+        x: 2700
+        y: 8
+        width: 270
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 7.2210693, y: 41.54732}
+        - {x: -32.77893, y: -20.452679}
+        - {x: -32.77893, y: -39.45268}
+        - {x: -31.77893, y: -45.45268}
+        - {x: 57.22107, y: -45.45268}
+        - {x: 62.22107, y: -35.45268}
+        - {x: 62.22107, y: 22.547321}
+        - {x: 59.22107, y: 41.54732}
+    - name: marcheRight_11
+      rect:
+        serializedVersion: 2
+        x: 2970
+        y: 8
+        width: 270
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 2.1932373, y: 41.54732}
+        - {x: -38.806763, y: -22.452679}
+        - {x: -38.806763, y: -45.45268}
+        - {x: 58.193237, y: -45.45268}
+        - {x: 58.193237, y: 28.547321}
+        - {x: 52.193237, y: 41.54732}
+    - name: marcheRight_12
+      rect:
+        serializedVersion: 2
+        x: 3240
+        y: 8
+        width: 270
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -3.8347168, y: 41.54732}
+        - {x: -33.834717, y: -4.4526787}
+        - {x: -41.834717, y: -24.452679}
+        - {x: -41.834717, y: -47.45268}
+        - {x: 58.165283, y: -47.45268}
+        - {x: 58.165283, y: 37.54732}
+        - {x: 48.165283, y: 41.54732}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

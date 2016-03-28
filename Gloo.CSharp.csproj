@@ -63,12 +63,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Backgrounds\init.cs" />
-    <Compile Include="Assets\Menus\init.cs" />
-    <Compile Include="Assets\Prefabs\init.cs" />
+    <Compile Include="Assets\Scripts\divScript.cs" />
     <Compile Include="Assets\Scripts\glooScript.cs" />
-    <Compile Include="Assets\Sounds\init.cs" />
-    <Compile Include="Assets\Sprites\init.cs" />
+    <Compile Include="Assets\Scripts\utils.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Backgrounds\gg.txt" />
+    <None Include="Assets\Menus\gg.txt" />
+    <None Include="Assets\Sounds\gg.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>
