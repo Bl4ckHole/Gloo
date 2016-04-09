@@ -1,0 +1,277 @@
+fileFormatVersion: 2
+guid: 6c71d4cbc78d25c4f9de4fa5ec02ae54
+timeCreated: 1460211337
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: retournementyeuxgauche_11
+    21300002: retournementyeuxgauche_12
+    21300004: retournementyeuxgauche_13
+    21300006: retournementyeuxgauche_14
+    21300008: retournementyeuxgauche_15
+    21300010: retournementyeuxgauche_16
+    21300012: retournementyeuxgauche_17
+    21300014: retournementyeuxgauche_18
+    21300016: retournementyeuxgauche_19
+    21300018: retournementyeuxgauche_20
+    21300020: retournementyeuxgauche_21
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: retournementyeuxgauche_11
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 141
+        width: 220
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -39.697777, y: 40.353333}
+        - {x: -48.697777, y: 10.3533325}
+        - {x: -48.697777, y: -39.646667}
+        - {x: 45.302223, y: -39.646667}
+        - {x: 45.302223, y: 15.3533325}
+        - {x: 20.302223, y: 40.353333}
+    - name: retournementyeuxgauche_12
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 141
+        width: 220
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 10.035553, y: 38.353333}
+        - {x: -30.964447, y: 38.353333}
+        - {x: -48.964447, y: -4.6466675}
+        - {x: -48.964447, y: -39.646667}
+        - {x: 44.035553, y: -39.646667}
+        - {x: 46.035553, y: -35.646667}
+        - {x: 46.035553, y: -22.646667}
+        - {x: 36.035553, y: -4.6466675}
+    - name: retournementyeuxgauche_13
+      rect:
+        serializedVersion: 2
+        x: 901
+        y: 141
+        width: 220
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 10.4422, y: 40.353333}
+        - {x: -23.5578, y: 40.353333}
+        - {x: -32.5578, y: 31.353333}
+        - {x: -48.5578, y: -21.646667}
+        - {x: -48.5578, y: -37.646667}
+        - {x: -46.5578, y: -39.646667}
+        - {x: 44.4422, y: -39.646667}
+        - {x: 45.4422, y: -37.646667}
+        - {x: 45.4422, y: -11.6466675}
+        - {x: 26.4422, y: 34.353333}
+    - name: retournementyeuxgauche_14
+      rect:
+        serializedVersion: 2
+        x: 1321
+        y: 141
+        width: 220
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 18.175537, y: 40.353333}
+        - {x: -28.824463, y: 40.353333}
+        - {x: -36.824463, y: 24.353333}
+        - {x: -48.824463, y: -21.646667}
+        - {x: -48.824463, y: -37.646667}
+        - {x: -44.824463, y: -39.646667}
+        - {x: 39.175537, y: -39.646667}
+        - {x: 43.175537, y: -34.646667}
+        - {x: 43.175537, y: -10.6466675}
+        - {x: 32.175537, y: 35.353333}
+    - name: retournementyeuxgauche_15
+      rect:
+        serializedVersion: 2
+        x: 1743
+        y: 141
+        width: 220
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -28.706665, y: 40.353333}
+        - {x: -47.706665, y: 4.3533325}
+        - {x: -47.706665, y: -39.646667}
+        - {x: 39.293335, y: -39.646667}
+        - {x: 42.293335, y: -36.646667}
+        - {x: 42.293335, y: -6.6466675}
+        - {x: 18.293335, y: 40.353333}
+    - name: retournementyeuxgauche_16
+      rect:
+        serializedVersion: 2
+        x: 2167
+        y: 141
+        width: 220
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -29.704468, y: 40.353333}
+        - {x: -38.704468, y: 26.353333}
+        - {x: -47.704468, y: -17.646667}
+        - {x: -47.704468, y: -39.646667}
+        - {x: 38.295532, y: -39.646667}
+        - {x: 38.295532, y: 26.353333}
+        - {x: 15.295532, y: 40.353333}
+    - name: retournementyeuxgauche_17
+      rect:
+        serializedVersion: 2
+        x: 2582
+        y: 141
+        width: 220
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -21.682251, y: 40.353333}
+        - {x: -30.682251, y: 36.353333}
+        - {x: -46.68225, y: -11.6466675}
+        - {x: -46.68225, y: -39.646667}
+        - {x: 37.31775, y: -39.646667}
+        - {x: 38.31775, y: -38.646667}
+        - {x: 38.31775, y: 9.3533325}
+        - {x: 19.317749, y: 40.353333}
+    - name: retournementyeuxgauche_18
+      rect:
+        serializedVersion: 2
+        x: 3004
+        y: 141
+        width: 220
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -19.564453, y: 40.353333}
+        - {x: -46.564453, y: -8.6466675}
+        - {x: -46.564453, y: -39.646667}
+        - {x: 35.435547, y: -39.646667}
+        - {x: 37.435547, y: -35.646667}
+        - {x: 37.435547, y: 13.3533325}
+        - {x: 17.435547, y: 40.353333}
+    - name: retournementyeuxgauche_19
+      rect:
+        serializedVersion: 2
+        x: 3422
+        y: 141
+        width: 220
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -23.715576, y: 40.353333}
+        - {x: -46.715576, y: 28.353333}
+        - {x: -46.715576, y: -39.646667}
+        - {x: 38.284424, y: -39.646667}
+        - {x: 38.284424, y: 4.3533325}
+        - {x: 16.284424, y: 40.353333}
+    - name: retournementyeuxgauche_20
+      rect:
+        serializedVersion: 2
+        x: 3837
+        y: 141
+        width: 220
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20.69336, y: 40.353333}
+        - {x: -45.69336, y: -17.646667}
+        - {x: -45.69336, y: -36.646667}
+        - {x: -42.69336, y: -39.646667}
+        - {x: 39.30664, y: -39.646667}
+        - {x: 42.30664, y: -37.646667}
+        - {x: 42.30664, y: -11.6466675}
+        - {x: 26.30664, y: 40.353333}
+    - name: retournementyeuxgauche_21
+      rect:
+        serializedVersion: 2
+        x: 4245
+        y: 141
+        width: 220
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -2.7667236, y: 40.353333}
+        - {x: -9.766724, y: 36.353333}
+        - {x: -21.766724, y: 19.353333}
+        - {x: -43.766724, y: -21.646667}
+        - {x: -45.766724, y: -28.646667}
+        - {x: -45.766724, y: -38.646667}
+        - {x: -43.766724, y: -39.646667}
+        - {x: 48.233276, y: -39.646667}
+        - {x: 49.233276, y: -38.646667}
+        - {x: 49.233276, y: -4.6466675}
+        - {x: 29.233276, y: 40.353333}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

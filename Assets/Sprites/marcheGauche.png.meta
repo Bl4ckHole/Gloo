@@ -1,0 +1,319 @@
+fileFormatVersion: 2
+guid: 1b5c596348b094b4ba185991d0b74739
+timeCreated: 1460210455
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: marcheGauche_13
+    21300002: marcheGauche_14
+    21300004: marcheGauche_15
+    21300006: marcheGauche_16
+    21300008: marcheGauche_17
+    21300010: marcheGauche_18
+    21300012: marcheGauche_19
+    21300014: marcheGauche_20
+    21300016: marcheGauche_21
+    21300018: marcheGauche_22
+    21300020: marcheGauche_23
+    21300022: marcheGauche_24
+    21300024: marcheGauche_25
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: marcheGauche_13
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 168
+        width: 220
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 8.745407, y: 25.898998}
+        - {x: -24.254593, y: 25.898998}
+        - {x: -31.254593, y: -12.101002}
+        - {x: -31.254593, y: -25.101002}
+        - {x: 28.745407, y: -25.101002}
+        - {x: 28.745407, y: -11.101002}
+        - {x: 19.745407, y: 22.898998}
+    - name: marcheGauche_14
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 168
+        width: 220
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 6.356415, y: 24.898998}
+        - {x: 3.3564148, y: 25.898998}
+        - {x: -15.643585, y: 25.898998}
+        - {x: -24.643585, y: 16.898998}
+        - {x: -30.643585, y: -7.1010017}
+        - {x: -30.643585, y: -25.101002}
+        - {x: 31.356415, y: -25.101002}
+        - {x: 31.356415, y: -19.101002}
+        - {x: 27.356415, y: -5.1010017}
+    - name: marcheGauche_15
+      rect:
+        serializedVersion: 2
+        x: 1264
+        y: 168
+        width: 220
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 5.1210327, y: 25.898998}
+        - {x: -19.878967, y: 25.898998}
+        - {x: -30.878967, y: -4.1010017}
+        - {x: -30.878967, y: -23.101002}
+        - {x: -28.878967, y: -25.101002}
+        - {x: 30.121033, y: -25.101002}
+        - {x: 32.121033, y: -24.101002}
+        - {x: 32.121033, y: -4.1010017}
+        - {x: 31.121033, y: 0.89899826}
+    - name: marcheGauche_16
+      rect:
+        serializedVersion: 2
+        x: 1812
+        y: 168
+        width: 220
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 8.732025, y: 25.898998}
+        - {x: -24.267975, y: 25.898998}
+        - {x: -26.267975, y: 24.898998}
+        - {x: -31.267975, y: -14.101002}
+        - {x: -31.267975, y: -25.101002}
+        - {x: 31.732025, y: -25.101002}
+        - {x: 31.732025, y: -8.101002}
+        - {x: 17.732025, y: 13.898998}
+    - name: marcheGauche_17
+      rect:
+        serializedVersion: 2
+        x: 2363
+        y: 168
+        width: 220
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -15.810547, y: 25.898998}
+        - {x: -20.810547, y: 21.898998}
+        - {x: -29.810547, y: -11.101002}
+        - {x: -29.810547, y: -25.101002}
+        - {x: 32.189453, y: -25.101002}
+        - {x: 32.189453, y: -10.101002}
+        - {x: 30.189453, y: -3.1010017}
+        - {x: 6.189453, y: 24.898998}
+        - {x: -0.8105469, y: 25.898998}
+    - name: marcheGauche_18
+      rect:
+        serializedVersion: 2
+        x: 2918
+        y: 168
+        width: 220
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 1.7754517, y: 25.898998}
+        - {x: -18.224548, y: 25.898998}
+        - {x: -30.224548, y: 1.8989983}
+        - {x: -30.224548, y: -25.101002}
+        - {x: 29.775452, y: -25.101002}
+        - {x: 30.775452, y: -24.101002}
+        - {x: 30.775452, y: -8.101002}
+        - {x: 29.775452, y: -1.1010017}
+    - name: marcheGauche_19
+      rect:
+        serializedVersion: 2
+        x: 3470
+        y: 168
+        width: 220
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -1.4849854, y: 25.898998}
+        - {x: -23.484985, y: 25.898998}
+        - {x: -30.484985, y: 20.898998}
+        - {x: -30.484985, y: -25.101002}
+        - {x: 29.515015, y: -25.101002}
+        - {x: 30.515015, y: -23.101002}
+        - {x: 30.515015, y: -11.101002}
+        - {x: 12.515015, y: 20.898998}
+    - name: marcheGauche_20
+      rect:
+        serializedVersion: 2
+        x: 4014
+        y: 168
+        width: 220
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -22.002563, y: 23.898998}
+        - {x: -29.002563, y: 20.898998}
+        - {x: -29.002563, y: -25.101002}
+        - {x: 29.997437, y: -25.101002}
+        - {x: 30.997437, y: -22.101002}
+        - {x: 30.997437, y: -11.101002}
+        - {x: 7.9974365, y: 23.898998}
+    - name: marcheGauche_21
+      rect:
+        serializedVersion: 2
+        x: 4562
+        y: 168
+        width: 220
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -15.3914795, y: 23.898998}
+        - {x: -28.39148, y: 18.898998}
+        - {x: -29.39148, y: 12.898998}
+        - {x: -29.39148, y: -25.101002}
+        - {x: 28.60852, y: -25.101002}
+        - {x: 28.60852, y: -12.101002}
+        - {x: 0.6085205, y: 23.898998}
+    - name: marcheGauche_22
+      rect:
+        serializedVersion: 2
+        x: 5107
+        y: 168
+        width: 220
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 6.373047, y: 21.898998}
+        - {x: -0.6269531, y: 23.898998}
+        - {x: -17.626953, y: 23.898998}
+        - {x: -26.626953, y: 8.898998}
+        - {x: -27.626953, y: -1.1010017}
+        - {x: -27.626953, y: -20.101002}
+        - {x: -23.626953, y: -25.101002}
+        - {x: 29.373047, y: -25.101002}
+        - {x: 29.373047, y: -13.101002}
+    - name: marcheGauche_23
+      rect:
+        serializedVersion: 2
+        x: 5651
+        y: 168
+        width: 220
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -3.1444092, y: 24.898998}
+        - {x: -18.14441, y: 24.898998}
+        - {x: -28.14441, y: 19.898998}
+        - {x: -28.14441, y: -25.101002}
+        - {x: 27.85559, y: -25.101002}
+        - {x: 27.85559, y: -12.101002}
+        - {x: -1.1444092, y: 22.898998}
+    - name: marcheGauche_24
+      rect:
+        serializedVersion: 2
+        x: 6206
+        y: 168
+        width: 220
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 21.941528, y: -3.1010017}
+        - {x: 12.941528, y: 8.898998}
+        - {x: -1.0584717, y: 24.898998}
+        - {x: -18.058472, y: 24.898998}
+        - {x: -27.058472, y: 20.898998}
+        - {x: -27.058472, y: -24.101002}
+        - {x: -25.058472, y: -25.101002}
+        - {x: 27.941528, y: -25.101002}
+        - {x: 29.941528, y: -24.101002}
+        - {x: 29.941528, y: -13.101002}
+    - name: marcheGauche_25
+      rect:
+        serializedVersion: 2
+        x: 6743
+        y: 168
+        width: 220
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -27.051025, y: -5.1010017}
+        - {x: -27.051025, y: -25.101002}
+        - {x: 31.948975, y: -25.101002}
+        - {x: 31.948975, y: -12.101002}
+        - {x: 15.948975, y: 22.898998}
+        - {x: 3.9489746, y: 25.898998}
+        - {x: -20.051025, y: 25.898998}
+        - {x: -24.051025, y: 20.898998}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

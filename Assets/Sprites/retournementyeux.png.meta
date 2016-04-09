@@ -1,0 +1,275 @@
+fileFormatVersion: 2
+guid: be4bef3afd2e6e444a262a8d1aaa2842
+timeCreated: 1460211036
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: retournementyeux_11
+    21300002: retournementyeux_12
+    21300004: retournementyeux_13
+    21300006: retournementyeux_14
+    21300008: retournementyeux_15
+    21300010: retournementyeux_16
+    21300012: retournementyeux_17
+    21300014: retournementyeux_18
+    21300016: retournementyeux_19
+    21300018: retournementyeux_20
+    21300020: retournementyeux_21
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: retournementyeux_11
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 67
+        width: 220
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -8.439999, y: 39.98}
+        - {x: -42.44, y: 4.9799995}
+        - {x: -48.44, y: -17.02}
+        - {x: -48.44, y: -39.02}
+        - {x: 45.56, y: -39.02}
+        - {x: 45.56, y: -17.02}
+        - {x: 25.560001, y: 39.98}
+    - name: retournementyeux_12
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 67
+        width: 220
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -48.300003, y: -39.02}
+        - {x: 38.699997, y: -39.02}
+        - {x: 38.699997, y: -5.0200005}
+        - {x: 30.699997, y: 37.98}
+        - {x: 26.699997, y: 39.98}
+        - {x: -22.300003, y: 39.98}
+        - {x: -48.300003, y: -5.0200005}
+    - name: retournementyeux_13
+      rect:
+        serializedVersion: 2
+        x: 956
+        y: 67
+        width: 220
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 14.639984, y: 39.98}
+        - {x: -16.360016, y: 39.98}
+        - {x: -48.360016, y: 19.98}
+        - {x: -48.360016, y: -38.02}
+        - {x: -46.360016, y: -39.02}
+        - {x: 36.639984, y: -39.02}
+        - {x: 36.639984, y: -3.0200005}
+        - {x: 24.639984, y: 19.98}
+    - name: retournementyeux_14
+      rect:
+        serializedVersion: 2
+        x: 1378
+        y: 67
+        width: 220
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -29.679993, y: 39.98}
+        - {x: -48.679993, y: 8.98}
+        - {x: -48.679993, y: -39.02}
+        - {x: 34.320007, y: -39.02}
+        - {x: 34.320007, y: 11.98}
+        - {x: 17.320007, y: 39.98}
+    - name: retournementyeux_15
+      rect:
+        serializedVersion: 2
+        x: 1798
+        y: 65
+        width: 220
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -28.380005, y: 40.1}
+        - {x: -48.380005, y: 5.0999985}
+        - {x: -48.380005, y: -38.9}
+        - {x: 33.619995, y: -38.9}
+        - {x: 35.619995, y: -34.9}
+        - {x: 35.619995, y: 25.099998}
+        - {x: 15.619995, y: 40.1}
+    - name: retournementyeux_16
+      rect:
+        serializedVersion: 2
+        x: 2220
+        y: 65
+        width: 220
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 18.799988, y: 40.1}
+        - {x: -28.200012, y: 40.1}
+        - {x: -47.200012, y: 5.0999985}
+        - {x: -47.200012, y: -38.9}
+        - {x: 36.799988, y: -38.9}
+        - {x: 39.799988, y: -33.9}
+        - {x: 39.799988, y: -4.9000015}
+        - {x: 37.799988, y: 28.099998}
+    - name: retournementyeux_17
+      rect:
+        serializedVersion: 2
+        x: 2637
+        y: 65
+        width: 220
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -47.71997, y: -19.900002}
+        - {x: -47.71997, y: -36.9}
+        - {x: -46.71997, y: -38.9}
+        - {x: 41.28003, y: -38.9}
+        - {x: 41.28003, y: -9.900002}
+        - {x: 28.28003, y: 36.1}
+        - {x: 16.28003, y: 40.1}
+        - {x: -21.71997, y: 40.1}
+        - {x: -32.71997, y: 26.099998}
+    - name: retournementyeux_18
+      rect:
+        serializedVersion: 2
+        x: 3055
+        y: 65
+        width: 220
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 11.699951, y: 41.1}
+        - {x: -29.300049, y: 41.1}
+        - {x: -34.30005, y: 38.1}
+        - {x: -47.30005, y: -11.900002}
+        - {x: -47.30005, y: -39.9}
+        - {x: 42.69995, y: -39.9}
+        - {x: 44.69995, y: -35.9}
+        - {x: 44.69995, y: -18.900002}
+        - {x: 27.699951, y: 34.1}
+    - name: retournementyeux_19
+      rect:
+        serializedVersion: 2
+        x: 3477
+        y: 65
+        width: 220
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 13.880005, y: 40.1}
+        - {x: -27.119995, y: 40.1}
+        - {x: -46.119995, y: -0.9000015}
+        - {x: -46.119995, y: -38.9}
+        - {x: 46.880005, y: -38.9}
+        - {x: 46.880005, y: -15.900002}
+        - {x: 24.880005, y: 36.1}
+    - name: retournementyeux_20
+      rect:
+        serializedVersion: 2
+        x: 3899
+        y: 65
+        width: 220
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 14.559937, y: 39.1}
+        - {x: -13.440063, y: 39.1}
+        - {x: -33.440063, y: 23.099998}
+        - {x: -46.440063, y: -14.900002}
+        - {x: -46.440063, y: -35.9}
+        - {x: -44.440063, y: -38.9}
+        - {x: 44.559937, y: -38.9}
+        - {x: 48.559937, y: -36.9}
+        - {x: 48.559937, y: -22.900002}
+        - {x: 37.559937, y: 3.0999985}
+    - name: retournementyeux_21
+      rect:
+        serializedVersion: 2
+        x: 4320
+        y: 67
+        width: 220
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -45.19995, y: -27.02}
+        - {x: -45.19995, y: -39.02}
+        - {x: 48.80005, y: -39.02}
+        - {x: 48.80005, y: -22.02}
+        - {x: 33.80005, y: 27.98}
+        - {x: 10.800049, y: 39.98}
+        - {x: -28.199951, y: 39.98}
+        - {x: -30.199951, y: 35.98}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
