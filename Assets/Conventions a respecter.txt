@@ -1,0 +1,4 @@
+
+
+Objects activables : 
+tout objet activable doit posséder une fonction "Activate(bool)" qui sera appelée par tout intérupteur/plateforme/levier pour l'activer ou le désactiver
