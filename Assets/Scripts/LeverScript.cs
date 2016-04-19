@@ -1,15 +1,28 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class LeverScript : MonoBehaviour {
+public class LeverScript : MonoBehaviour 
+{
+	public GameObject cible;
+	private bool isActivated = false;
+	private Animator animator;
 
 	// Use this for initialization
-	void Start () {
-	
+	void Start () 
+	{
+		animator = GetComponent<Animator>();
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update () 
+	{
 	
+	}
+
+	void LeverActivate()
+	{
+		isActivated = !isActivated;
+		animator.SetBool("isActivated", isActivated);
+		cible.SendMessage ("Activate", isActivated);
 	}
 }
