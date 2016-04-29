@@ -14,10 +14,14 @@ public abstract class TriggerClass : MonoBehaviour
 	}
 
 
-	void TriggerActivate()
+	public void TriggerActivate()
 	{
 		isActivated = !isActivated;
-		animator.SetBool("isActivated", isActivated);
+		TriggerActivate (isActivated);
+	}
+	public void TriggerActivate(bool requested)
+	{
+		animator.SetBool("isActivated", requested);
 		if (cible == null) 
 		{
 			print ("This Trigger is't linked with any object");
