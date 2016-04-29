@@ -36,6 +36,17 @@ public class glooScript : MonoBehaviour {
             animator.SetBool("GoLeft", left);
             animator.SetBool("GoRight", right && !left);
             animator.SetBool("Jump", inJump);
+			if (Input.GetKeyDown (GlooConstants.keyActivate)) 
+			{
+				Collider2D[] nearbyObjects = Physics2D.OverlapCircleAll(this.transform.position, this.GetComponent<BoxCollider2D>().size.x/2);
+				foreach (Collider2D objColl in nearbyObjects) 
+				{
+					if (objColl.gameObject.tag == "Lever") 
+					{
+						objColl.gameObject.SendMessage ("TriggerActivate");
+					}
+				}
+			}
         }        
     }
 

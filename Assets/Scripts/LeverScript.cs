@@ -19,10 +19,10 @@ public class LeverScript : MonoBehaviour
 	
 	}
 
-	void LeverActivate()
+	void TriggerActivate()
 	{
 		isActivated = !isActivated;
 		animator.SetBool("isActivated", isActivated);
-		cible.SendMessage ("Activate", isActivated);
+		//cible.SendMessage ("Activate", isActivated);
 	}
 }
