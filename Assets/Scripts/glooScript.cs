@@ -6,6 +6,7 @@ public class glooScript : MonoBehaviour {
 
     private Animator animator;
     private Rigidbody2D rbody;
+    private BoxCollider2D boxcoll;
     private float speed = 3.0f;
     private float jumpForce = 7.0f;
     private int hashLeft = Animator.StringToHash("run_left");
@@ -14,31 +15,42 @@ public class glooScript : MonoBehaviour {
     private int hashJumpR = Animator.StringToHash("jump_right");
     bool inJump = false;
     public bool recording = false;
+    private int facing = 1;
 
     public GameObject div;
+    private BoxCollider2D divcoll;
 
     // Use this for initialization
     void Start() {
         animator = GetComponent<Animator>();
         rbody = GetComponent<Rigidbody2D>();
+        boxcoll = GetComponent<BoxCollider2D>();
+        divcoll = div.GetComponent<BoxCollider2D>();
     }        
 	
 	// Update is called once per frame
 	void Update () {
+        
         if (!recording) {
             if (Input.GetKeyDown(GlooConstants.keyDivide)) {
                 recording = true;
-                GameObject div_instance = (GameObject) Instantiate(div, transform.position, new Quaternion());
+                int facing_int = facing == 1 ? -1 : 1;
+                GameObject div_instance = (GameObject) Instantiate(div, transform.position + new Vector3(boxcoll.size.x / 2.0f + divcoll.size.x, 0, 0)*facing_int, new Quaternion());
                 div_instance.GetComponent<divScript>().parent = gameObject;
             }
             bool right = Input.GetKey(GlooConstants.keyRight);
             bool left = Input.GetKey(GlooConstants.keyLeft);
+            if (left) {
+                facing = 1;
+            } else if (right) {
+                facing = 2;
+            }
             animator.SetBool("GoLeft", left);
             animator.SetBool("GoRight", right && !left);
             animator.SetBool("Jump", inJump);
 			if (Input.GetKeyDown (GlooConstants.keyActivate)) 
 			{
-				Collider2D[] nearbyObjects = Physics2D.OverlapCircleAll(this.transform.position, this.GetComponent<BoxCollider2D>().size.x/2);
+				Collider2D[] nearbyObjects = Physics2D.OverlapCircleAll(this.transform.position, boxcoll.size.x/2);
 				foreach (Collider2D objColl in nearbyObjects) 
 				{
 					if (objColl.gameObject.tag == "Lever") 
