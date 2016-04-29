@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using Utils;
+using System;
 
 public class glooScript : MonoBehaviour {
 
@@ -81,8 +82,13 @@ public class glooScript : MonoBehaviour {
     }
 
     void OnCollisionStay2D(Collision2D coll) {
-        if (coll.relativeVelocity.y < 0.16) {
-            inJump = false;
+        foreach(ContactPoint2D contact in coll.contacts)
+        {
+            if(Math.Abs(contact.normal[0]) < 0.1 && contact.normal[1] > 0)
+            {
+                inJump = false;
+                break;
+            }
         }
     }
 }
