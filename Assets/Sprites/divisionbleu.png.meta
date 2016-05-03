@@ -1,0 +1,323 @@
+fileFormatVersion: 2
+guid: 162ea432ad80ac44f851a3f3431bda95
+timeCreated: 1462287188
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: divisionbleu_13
+    21300002: divisionbleu_14
+    21300004: divisionbleu_15
+    21300006: divisionbleu_16
+    21300008: divisionbleu_17
+    21300010: divisionbleu_18
+    21300012: divisionbleu_19
+    21300014: divisionbleu_20
+    21300016: divisionbleu_21
+    21300018: divisionbleu_22
+    21300020: divisionbleu_23
+    21300022: divisionbleu_24
+    21300024: divisionbleu_25
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: divisionbleu_13
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 44
+        width: 440
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -22, y: 21.9044}
+        - {x: -28, y: 6.9044}
+        - {x: -28, y: -9.0956}
+        - {x: -25, y: -11.0956}
+        - {x: -19, y: -13.0956}
+        - {x: -1, y: -13.0956}
+        - {x: 8, y: -7.0956}
+        - {x: 8, y: 9.9044}
+        - {x: 0, y: 21.9044}
+    - name: divisionbleu_14
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 44
+        width: 440
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -18.181274, y: 22.9044}
+        - {x: -28.181274, y: 18.9044}
+        - {x: -28.181274, y: -6.0956}
+        - {x: -24.181274, y: -9.0956}
+        - {x: -20.181274, y: -11.0956}
+        - {x: -1.1812744, y: -11.0956}
+        - {x: 7.8187256, y: -4.0956}
+        - {x: 7.8187256, y: 12.9044}
+        - {x: 1.8187256, y: 22.9044}
+    - name: divisionbleu_15
+      rect:
+        serializedVersion: 2
+        x: 920
+        y: 44
+        width: 440
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -21.362549, y: 22.9044}
+        - {x: -31.362549, y: 9.9044}
+        - {x: -31.362549, y: -6.0956}
+        - {x: -23.362549, y: -10.0956}
+        - {x: -0.36254883, y: -10.0956}
+        - {x: 2.6374512, y: -9.0956}
+        - {x: 4.637451, y: -2.0956001}
+        - {x: 4.637451, y: 15.9044}
+        - {x: -3.3625488, y: 22.9044}
+    - name: divisionbleu_16
+      rect:
+        serializedVersion: 2
+        x: 1380
+        y: 44
+        width: 440
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -4.5438232, y: 22.9044}
+        - {x: -24.543823, y: 22.9044}
+        - {x: -34.543823, y: 11.9044}
+        - {x: -34.543823, y: -7.0956}
+        - {x: -30.543823, y: -9.0956}
+        - {x: -23.543823, y: -10.0956}
+        - {x: -0.54382324, y: -10.0956}
+        - {x: 1.4561768, y: -2.0956001}
+        - {x: 1.4561768, y: 16.9044}
+    - name: divisionbleu_17
+      rect:
+        serializedVersion: 2
+        x: 1840
+        y: 44
+        width: 440
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -25.725098, y: 22.9044}
+        - {x: -36.725098, y: 13.9044}
+        - {x: -36.725098, y: -7.0956}
+        - {x: -33.725098, y: -12.0956}
+        - {x: -2.7250977, y: -12.0956}
+        - {x: -0.72509766, y: -6.0956}
+        - {x: -0.72509766, y: 17.9044}
+        - {x: -8.725098, y: 22.9044}
+    - name: divisionbleu_18
+      rect:
+        serializedVersion: 2
+        x: 2300
+        y: 44
+        width: 440
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -13.906372, y: 19.9044}
+        - {x: -26.906372, y: 19.9044}
+        - {x: -37.906372, y: 10.9044}
+        - {x: -37.906372, y: -15.0956}
+        - {x: -3.906372, y: -15.0956}
+        - {x: -1.9063721, y: -10.0956}
+        - {x: -1.9063721, y: 8.9044}
+    - name: divisionbleu_19
+      rect:
+        serializedVersion: 2
+        x: 2760
+        y: 44
+        width: 440
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -23.087646, y: 15.9044}
+        - {x: -36.087646, y: 10.9044}
+        - {x: -36.087646, y: -15.0956}
+        - {x: -32.087646, y: -19.0956}
+        - {x: -11.0876465, y: -19.0956}
+        - {x: -0.087646484, y: -14.0956}
+        - {x: -0.087646484, y: 4.9044}
+        - {x: -6.0876465, y: 15.9044}
+    - name: divisionbleu_20
+      rect:
+        serializedVersion: 2
+        x: 3220
+        y: 44
+        width: 440
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -10.268921, y: 13.9044}
+        - {x: -27.26892, y: 13.9044}
+        - {x: -34.26892, y: -1.0956001}
+        - {x: -34.26892, y: -21.0956}
+        - {x: -2.268921, y: -21.0956}
+        - {x: 2.731079, y: -14.0956}
+        - {x: 2.731079, y: 1.9043999}
+    - name: divisionbleu_21
+      rect:
+        serializedVersion: 2
+        x: 3680
+        y: 44
+        width: 440
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -21.450195, y: 11.9044}
+        - {x: -29.450195, y: 3.9043999}
+        - {x: -30.450195, y: -0.09560013}
+        - {x: -30.450195, y: -21.0956}
+        - {x: 1.5498047, y: -21.0956}
+        - {x: 5.5498047, y: -14.0956}
+        - {x: 5.5498047, y: 7.9044}
+        - {x: -2.4501953, y: 11.9044}
+    - name: divisionbleu_22
+      rect:
+        serializedVersion: 2
+        x: 4140
+        y: 44
+        width: 440
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -17.63147, y: 11.9044}
+        - {x: -26.63147, y: 0.9043999}
+        - {x: -26.63147, y: -18.0956}
+        - {x: -25.63147, y: -21.0956}
+        - {x: 6.3685303, y: -21.0956}
+        - {x: 9.36853, y: -14.0956}
+        - {x: 9.36853, y: 2.9043999}
+        - {x: 1.3685303, y: 11.9044}
+    - name: divisionbleu_23
+      rect:
+        serializedVersion: 2
+        x: 4600
+        y: 44
+        width: 440
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -9.812744, y: 12.9044}
+        - {x: -22.812744, y: 7.9044}
+        - {x: -22.812744, y: -20.0956}
+        - {x: -19.812744, y: -21.0956}
+        - {x: 11.187256, y: -21.0956}
+        - {x: 13.187256, y: -15.0956}
+        - {x: 13.187256, y: 3.9043999}
+        - {x: 7.187256, y: 12.9044}
+    - name: divisionbleu_24
+      rect:
+        serializedVersion: 2
+        x: 5060
+        y: 44
+        width: 440
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 5.0059814, y: 15.9044}
+        - {x: -2.9940186, y: 15.9044}
+        - {x: -8.994019, y: 14.9044}
+        - {x: -16.994019, y: 5.9044}
+        - {x: -20.994019, y: -3.0956001}
+        - {x: -20.994019, y: -15.0956}
+        - {x: -13.994019, y: -19.0956}
+        - {x: 5.0059814, y: -19.0956}
+        - {x: 15.005981, y: -13.0956}
+        - {x: 15.005981, y: 4.9044}
+    - name: divisionbleu_25
+      rect:
+        serializedVersion: 2
+        x: 5520
+        y: 44
+        width: 440
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 10.824707, y: 18.9044}
+        - {x: -6.175293, y: 18.9044}
+        - {x: -18.175293, y: 14.9044}
+        - {x: -18.175293, y: -11.0956}
+        - {x: -16.175293, y: -15.0956}
+        - {x: -10.175293, y: -16.0956}
+        - {x: 10.824707, y: -16.0956}
+        - {x: 17.824707, y: -11.0956}
+        - {x: 17.824707, y: 4.9044}
+        - {x: 16.824707, y: 11.9044}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -23,7 +23,7 @@ public class CameraBehavior : MonoBehaviour {
         }
         float PlayerPosy = player.transform.position.y;
         float CamPosy = this.transform.position.y;
-        if (Mathf.Abs(PlayerPosy - CamPosy) > 0.5f)
+        if (Mathf.Abs(PlayerPosy - CamPosy) > 2.0f)
         {
             pos = Mathf.SmoothDamp(CamPosy, PlayerPosy, ref speed, 2f);
             transform.Translate(new Vector3(0.0f, pos - CamPosy, 0.0f));
