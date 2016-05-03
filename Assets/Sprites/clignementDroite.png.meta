@@ -1,0 +1,319 @@
+fileFormatVersion: 2
+guid: d2b740d58d19c5449a62ac8a3c86b0fc
+timeCreated: 1461936193
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: clignementDroite_0
+    21300002: clignementDroite_1
+    21300004: clignementDroite_2
+    21300006: clignementDroite_3
+    21300008: clignementDroite_4
+    21300010: clignementDroite_5
+    21300012: clignementDroite_6
+    21300014: clignementDroite_7
+    21300016: clignementDroite_8
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: clignementDroite_0
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 1265
+        width: 1088
+        height: 924
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 137, y: -82.75}
+        - {x: 116, y: -41.75}
+        - {x: 91, y: 76.25}
+        - {x: 69, y: 114.25}
+        - {x: 54, y: 116.25}
+        - {x: 1, y: 116.25}
+        - {x: -25, y: 103.25}
+        - {x: -55, y: 66.25}
+        - {x: -68, y: 22.25}
+        - {x: -95, y: -6.75}
+        - {x: -134, y: -82.75}
+        - {x: -136, y: -92.75}
+        - {x: -136, y: -110.75}
+        - {x: -132, y: -113.75}
+        - {x: -126, y: -115.75}
+        - {x: 125, y: -115.75}
+        - {x: 137, y: -108.75}
+    - name: clignementDroite_1
+      rect:
+        serializedVersion: 2
+        x: 1278
+        y: 1265
+        width: 1088
+        height: 924
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 132, y: -68.75}
+        - {x: 115, y: -37.75}
+        - {x: 102, y: 37.25}
+        - {x: 85, y: 90.25}
+        - {x: 69, y: 108.25}
+        - {x: 52, y: 116.25}
+        - {x: 2, y: 116.25}
+        - {x: -30, y: 96.25}
+        - {x: -51, y: 71.25}
+        - {x: -91, y: -2.75}
+        - {x: -103, y: -24.75}
+        - {x: -136, y: -85.75}
+        - {x: -136, y: -110.75}
+        - {x: -133, y: -115.75}
+        - {x: 124, y: -115.75}
+        - {x: 131, y: -111.75}
+        - {x: 137, y: -107.75}
+        - {x: 137, y: -84.75}
+    - name: clignementDroite_2
+      rect:
+        serializedVersion: 2
+        x: 2462
+        y: 1265
+        width: 1088
+        height: 924
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 137, y: -82.75}
+        - {x: 116, y: -41.75}
+        - {x: 91, y: 76.25}
+        - {x: 69, y: 114.25}
+        - {x: 54, y: 116.25}
+        - {x: 1, y: 116.25}
+        - {x: -25, y: 103.25}
+        - {x: -55, y: 66.25}
+        - {x: -68, y: 22.25}
+        - {x: -95, y: -6.75}
+        - {x: -134, y: -82.75}
+        - {x: -136, y: -92.75}
+        - {x: -136, y: -110.75}
+        - {x: -132, y: -113.75}
+        - {x: -126, y: -115.75}
+        - {x: 125, y: -115.75}
+        - {x: 137, y: -108.75}
+    - name: clignementDroite_3
+      rect:
+        serializedVersion: 2
+        x: 3642
+        y: 1265
+        width: 1088
+        height: 924
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 132, y: -68.75}
+        - {x: 115, y: -37.75}
+        - {x: 102, y: 37.25}
+        - {x: 85, y: 90.25}
+        - {x: 69, y: 108.25}
+        - {x: 52, y: 116.25}
+        - {x: 2, y: 116.25}
+        - {x: -30, y: 96.25}
+        - {x: -51, y: 71.25}
+        - {x: -91, y: -2.75}
+        - {x: -103, y: -24.75}
+        - {x: -136, y: -85.75}
+        - {x: -136, y: -110.75}
+        - {x: -133, y: -115.75}
+        - {x: 124, y: -115.75}
+        - {x: 131, y: -111.75}
+        - {x: 137, y: -107.75}
+        - {x: 137, y: -84.75}
+    - name: clignementDroite_4
+      rect:
+        serializedVersion: 2
+        x: 4826
+        y: 1265
+        width: 1088
+        height: 924
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 137, y: -82.75}
+        - {x: 116, y: -41.75}
+        - {x: 91, y: 76.25}
+        - {x: 69, y: 114.25}
+        - {x: 54, y: 116.25}
+        - {x: 1, y: 116.25}
+        - {x: -25, y: 103.25}
+        - {x: -55, y: 66.25}
+        - {x: -68, y: 22.25}
+        - {x: -95, y: -6.75}
+        - {x: -134, y: -82.75}
+        - {x: -136, y: -92.75}
+        - {x: -136, y: -110.75}
+        - {x: -132, y: -113.75}
+        - {x: -126, y: -115.75}
+        - {x: 125, y: -115.75}
+        - {x: 137, y: -108.75}
+    - name: clignementDroite_5
+      rect:
+        serializedVersion: 2
+        x: 6006
+        y: 1265
+        width: 1088
+        height: 924
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 132, y: -68.75}
+        - {x: 115, y: -37.75}
+        - {x: 102, y: 37.25}
+        - {x: 85, y: 90.25}
+        - {x: 69, y: 108.25}
+        - {x: 52, y: 116.25}
+        - {x: 2, y: 116.25}
+        - {x: -30, y: 96.25}
+        - {x: -51, y: 71.25}
+        - {x: -91, y: -2.75}
+        - {x: -103, y: -24.75}
+        - {x: -136, y: -85.75}
+        - {x: -136, y: -110.75}
+        - {x: -133, y: -115.75}
+        - {x: 124, y: -115.75}
+        - {x: 131, y: -111.75}
+        - {x: 137, y: -107.75}
+        - {x: 137, y: -84.75}
+    - name: clignementDroite_6
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 242
+        width: 1088
+        height: 927
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 121, y: -55}
+        - {x: 93, y: 64}
+        - {x: 81, y: 97}
+        - {x: 56, y: 117}
+        - {x: 10, y: 117}
+        - {x: -13, y: 110}
+        - {x: -53, y: 73}
+        - {x: -71, y: 25}
+        - {x: -106, y: -22}
+        - {x: -109, y: -48}
+        - {x: -136, y: -91}
+        - {x: -136, y: -111}
+        - {x: -131, y: -116}
+        - {x: 129, y: -116}
+        - {x: 137, y: -107}
+        - {x: 137, y: -89}
+        - {x: 135, y: -80}
+    - name: clignementDroite_7
+      rect:
+        serializedVersion: 2
+        x: 1278
+        y: 242
+        width: 1088
+        height: 927
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 96, y: 59}
+        - {x: 80, y: 99}
+        - {x: 54, y: 117}
+        - {x: 5, y: 117}
+        - {x: -27, y: 108}
+        - {x: -48, y: 78}
+        - {x: -70, y: 23}
+        - {x: -96, y: -9}
+        - {x: -136, y: -93}
+        - {x: -136, y: -110}
+        - {x: -127, y: -116}
+        - {x: 127, y: -116}
+        - {x: 137, y: -111}
+        - {x: 137, y: -77}
+        - {x: 117, y: -41}
+    - name: clignementDroite_8
+      rect:
+        serializedVersion: 2
+        x: 2462
+        y: 242
+        width: 1088
+        height: 927
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 121, y: -55}
+        - {x: 93, y: 64}
+        - {x: 81, y: 97}
+        - {x: 56, y: 117}
+        - {x: 10, y: 117}
+        - {x: -13, y: 110}
+        - {x: -53, y: 73}
+        - {x: -71, y: 25}
+        - {x: -106, y: -22}
+        - {x: -109, y: -48}
+        - {x: -136, y: -91}
+        - {x: -136, y: -111}
+        - {x: -131, y: -116}
+        - {x: 129, y: -116}
+        - {x: 137, y: -107}
+        - {x: 137, y: -89}
+        - {x: 135, y: -80}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
