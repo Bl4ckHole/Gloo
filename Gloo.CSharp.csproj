@@ -64,7 +64,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\CameraBehavior.cs" />
+    <Compile Include="Assets\Scripts\GlooGenericObject.cs" />
     <Compile Include="Assets\Scripts\LeverScript.cs" />
+    <Compile Include="Assets\Scripts\PressurePlateScript.cs" />
+    <Compile Include="Assets\Scripts\TriggerClass.cs" />
+    <Compile Include="Assets\Scripts\UIMainMenu.cs" />
     <Compile Include="Assets\Scripts\divScript.cs" />
     <Compile Include="Assets\Scripts\glooScript.cs" />
     <Compile Include="Assets\Scripts\utils.cs" />
