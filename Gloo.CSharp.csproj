@@ -63,12 +63,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\CameraBehavior.cs" />
+    <Compile Include="Assets\Scripts\LeverScript.cs" />
     <Compile Include="Assets\Scripts\divScript.cs" />
     <Compile Include="Assets\Scripts\glooScript.cs" />
     <Compile Include="Assets\Scripts\utils.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Backgrounds\gg.txt" />
+    <None Include="Assets\Conventions a respecter.txt" />
     <None Include="Assets\Menus\gg.txt" />
     <None Include="Assets\Sounds\gg.txt" />
   </ItemGroup>
