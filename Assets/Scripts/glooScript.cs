@@ -107,7 +107,7 @@ public class glooScript : MonoBehaviour, GlooGenericObject {
     void OnCollisionStay2D(Collision2D coll) {
         foreach(ContactPoint2D contact in coll.contacts)
         {
-            if(Math.Abs(contact.normal[0]) < 0.1 && contact.normal[1] > 0)
+			if(contact.normal[1] > 0.7)
             {
                 data.inJump = false;
                 break;
