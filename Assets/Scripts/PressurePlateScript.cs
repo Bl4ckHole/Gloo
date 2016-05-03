@@ -4,7 +4,7 @@ using System.Collections;
 public class PressurePlateScript : TriggerClass {
 
 	// Use this for initialization
-	void Start () 
+	override public void Start () 
 	{
 		base.Start ();
 	}
