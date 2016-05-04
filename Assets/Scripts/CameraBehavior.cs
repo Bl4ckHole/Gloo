@@ -16,19 +16,22 @@ public class CameraBehavior : MonoBehaviour {
         player = GameObject.Find("Gloo");
         float PlayerPosx = player.transform.position.x;
         float CamPosx = this.transform.position.x;
-        float pos;
-        if (Mathf.Abs(PlayerPosx-CamPosx)>0.5f) {
-            pos = Mathf.SmoothDamp(CamPosx, PlayerPosx, ref speed, 2f);
-            transform.Translate(new Vector3(pos-CamPosx, 0.0f,0.0f));
+        float posx=0.0f;
+        float posy=0.0f;
+        if (Mathf.Abs(PlayerPosx-CamPosx)>2.0f) {
+            posx = Mathf.SmoothDamp(CamPosx, PlayerPosx, ref speed, 2f);
+        } else {
+            posx = CamPosx;
         }
         float PlayerPosy = player.transform.position.y;
         float CamPosy = this.transform.position.y;
         if (Mathf.Abs(PlayerPosy - CamPosy) > 2.0f)
         {
-            pos = Mathf.SmoothDamp(CamPosy, PlayerPosy, ref speed, 2f);
-            transform.Translate(new Vector3(0.0f, pos - CamPosy, 0.0f));
+            posy = Mathf.SmoothDamp(CamPosy, PlayerPosy, ref speed, 2f);
+        }else {
+            posy = CamPosy;
         }
-
+        transform.Translate(new Vector3(posx - CamPosx, posy - CamPosy, 0.0f));
 
 
     }
