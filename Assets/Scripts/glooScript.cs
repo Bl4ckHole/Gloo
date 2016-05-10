@@ -8,23 +8,26 @@ public class glooScript : MonoBehaviour, GlooGenericObject {
 
     private Animator animator;
     private Rigidbody2D rbody;
-    private BoxCollider2D boxcoll;
+    public BoxCollider2D boxcoll;
+    public BoxCollider2D divcoll;
     private float speed = 3.0f;
     private float jumpForce = 7.0f;
     private int hashLeft = Animator.StringToHash("run_left");
     private int hashRight = Animator.StringToHash("run_right");
     private int hashJumpL = Animator.StringToHash("jump_left");
     private int hashJumpR = Animator.StringToHash("jump_right");
-	private int hashDiv = Animator.StringToHash("glooCreationDivisionLeft");
+    private int hashIdleLeft = Animator.StringToHash("stand_left");
+    private int hashIdleRight = Animator.StringToHash("stand_right");
     /*bool inJump = false;
     public bool recording = false;*/
-    private int facing = 1;
+    public int facing = 1;
 
     private class glooData {
 
         public bool inJump = false;
         public bool recording = false;
         public Vector3 position;
+        public string createFace;
 
         public glooData() {
 
@@ -34,12 +37,12 @@ public class glooScript : MonoBehaviour, GlooGenericObject {
             inJump = model.inJump;
             recording = model.recording;
             position = model.position;
+            createFace = model.createFace;
         }        
     }
     private glooData data = new glooData();
 
     public GameObject div;
-    private BoxCollider2D divcoll;
 
     // Use this for initialization
     void Start() {
@@ -53,10 +56,17 @@ public class glooScript : MonoBehaviour, GlooGenericObject {
 	void Update () {
         
         if (!data.recording) {
-            if (Input.GetKeyDown(GlooConstants.keyDivide)) {
+            int currentHash = animator.GetCurrentAnimatorStateInfo(0).shortNameHash;
+            if (Input.GetKeyDown(GlooConstants.keyDivide) && (currentHash == hashIdleLeft || currentHash == hashIdleRight)) {
                 data.recording = true;
-                int facing_int = facing == 1 ? -1 : 1;
-                GameObject div_instance = (GameObject) Instantiate(div, transform.position + new Vector3(boxcoll.size.x / 2.0f + divcoll.size.x, 0, 0)*facing_int, new Quaternion());
+                animator.SetBool("DoCreate", true);
+                /*int facing_int = facing == 1 ? -1 : 1;
+                Instantiate(div, transform.position + new Vector3(boxcoll.size.x / 2.0f + divcoll.size.x, 0, 0)*facing_int, new Quaternion());*/
+                if (facing == 1) {
+                    animator.SetTrigger("CreateLeft");
+                }else {
+                    animator.SetTrigger("CreateRight");
+                }
             }
             bool right = Input.GetKey(GlooConstants.keyRight);
             bool left = Input.GetKey(GlooConstants.keyLeft);
@@ -118,11 +128,14 @@ public class glooScript : MonoBehaviour, GlooGenericObject {
         glooData toSave = new glooData(data);
         toSave.recording = false;
         toSave.position = transform.position;
+        toSave.createFace = facing == 1 ? "CreateLeft" : "CreateRight";
         return toSave;
     }
 
     public void setData(object savedData) {
         data = (glooData) savedData;
         transform.position = data.position;
+        animator.SetBool("DoCreate", false);
+        animator.SetTrigger(data.createFace);
     }
 }
