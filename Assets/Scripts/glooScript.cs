@@ -15,6 +15,7 @@ public class glooScript : MonoBehaviour, GlooGenericObject {
     private int hashRight = Animator.StringToHash("run_right");
     private int hashJumpL = Animator.StringToHash("jump_left");
     private int hashJumpR = Animator.StringToHash("jump_right");
+	private int hashDiv = Animator.StringToHash("glooCreationDivisionLeft");
     /*bool inJump = false;
     public bool recording = false;*/
     private int facing = 1;
