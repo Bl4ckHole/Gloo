@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 using Utils;
 
 public class divScript : MonoBehaviour {
@@ -12,10 +13,9 @@ public class divScript : MonoBehaviour {
     bool inJump = false;
     bool recording = true;
     private Vector3 oldPos;
+    private Dictionary<string,object> savedData;
 
-    public GameObject parent;
     public Sprite div;
-    public object parentData;
 
     // Use this for initialization
     void Start() {
@@ -23,6 +23,14 @@ public class divScript : MonoBehaviour {
         rbody = GetComponent<Rigidbody2D>();
         record = new Queue();
         recordBuffer = new ArrayList();
+        savedData = new Dictionary<string, object>();
+        GameObject[] allObjects = FindObjectsOfType<GameObject>();
+        foreach(GameObject obj in allObjects) {
+            if(obj.GetComponent<MonoBehaviour>() is GlooGenericObject) {
+                GlooGenericObject objScript = obj.GetComponent<MonoBehaviour>() as GlooGenericObject;
+                savedData.Add(obj.name, objScript.getData());
+            }
+        }        
     }
 
     // Update is called once per frame
@@ -31,9 +39,12 @@ public class divScript : MonoBehaviour {
             if (Input.GetKeyDown(GlooConstants.keyDivide)) {
                 recording = false;
                 transform.position = oldPos;
-                parent.GetComponent<glooScript>().setData(parentData);
                 SpriteRenderer mySprite = gameObject.GetComponent<SpriteRenderer>();
                 mySprite.sprite = div;
+                foreach(KeyValuePair<string,object> kvp in savedData) {
+                    GlooGenericObject objScript = GameObject.Find(kvp.Key).GetComponent<MonoBehaviour>() as GlooGenericObject;
+                    objScript.setData(kvp.Value);
+                }
             }
         }        
     }

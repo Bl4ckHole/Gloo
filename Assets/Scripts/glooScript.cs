@@ -15,6 +15,7 @@ public class glooScript : MonoBehaviour, GlooGenericObject {
     private int hashRight = Animator.StringToHash("run_right");
     private int hashJumpL = Animator.StringToHash("jump_left");
     private int hashJumpR = Animator.StringToHash("jump_right");
+	private int hashDiv = Animator.StringToHash("glooCreationDivisionLeft");
     /*bool inJump = false;
     public bool recording = false;*/
     private int facing = 1;
@@ -56,8 +57,6 @@ public class glooScript : MonoBehaviour, GlooGenericObject {
                 data.recording = true;
                 int facing_int = facing == 1 ? -1 : 1;
                 GameObject div_instance = (GameObject) Instantiate(div, transform.position + new Vector3(boxcoll.size.x / 2.0f + divcoll.size.x, 0, 0)*facing_int, new Quaternion());
-                div_instance.GetComponent<divScript>().parent = gameObject;
-                div_instance.GetComponent<divScript>().parentData = getData();
             }
             bool right = Input.GetKey(GlooConstants.keyRight);
             bool left = Input.GetKey(GlooConstants.keyLeft);
