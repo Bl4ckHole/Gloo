@@ -2,8 +2,9 @@
 using System.Collections;
 using Utils;
 using System;
+using UnityEngine.SceneManagement;
 
-public class glooScript : MonoBehaviour {
+public class glooScript : MonoBehaviour, GlooGenericObject {
 
     private Animator animator;
     private Rigidbody2D rbody;
@@ -14,9 +15,27 @@ public class glooScript : MonoBehaviour {
     private int hashRight = Animator.StringToHash("run_right");
     private int hashJumpL = Animator.StringToHash("jump_left");
     private int hashJumpR = Animator.StringToHash("jump_right");
-    bool inJump = false;
-    public bool recording = false;
+    /*bool inJump = false;
+    public bool recording = false;*/
     private int facing = 1;
+
+    private class glooData {
+
+        public bool inJump = false;
+        public bool recording = false;
+        public Vector3 position;
+
+        public glooData() {
+
+        }
+
+        public glooData(glooData model) {
+            inJump = model.inJump;
+            recording = model.recording;
+            position = model.position;
+        }        
+    }
+    private glooData data = new glooData();
 
     public GameObject div;
     private BoxCollider2D divcoll;
@@ -32,12 +51,13 @@ public class glooScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         
-        if (!recording) {
+        if (!data.recording) {
             if (Input.GetKeyDown(GlooConstants.keyDivide)) {
-                recording = true;
+                data.recording = true;
                 int facing_int = facing == 1 ? -1 : 1;
                 GameObject div_instance = (GameObject) Instantiate(div, transform.position + new Vector3(boxcoll.size.x / 2.0f + divcoll.size.x, 0, 0)*facing_int, new Quaternion());
                 div_instance.GetComponent<divScript>().parent = gameObject;
+                div_instance.GetComponent<divScript>().parentData = getData();
             }
             bool right = Input.GetKey(GlooConstants.keyRight);
             bool left = Input.GetKey(GlooConstants.keyLeft);
@@ -48,7 +68,7 @@ public class glooScript : MonoBehaviour {
             }
             animator.SetBool("GoLeft", left);
             animator.SetBool("GoRight", right && !left);
-            animator.SetBool("Jump", inJump);
+            animator.SetBool("Jump", data.inJump);
 			if (Input.GetKeyDown (GlooConstants.keyActivate)) 
 			{
 				Collider2D[] nearbyObjects = Physics2D.OverlapCircleAll(this.transform.position, boxcoll.size.x/2);
@@ -60,6 +80,9 @@ public class glooScript : MonoBehaviour {
 					}
 				}
 			}
+
+            if (Input.GetKeyDown(GlooConstants.keyTest)) {
+            }
         }        
     }
 
@@ -72,23 +95,35 @@ public class glooScript : MonoBehaviour {
         if (currentHash == hashRight || (currentHash == hashJumpR && Input.GetKey(GlooConstants.keyRight))) {
             move += new Vector2(1, 0);
         }
-        if (Input.GetKey(GlooConstants.keyJump) && !inJump && !recording) {
+        if (Input.GetKey(GlooConstants.keyJump) && !data.inJump && !data.recording) {
             rbody.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
-            inJump = true;
+            data.inJump = true;
         }
         move *= speed;
         float vy = rbody.velocity.y;
-        rbody.velocity = move + new Vector2((inJump && move.x == 0) ? rbody.velocity.x : 0, vy);
+        rbody.velocity = move + new Vector2((data.inJump && move.x == 0) ? rbody.velocity.x : 0, vy);
     }
 
     void OnCollisionStay2D(Collision2D coll) {
         foreach(ContactPoint2D contact in coll.contacts)
         {
-            if(Math.Abs(contact.normal[0]) < 0.1 && contact.normal[1] > 0)
+			if(contact.normal[1] > 0.7)
             {
-                inJump = false;
+                data.inJump = false;
                 break;
             }
         }
+    }
+
+    public object getData() {
+        glooData toSave = new glooData(data);
+        toSave.recording = false;
+        toSave.position = transform.position;
+        return toSave;
+    }
+
+    public void setData(object savedData) {
+        data = (glooData) savedData;
+        transform.position = data.position;
     }
 }

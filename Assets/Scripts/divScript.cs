@@ -15,6 +15,7 @@ public class divScript : MonoBehaviour {
 
     public GameObject parent;
     public Sprite div;
+    public object parentData;
 
     // Use this for initialization
     void Start() {
@@ -30,7 +31,7 @@ public class divScript : MonoBehaviour {
             if (Input.GetKeyDown(GlooConstants.keyDivide)) {
                 recording = false;
                 transform.position = oldPos;
-                parent.GetComponent<glooScript>().recording = false;
+                parent.GetComponent<glooScript>().setData(parentData);
                 SpriteRenderer mySprite = gameObject.GetComponent<SpriteRenderer>();
                 mySprite.sprite = div;
             }

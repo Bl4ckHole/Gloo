@@ -8,7 +8,7 @@ public abstract class TriggerClass : MonoBehaviour
 	private Animator animator;
 
 	// Use this for initialization
-	public void Start () 
+	virtual public void Start () 
 	{
 		animator = GetComponent<Animator>();
 	}
