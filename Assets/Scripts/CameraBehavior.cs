@@ -4,7 +4,7 @@ using System.Collections;
 public class CameraBehavior : MonoBehaviour {
 
     public GameObject player;
-    float speed =0.0f;
+    float speed =5.0f;
 
 	// Use this for initialization
 	void Start () {

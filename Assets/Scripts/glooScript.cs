@@ -14,6 +14,8 @@ public class glooScript : MonoBehaviour, GlooGenericObject {
     private float jumpForce = 7.0f;
     private int hashLeft = Animator.StringToHash("run_left");
     private int hashRight = Animator.StringToHash("run_right");
+    private int hashJumpToR = Animator.StringToHash("JumpToStandR");
+    private int hashJumpToL = Animator.StringToHash("JumpToStandL");
     private int hashJumpL = Animator.StringToHash("jump_left");
     private int hashJumpR = Animator.StringToHash("jump_right");
     private int hashIdleLeft = Animator.StringToHash("stand_left");
@@ -98,12 +100,23 @@ public class glooScript : MonoBehaviour, GlooGenericObject {
     void FixedUpdate() {
         Vector2 move = new Vector2(0, 0);
         int currentHash = animator.GetCurrentAnimatorStateInfo(0).shortNameHash;
-        if (currentHash == hashLeft || (currentHash == hashJumpL && Input.GetKey(GlooConstants.keyLeft))) {
+        if (currentHash == hashLeft || (currentHash== hashJumpToL && Input.GetKey(GlooConstants.keyLeft)) || (currentHash == hashJumpL && Input.GetKey(GlooConstants.keyLeft))) {
             move += new Vector2(-1, 0);
         }
-        if (currentHash == hashRight || (currentHash == hashJumpR && Input.GetKey(GlooConstants.keyRight))) {
+      
+        if (currentHash == hashRight || (currentHash == hashJumpToR && Input.GetKey(GlooConstants.keyRight)) || (currentHash == hashJumpR && Input.GetKey(GlooConstants.keyRight))) {
             move += new Vector2(1, 0);
         }
+
+        if (currentHash == hashJumpL && Input.GetKey(GlooConstants.keyRight))
+        {
+            move += new Vector2(0.5f, 0);
+        }
+        if (currentHash == hashJumpR && Input.GetKey(GlooConstants.keyLeft))
+        {
+            move += new Vector2(-0.5f, 0);
+        }
+
         if (Input.GetKey(GlooConstants.keyJump) && !data.inJump && !data.recording) {
             rbody.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
             data.inJump = true;
