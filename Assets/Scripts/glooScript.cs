@@ -82,7 +82,7 @@ public class glooScript : MonoBehaviour, GlooGenericObject {
             animator.SetBool("Jump", data.inJump);
 			if (Input.GetKeyDown (GlooConstants.keyActivate)) 
 			{
-				Collider2D[] nearbyObjects = Physics2D.OverlapCircleAll(this.transform.position, boxcoll.size.x/2);
+				Collider2D[] nearbyObjects = Physics2D.OverlapCircleAll(this.transform.position, boxcoll.size.x/2 * this.transform.localScale.x);
 				foreach (Collider2D objColl in nearbyObjects) 
 				{
 					if (objColl.gameObject.tag == "ManualTrigger") 
