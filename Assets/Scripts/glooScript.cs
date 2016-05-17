@@ -107,10 +107,10 @@ public class glooScript : MonoBehaviour, GlooGenericObject {
 
         for(int i = 0; i < 10; i++)
         {
-            RaycastHit2D hit = Physics2D.Raycast(transform.position + 0.1f * boxcoll.size.x * ((-4.5f + i) / 4.5f) * transform.right, -transform.up, boxcoll.size.y);
+            RaycastHit2D hit = Physics2D.Raycast(transform.position + 0.08f * boxcoll.size.x * ((-4.5f + i) / 4.5f) * transform.right, -transform.up, 0.4f * boxcoll.size.y);
             if (hit.collider != null)
             {
-                Debug.DrawLine(transform.position + 0.1f * boxcoll.size.x * ((-4.5f + i)/4.5f) * transform.right, hit.point, Color.green);
+                Debug.DrawLine(transform.position + 0.08f * boxcoll.size.x * ((-4.5f + i)/4.5f) * transform.right, hit.point, Color.green);
                 Debug.DrawLine(hit.point, hit.point + 0.3f * hit.normal.normalized, Color.red);
                 globalNormal += hit.normal;
                 numPoints += 1;
@@ -126,9 +126,9 @@ public class glooScript : MonoBehaviour, GlooGenericObject {
             float angle = Vector2.Angle(transform.position + transform.up, new Vector2(transform.position.x, transform.position.y) + globalNormal);
            
             if (globalNormal.x < transform.up.x)
-                transform.Rotate(new Vector3(0.0f, 0.0f, Math.Min(angle, 2)));
+                transform.Rotate(new Vector3(0.0f, 0.0f, Math.Min(angle, 20)));
             else
-                transform.Rotate(new Vector3(0.0f, 0.0f, Math.Max(-angle, -2)));
+                transform.Rotate(new Vector3(0.0f, 0.0f, Math.Max(-angle, -20)));
             
         }
         else
