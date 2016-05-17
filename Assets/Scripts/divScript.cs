@@ -78,8 +78,17 @@ public class divScript : MonoBehaviour {
     }
 
     void OnCollisionStay2D(Collision2D coll) {
-        if (coll.relativeVelocity.y < 0.16) {
-            inJump = false;
+
+        if (!inJump)
+            return;
+
+        foreach (ContactPoint2D contact in coll.contacts)
+        {
+            if (contact.normal[1] > 0.7)
+            {
+                inJump = false;
+                break;
+            }
         }
     }
 
