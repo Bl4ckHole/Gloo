@@ -1,0 +1,318 @@
+fileFormatVersion: 2
+guid: 6bc556d520175b942a1d144c89273a57
+timeCreated: 1463489896
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: cristaux_0
+    21300002: cristaux_1
+    21300004: cristaux_2
+    21300006: cristaux_3
+    21300008: cristaux_4
+    21300010: cristaux_5
+    21300012: cristaux_6
+    21300014: cristaux_7
+    21300016: cristaux_8
+    21300018: cristaux_9
+    21300020: cristaux_10
+    21300022: cristaux_11
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: cristaux_1
+      rect:
+        serializedVersion: 2
+        x: 1191
+        y: 2247
+        width: 1191
+        height: 1123
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 234, y: 130.96472}
+        - {x: 149, y: 130.96472}
+        - {x: 147, y: 128.96472}
+        - {x: 147, y: -187.03528}
+        - {x: 40, y: -187.03528}
+        - {x: 40, y: 128.96472}
+        - {x: 38, y: 130.96472}
+        - {x: -189, y: 130.96472}
+        - {x: -190, y: 131.96472}
+        - {x: -256, y: 131.96472}
+        - {x: -256, y: -240.03528}
+        - {x: 256, y: -240.03528}
+        - {x: 256, y: 131.96472}
+        - {x: 235, y: 131.96472}
+    - name: cristaux_2
+      rect:
+        serializedVersion: 2
+        x: 2382
+        y: 2247
+        width: 1191
+        height: 1123
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -1, y: 128.96472}
+        - {x: -3, y: 130.96472}
+        - {x: -207, y: 131.96472}
+        - {x: -256, y: 131.96472}
+        - {x: -256, y: -240.03528}
+        - {x: -2, y: -240.03528}
+        - {x: 0, y: -238.03528}
+        - {x: 0, y: -142.03528}
+        - {x: -1, y: -141.03528}
+    - name: cristaux_3
+      rect:
+        serializedVersion: 2
+        x: 3573
+        y: 2247
+        width: 1191
+        height: 1123
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 44, y: 130.96472}
+        - {x: -214, y: 130.96472}
+        - {x: -215, y: 131.96472}
+        - {x: -256, y: 131.96472}
+        - {x: -256, y: -240.03528}
+        - {x: 15, y: -240.03528}
+        - {x: 15, y: -241.03528}
+        - {x: 47, y: -241.03528}
+        - {x: 47, y: -196.03528}
+        - {x: 46, y: -195.03528}
+        - {x: 46, y: 128.96472}
+    - name: cristaux_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1124
+        width: 1191
+        height: 1123
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 184, y: -239.3027}
+        - {x: 184, y: -241.3027}
+        - {x: 256, y: -241.3027}
+        - {x: 256, y: 119.697296}
+        - {x: 219, y: 119.697296}
+        - {x: 218, y: 118.697296}
+        - {x: 217, y: 119.697296}
+        - {x: 176, y: 119.697296}
+        - {x: 174, y: 117.697296}
+        - {x: 174, y: -220.3027}
+        - {x: 28, y: -220.3027}
+        - {x: 28, y: 117.697296}
+        - {x: 26, y: 119.697296}
+        - {x: -256, y: 119.697296}
+        - {x: -256, y: -241.3027}
+        - {x: -127, y: -241.3027}
+        - {x: -126, y: -240.3027}
+        - {x: 26, y: -240.3027}
+        - {x: 27, y: -239.3027}
+    - name: cristaux_5
+      rect:
+        serializedVersion: 2
+        x: 1191
+        y: 1124
+        width: 1191
+        height: 1123
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 171, y: 117.697296}
+        - {x: 171, y: -215.3027}
+        - {x: 52, y: -215.3027}
+        - {x: 52, y: 117.697296}
+        - {x: 50, y: 119.697296}
+        - {x: -256, y: 119.697296}
+        - {x: -256, y: -241.3027}
+        - {x: 256, y: -241.3027}
+        - {x: 256, y: 119.697296}
+        - {x: 173, y: 119.697296}
+    - name: cristaux_6
+      rect:
+        serializedVersion: 2
+        x: 2382
+        y: 1124
+        width: 1191
+        height: 1123
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: -141.3027}
+        - {x: -1, y: -140.3027}
+        - {x: -1, y: 117.697296}
+        - {x: -3, y: 119.697296}
+        - {x: -256, y: 119.697296}
+        - {x: -256, y: -241.3027}
+        - {x: 0, y: -241.3027}
+        - {x: 0, y: -238.3027}
+        - {x: -1, y: -230.3027}
+        - {x: 0, y: -229.3027}
+    - name: cristaux_7
+      rect:
+        serializedVersion: 2
+        x: 3573
+        y: 1124
+        width: 1191
+        height: 1123
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 43, y: 129.6973}
+        - {x: 17, y: 129.6973}
+        - {x: 15, y: 127.697296}
+        - {x: 15, y: 119.697296}
+        - {x: -256, y: 119.697296}
+        - {x: -256, y: -241.3027}
+        - {x: 46, y: -241.3027}
+        - {x: 46, y: -207.3027}
+        - {x: 45, y: -206.3027}
+        - {x: 45, y: 127.697296}
+      - - {x: 15, y: 241.6973}
+        - {x: 15, y: 166.6973}
+        - {x: 17, y: 164.6973}
+        - {x: 44, y: 164.6973}
+        - {x: 46, y: 166.6973}
+        - {x: 47, y: 217.6973}
+        - {x: 47, y: 241.6973}
+    - name: cristaux_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1
+        width: 1191
+        height: 1123
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 184, y: 242.42989}
+        - {x: 184, y: -179.57011}
+        - {x: 30, y: -179.57011}
+        - {x: 30, y: 174.42989}
+        - {x: 28, y: 176.42989}
+        - {x: -127, y: 176.42989}
+        - {x: -127, y: 242.42989}
+        - {x: -256, y: 242.42989}
+        - {x: -256, y: -241.57011}
+        - {x: 256, y: -241.57011}
+        - {x: 256, y: 242.42989}
+    - name: cristaux_9
+      rect:
+        serializedVersion: 2
+        x: 1191
+        y: 1
+        width: 1191
+        height: 1123
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -256, y: 242.42989}
+        - {x: -256, y: -241.57011}
+        - {x: 256, y: -241.57011}
+        - {x: 256, y: 242.42989}
+    - name: cristaux_10
+      rect:
+        serializedVersion: 2
+        x: 2382
+        y: 1
+        width: 1191
+        height: 1123
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -3, y: 126.429886}
+        - {x: -181, y: 126.429886}
+        - {x: -181, y: 198.42989}
+        - {x: -3, y: 198.42989}
+        - {x: -1, y: 200.42989}
+        - {x: 0, y: 208.42989}
+        - {x: 0, y: 242.42989}
+        - {x: -256, y: 242.42989}
+        - {x: -256, y: -241.57011}
+        - {x: 0, y: -241.57011}
+        - {x: 0, y: -147.57011}
+        - {x: -1, y: -146.57011}
+        - {x: -1, y: 124.429886}
+    - name: cristaux_11
+      rect:
+        serializedVersion: 2
+        x: 3573
+        y: 1
+        width: 1191
+        height: 1123
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -186, y: 207.42989}
+        - {x: 44, y: 207.42989}
+        - {x: 46, y: 209.42989}
+        - {x: 46, y: 242.42989}
+        - {x: -256, y: 242.42989}
+        - {x: -256, y: -241.57011}
+        - {x: 46, y: -241.57011}
+        - {x: 46, y: 133.42989}
+        - {x: 44, y: 135.42989}
+        - {x: -186, y: 135.42989}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
