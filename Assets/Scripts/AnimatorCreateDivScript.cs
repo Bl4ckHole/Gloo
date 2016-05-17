@@ -20,7 +20,8 @@ public class AnimatorCreateDivScript : StateMachineBehaviour {
         if (!animator.GetBool("DoCreate"))
             return;
         int facing_int = facing == 1 ? -1 : 1;
-        Instantiate(animator.gameObject.GetComponent<glooScript>().div, animator.gameObject.transform.position + new Vector3(animator.gameObject.GetComponent<glooScript>().divcoll.size.x /2.0f+1.2f, 0, 0) * facing_int, new Quaternion());
+        Object divInst = Instantiate(animator.gameObject.GetComponent<glooScript>().div, animator.gameObject.transform.position + new Vector3(animator.gameObject.GetComponent<glooScript>().divcoll.size.x /2.0f+1.2f, 0, 0) * facing_int, new Quaternion());
+        divInst.name = "divInstance" +glooScript.divID++;
     }
 
 	// OnStateMove is called right after Animator.OnAnimatorMove(). Code that processes and affects root motion should be implemented here

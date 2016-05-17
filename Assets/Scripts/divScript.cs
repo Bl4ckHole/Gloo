@@ -2,8 +2,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using Utils;
+using System;
 
-public class divScript : MonoBehaviour {
+public class divScript : MonoBehaviour, GlooGenericObject {
 
     public Queue record;
     private ArrayList recordBuffer;
@@ -15,6 +16,23 @@ public class divScript : MonoBehaviour {
     private Vector3 oldPos;
     private Dictionary<string,object> savedData;
     private BoxCollider2D boxcoll;
+    public int wallJump = 0;
+
+    private class divData {
+        public bool inJump;
+        public bool recording;
+        public Queue record;
+        public Vector3 pos;
+        public Vector3 velocity;
+        
+        public divData(bool inJump, bool recording, Queue record, Vector3 pos, Vector3 velocity) {
+            this.inJump = inJump;
+            this.record = record;
+            this.pos = pos;
+            this.velocity = velocity;
+            this.recording = recording;
+        }
+    }
 
     public Sprite div;
 
@@ -33,7 +51,9 @@ public class divScript : MonoBehaviour {
                 GlooGenericObject objScript = obj.GetComponent<MonoBehaviour>() as GlooGenericObject;
                 savedData.Add(obj.name, objScript.getData());
             }
-        }        
+        }
+        GameObject cam = GameObject.Find("Main Camera");
+        cam.GetComponent<CameraBehavior>().currenttarget = gameObject.name;       
     }
 
     // Update is called once per frame
@@ -45,9 +65,14 @@ public class divScript : MonoBehaviour {
                 SpriteRenderer mySprite = gameObject.GetComponent<SpriteRenderer>();
                 mySprite.sprite = div;
                 foreach(KeyValuePair<string,object> kvp in savedData) {
-                    GlooGenericObject objScript = GameObject.Find(kvp.Key).GetComponent<MonoBehaviour>() as GlooGenericObject;
+                    GameObject obj = GameObject.Find(kvp.Key);
+                    if (obj == null)
+                        continue;
+                    GlooGenericObject objScript = obj.GetComponent<MonoBehaviour>() as GlooGenericObject;
                     objScript.setData(kvp.Value);
                 }
+                GameObject cam = GameObject.Find("Main Camera");
+                cam.GetComponent<CameraBehavior>().currenttarget = "Gloo";
             }
         }        
     }
@@ -85,8 +110,11 @@ public class divScript : MonoBehaviour {
         if (right) {
             move += new Vector2(1, 0);
         }
-        if (jump && !inJump) {
-            rbody.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
+        if (jump && !inJump) {            
+            rbody.AddForce(new Vector2((jumpForce/1.0f)*wallJump, jumpForce), ForceMode2D.Impulse);
+            if (wallJump != 0) {
+                wallJump = 0;
+            }
             inJump = true;
         }
         move *= speed;
@@ -113,6 +141,12 @@ public class divScript : MonoBehaviour {
             if (contact.normal[1] > 0.7)
             {
                 inJump = false;
+                wallJump = 0;
+                break;
+            }
+            if(Math.Abs(contact.normal[1]) < 0.3) {
+                inJump = false;
+                wallJump = contact.normal[1] >= 0 ? -1 : 1;
                 break;
             }
         }
@@ -133,5 +167,19 @@ public class divScript : MonoBehaviour {
             }
         }
         record.Enqueue((ArrayList)recordBuffer.Clone());
+    }
+
+    public object getData() {
+        return new divData(inJump,recording,new Queue(record), transform.position, rbody.velocity);
+    }
+
+    public void setData(object savedData) {
+        divData data = savedData as divData;
+        if (data.recording)
+            return;
+        inJump = data.inJump;
+        record = data.record;
+        transform.position = data.pos;
+        rbody.velocity = data.velocity;
     }
 }

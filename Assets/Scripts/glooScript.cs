@@ -47,6 +47,7 @@ public class glooScript : MonoBehaviour, GlooGenericObject {
     private glooData data = new glooData();
 
     public GameObject div;
+    public static int divID = 0;
 
     // Use this for initialization
     void Start() {
