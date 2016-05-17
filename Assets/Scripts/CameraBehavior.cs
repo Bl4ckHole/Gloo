@@ -1,38 +1,60 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class CameraBehavior : MonoBehaviour {
 
-    public GameObject player;
-    float speed =5.0f;
+public class CameraBehavior : MonoBehaviour
+{
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-        player = GameObject.Find("Gloo");
-        float PlayerPosx = player.transform.position.x;
-        float CamPosx = this.transform.position.x;
-        float posx=0.0f;
-        float posy=0.0f;
-        if (Mathf.Abs(PlayerPosx-CamPosx)>2.0f) {
-            posx = Mathf.SmoothDamp(CamPosx, PlayerPosx, ref speed, 2f);
-        } else {
-            posx = CamPosx;
+    private float interpVelocity;
+    private float distanceMin;
+    public GameObject target;
+    public string currenttarget;
+    Vector3 targetPos;
+    // Use this for initialization
+    void Start()
+    {
+        targetPos = transform.position;
+        currenttarget = "Gloo";
+        distanceMin = 1.0f;
+    }
+
+    // Update is called once per frame
+    void FixedUpdate()
+    {
+        target = GameObject.Find(currenttarget);
+        Vector3 posNoZ = transform.position;
+        posNoZ.z = target.transform.position.z;
+
+        Vector3 targetDirection = (target.transform.position - posNoZ);
+
+        interpVelocity = targetDirection.magnitude * 5f;
+
+        targetPos = transform.position + (targetDirection.normalized * interpVelocity * Time.deltaTime);
+
+        Vector3 resultat = Vector3.Lerp(transform.position, targetPos, 0.25f);
+
+        Vector3 Id= Vector3.Lerp(transform.position, transform.position, 0.25f);
+
+        if (Mathf.Abs(targetDirection.x) <0.5f) {
+            resultat.x = Id.x;
         }
-        float PlayerPosy = player.transform.position.y;
-        float CamPosy = this.transform.position.y;
-        if (Mathf.Abs(PlayerPosy - CamPosy) > 2.0f)
-        {
-            posy = Mathf.SmoothDamp(CamPosy, PlayerPosy, ref speed, 2f);
-        }else {
-            posy = CamPosy;
+        if (Mathf.Abs(targetDirection.y)<2.0f) {
+            resultat.y = Id.y;
         }
-        transform.Translate(new Vector3(posx - CamPosx, posy - CamPosy, 0.0f));
 
+        transform.position = resultat;
 
     }
+
+
+    void setCurrentTarget(string nom) {
+        currenttarget = nom;
+    }
+
+
+    string getCurrentTarget() {
+        return currenttarget;
+    }
+
+
 }
