@@ -50,7 +50,9 @@
      <Compile Include="Assets\Scripts\CameraBehavior.cs" />
      <Compile Include="Assets\Scripts\GlooGenericObject.cs" />
      <Compile Include="Assets\Scripts\LeverScript.cs" />
+     <Compile Include="Assets\Scripts\OstileClass.cs" />
      <Compile Include="Assets\Scripts\PressurePlateScript.cs" />
+     <Compile Include="Assets\Scripts\RushScript.cs" />
      <Compile Include="Assets\Scripts\SuiviDivision.cs" />
      <Compile Include="Assets\Scripts\TriggerClass.cs" />
      <Compile Include="Assets\Scripts\UIMainMenu.cs" />
