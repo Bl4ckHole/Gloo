@@ -1,12 +1,11 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\glooScript.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\PorteScript.cs">
     <Files>
-      <File FileName="Assets\Scripts\glooScript.cs" Line="87" Column="6" />
-      <File FileName="Assets\Scripts\TriggerClass.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\divScript.cs" Line="1" Column="1" />
-      <File FileName="..\..\Pong\Assets\ballScript.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\ActivableObjectClass.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\TriggerClass.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\PorteScript.cs" Line="21" Column="32" />
+      <File FileName="Assets\Scripts\PressurePlateScript.cs" Line="31" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
