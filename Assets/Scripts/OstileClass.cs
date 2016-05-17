@@ -5,7 +5,7 @@ public abstract class OstileClass : MonoBehaviour
 {
 
 	// Use this for initialization
-	public void Start () 
+	virtual public void Start () 
 	{
 	
 	}
