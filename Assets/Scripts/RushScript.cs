@@ -9,6 +9,19 @@ public class RushScript : OstileClass, GlooGenericObject
 	private BoxCollider2D boxcoll;
 	private float speed = 10.0f;
 
+    private class RushData
+    {
+        public Vector2 velocity;
+        public Vector2 position;
+
+        public RushData(Vector2 vel, Vector3 pos)
+        {
+            velocity = vel;
+            position = pos;
+        }
+    }
+
+
     // Use this for initialization
     override public void Start () 
 	{
@@ -45,11 +58,13 @@ public class RushScript : OstileClass, GlooGenericObject
 
     public object getData()
     {
-        throw new NotImplementedException();
+        return new RushData(body.velocity, this.transform.position);
     }
 
     public void setData(object savedData)
     {
-        throw new NotImplementedException();
+        RushData data = savedData as RushData;
+        this.transform.position = data.position;
+        body.velocity = data.velocity;
     }
 }
