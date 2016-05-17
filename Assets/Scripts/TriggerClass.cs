@@ -27,6 +27,7 @@ public abstract class TriggerClass : MonoBehaviour, GlooGenericObject
 		isActivated = !isActivated;
 		TriggerActivate (isActivated);
 	}
+
 	public void TriggerActivate(bool requested)
 	{
 		animator.SetBool("isActivated", requested);
@@ -36,7 +37,7 @@ public abstract class TriggerClass : MonoBehaviour, GlooGenericObject
 		} 
 		else 
 		{
-			cible.SendMessage ("Activate", isActivated);
+			cible.SendMessage ("Activate", requested);
 		}
 	}
 
