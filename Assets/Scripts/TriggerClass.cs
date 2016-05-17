@@ -1,11 +1,19 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
 
-public abstract class TriggerClass : MonoBehaviour 
+public abstract class TriggerClass : MonoBehaviour, GlooGenericObject
 {
 	public GameObject cible;
 	private bool isActivated = false;
 	private Animator animator;
+
+    private class TriggerData {
+        public bool isActivated;
+        public TriggerData(bool activ) {
+            isActivated = activ;
+        }
+    }
 
 	// Use this for initialization
 	virtual public void Start () 
@@ -31,4 +39,15 @@ public abstract class TriggerClass : MonoBehaviour
 			cible.SendMessage ("Activate", isActivated);
 		}
 	}
+
+    public object getData() {
+        return new TriggerData(isActivated);
+    }
+
+    public void setData(object savedData) {
+        TriggerData data = savedData as TriggerData;
+        isActivated = data.isActivated;
+        animator.SetBool("isActivated", isActivated);
+        animator.SetTrigger(data.isActivated ? "forceActive" : "forceInactive");
+    }
 }

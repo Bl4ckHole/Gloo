@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 using Utils;
 using System;
 using UnityEngine.SceneManagement;
@@ -42,6 +43,7 @@ public class glooScript : MonoBehaviour, GlooGenericObject {
             createFace = model.createFace;
         }        
     }
+
     private glooData data = new glooData();
 
     public GameObject div;
@@ -98,6 +100,52 @@ public class glooScript : MonoBehaviour, GlooGenericObject {
     }
 
     void FixedUpdate() {
+        /*
+        // check floor orientation
+        List<Vector2> hitPoints = new List<Vector2>();
+        float moy_x = 0.0f;
+        float moy_y = 0.0f;
+        float double_product_sum = 0.0f;
+        float square_sum = 0.0f;
+        Vector2 linePoint;
+        Vector2 lineDirection;
+
+        for(int i = 0; i < 500; i++)
+        {
+            RaycastHit2D hit = Physics2D.Raycast(transform.position + new Vector3(-4.5f + i*9.0f/499, 5.0f, 0.0f), -transform.up, 6.0f);
+            if (hit.collider != null)
+            {
+                hitPoints.Add(hit.point);
+                moy_x += hit.point.x;
+                moy_y += hit.point.y;
+                double_product_sum += hit.point.x * hit.point.y;
+                square_sum += (float) Math.Pow(hit.point.x, 2);
+            }
+        }
+
+        if (hitPoints.Count > 2)
+        {
+            moy_x /= hitPoints.Count;
+            moy_y /= hitPoints.Count;
+            double_product_sum /= hitPoints.Count;
+            square_sum /= hitPoints.Count;
+
+            float a = (double_product_sum - moy_x * moy_y)/(square_sum - (float) Math.Pow(moy_x, 2));
+            float b = moy_y - a * moy_x;
+
+            linePoint = new Vector2(0.0f, b);
+            lineDirection = new Vector2(1.0f, a);
+
+            float angle = Vector2.Angle(transform.right, lineDirection);
+            print(angle);
+            transform.Rotate(new Vector3(0.0f, 0.0f, angle));
+        }
+
+        else
+        {
+            transform.Rotate(new Vector3(0.0f, 0.0f, Vector2.Angle(transform.right, Vector2.right)));
+        }*/
+
         Vector2 move = new Vector2(0, 0);
         int currentHash = animator.GetCurrentAnimatorStateInfo(0).shortNameHash;
         if (currentHash == hashLeft || (currentHash== hashJumpToL && Input.GetKey(GlooConstants.keyLeft)) || (currentHash == hashJumpL && Input.GetKey(GlooConstants.keyLeft))) {
@@ -127,7 +175,11 @@ public class glooScript : MonoBehaviour, GlooGenericObject {
     }
 
     void OnCollisionStay2D(Collision2D coll) {
-        foreach(ContactPoint2D contact in coll.contacts)
+
+        if (!data.inJump)
+            return;
+
+        foreach (ContactPoint2D contact in coll.contacts)
         {
 			if(contact.normal[1] > 0.7)
             {

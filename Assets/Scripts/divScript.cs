@@ -14,11 +14,14 @@ public class divScript : MonoBehaviour {
     bool recording = true;
     private Vector3 oldPos;
     private Dictionary<string,object> savedData;
+    private BoxCollider2D boxcoll;
 
     public Sprite div;
 
     // Use this for initialization
     void Start() {
+        boxcoll = GetComponent<BoxCollider2D>();
+
         oldPos = transform.position;
         rbody = GetComponent<Rigidbody2D>();
         record = new Queue();
@@ -53,10 +56,12 @@ public class divScript : MonoBehaviour {
         bool right = false;
         bool left = false;
         bool jump = false;
+        bool active = false;
         if (recording) {
             right = Input.GetKey(GlooConstants.keyRight);
             left = Input.GetKey(GlooConstants.keyLeft);
             jump = Input.GetKey(GlooConstants.keyJump);
+            active = Input.GetKeyDown(GlooConstants.keyActivate);
             RecordKeys();
         }
         else {
@@ -69,6 +74,7 @@ public class divScript : MonoBehaviour {
                 right |= k == GlooConstants.keyRight;
                 left |= k == GlooConstants.keyLeft;
                 jump |= k == GlooConstants.keyJump;
+                active |= k == GlooConstants.keyActivate;
             }
         }        
 
@@ -86,19 +92,43 @@ public class divScript : MonoBehaviour {
         move *= speed;
         float vy = rbody.velocity.y;
         rbody.velocity = move + new Vector2((inJump && move.x == 0) ? rbody.velocity.x : 0, vy);
+
+        if (active) {
+            Collider2D[] nearbyObjects = Physics2D.OverlapCircleAll(this.transform.position, boxcoll.size.x / 2 * this.transform.localScale.x);
+            foreach (Collider2D objColl in nearbyObjects) {
+                if (objColl.gameObject.tag == "ManualTrigger") {
+                    objColl.gameObject.SendMessage("TriggerActivate");
+                }
+            }
+        }
     }
 
     void OnCollisionStay2D(Collision2D coll) {
-        if (coll.relativeVelocity.y < 0.16) {
-            inJump = false;
+
+        if (!inJump)
+            return;
+
+        foreach (ContactPoint2D contact in coll.contacts)
+        {
+            if (contact.normal[1] > 0.7)
+            {
+                inJump = false;
+                break;
+            }
         }
     }
 
     void RecordKeys() {
         ArrayList keys = new ArrayList { GlooConstants.keyJump, GlooConstants.keyLeft, GlooConstants.keyRight};
+        ArrayList keysDown = new ArrayList { GlooConstants.keyActivate };
         recordBuffer.Clear();
         foreach (KeyCode code in keys) {
             if (Input.GetKey(code)) {
+                recordBuffer.Add(code);
+            }
+        }
+        foreach( KeyCode code in keysDown) {
+            if (Input.GetKeyDown(code)) {
                 recordBuffer.Add(code);
             }
         }
