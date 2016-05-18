@@ -101,51 +101,41 @@ public class glooScript : MonoBehaviour, GlooGenericObject {
     }
 
     void FixedUpdate() {
-        /*
-        // check floor orientation
-        List<Vector2> hitPoints = new List<Vector2>();
-        float moy_x = 0.0f;
-        float moy_y = 0.0f;
-        float double_product_sum = 0.0f;
-        float square_sum = 0.0f;
-        Vector2 linePoint;
-        Vector2 lineDirection;
+        Vector2 globalNormal = new Vector2(0.0f, 0.0f);
+        int numPoints = 0;
+        Debug.DrawLine(transform.position + 0.1f * transform.right, transform.position + transform.up + 0.1f * transform.right, Color.yellow);
 
-        for(int i = 0; i < 500; i++)
+        for(int i = 0; i < 10; i++)
         {
-            RaycastHit2D hit = Physics2D.Raycast(transform.position + new Vector3(-4.5f + i*9.0f/499, 5.0f, 0.0f), -transform.up, 6.0f);
+            RaycastHit2D hit = Physics2D.Raycast(transform.position + 0.08f * boxcoll.size.x * ((-4.5f + i) / 4.5f) * transform.right, -transform.up, 0.4f * boxcoll.size.y);
             if (hit.collider != null)
             {
-                hitPoints.Add(hit.point);
-                moy_x += hit.point.x;
-                moy_y += hit.point.y;
-                double_product_sum += hit.point.x * hit.point.y;
-                square_sum += (float) Math.Pow(hit.point.x, 2);
+                Debug.DrawLine(transform.position + 0.08f * boxcoll.size.x * ((-4.5f + i)/4.5f) * transform.right, hit.point, Color.green);
+                Debug.DrawLine(hit.point, hit.point + 0.3f * hit.normal.normalized, Color.red);
+                globalNormal += hit.normal;
+                numPoints += 1;
             }
         }
 
-        if (hitPoints.Count > 2)
+        if(numPoints > 1)
         {
-            moy_x /= hitPoints.Count;
-            moy_y /= hitPoints.Count;
-            double_product_sum /= hitPoints.Count;
-            square_sum /= hitPoints.Count;
+            globalNormal /= numPoints;
+            globalNormal.Normalize();
+            Debug.DrawLine(transform.position, new Vector2(transform.position.x, transform.position.y) + 2 * globalNormal, Color.cyan);
 
-            float a = (double_product_sum - moy_x * moy_y)/(square_sum - (float) Math.Pow(moy_x, 2));
-            float b = moy_y - a * moy_x;
-
-            linePoint = new Vector2(0.0f, b);
-            lineDirection = new Vector2(1.0f, a);
-
-            float angle = Vector2.Angle(transform.right, lineDirection);
-            print(angle);
-            transform.Rotate(new Vector3(0.0f, 0.0f, angle));
+            float angle = Vector2.Angle(transform.position + transform.up, new Vector2(transform.position.x, transform.position.y) + globalNormal);
+           
+            if (globalNormal.x < transform.up.x)
+                transform.Rotate(new Vector3(0.0f, 0.0f, Math.Min(angle, 20)));
+            else
+                transform.Rotate(new Vector3(0.0f, 0.0f, Math.Max(-angle, -20)));
+            
         }
-
         else
         {
-            transform.Rotate(new Vector3(0.0f, 0.0f, Vector2.Angle(transform.right, Vector2.right)));
-        }*/
+            transform.Rotate(new Vector3(0.0f, 0.0f, Vector2.Angle(transform.position + transform.right, Vector2.right)));
+            Debug.Log(Vector2.Angle(transform.right, Vector2.right));
+        }
 
         Vector2 move = new Vector2(0, 0);
         int currentHash = animator.GetCurrentAnimatorStateInfo(0).shortNameHash;
