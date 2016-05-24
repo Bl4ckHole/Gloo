@@ -93,7 +93,7 @@ public class divScript : MonoBehaviour, GlooGenericObject {
         }
         else {
             if(record.Count == 0) {
-                //Destroy(gameObject);
+                Destroy(gameObject);
                 finish = true;
                 return;
             }
