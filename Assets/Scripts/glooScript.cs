@@ -101,13 +101,46 @@ public class glooScript : MonoBehaviour, GlooGenericObject {
     }
 
     void FixedUpdate() {
-        Vector2 globalNormal = new Vector2(0.0f, 0.0f);
+        float rotation = 0.0f;
+        Debug.Log(rotation);
+        Debug.DrawLine(transform.position, transform.position + transform.right, Color.red);
+        Debug.DrawLine(transform.position, new Vector2(transform.position.x, transform.position.y) + Vector2.right, Color.blue);
+        if (transform.right.y > 0.0f)
+            rotation = -1.0f;
+        if (transform.right.y < 0.0f)
+            rotation = 1.0f;
+
+        if (data.inJump)
+            transform.Rotate(new Vector3(0.0f, 0.0f, rotation));
+
+        else
+        {
+            float width = 0.09f;
+            float ray_size = 0.2f;
+            RaycastHit2D hit1 = Physics2D.Raycast(transform.position - width * boxcoll.size.x * transform.right, -transform.up, ray_size * boxcoll.size.y);
+            RaycastHit2D hit2 = Physics2D.Raycast(transform.position + width * boxcoll.size.x * transform.right, -transform.up, ray_size * boxcoll.size.y);
+            Debug.DrawLine(transform.position - width * boxcoll.size.x * transform.right, transform.position - width * boxcoll.size.x * transform.right - ray_size * boxcoll.size.y * transform.up, Color.green);
+            Debug.DrawLine(transform.position + width * boxcoll.size.x * transform.right, transform.position + width * boxcoll.size.x * transform.right - ray_size * boxcoll.size.y * transform.up, Color.green);
+            if (hit1.collider != null && hit2.collider != null)
+            {
+                float balance = hit2.distance - hit1.distance;
+                if (balance > 0.001f)
+                    rotation = -1.0f;
+                else if (balance < -0.001f)
+                    rotation = 1.0f;
+            }
+
+            transform.Rotate(new Vector3(0.0f, 0.0f, rotation));
+        }
+        
+
+        /*Vector2 globalNormal = new Vector2(0.0f, 0.0f);
         int numPoints = 0;
         Debug.DrawLine(transform.position + 0.1f * transform.right, transform.position + transform.up + 0.1f * transform.right, Color.yellow);
 
         for(int i = 0; i < 10; i++)
         {
-            RaycastHit2D hit = Physics2D.Raycast(transform.position + 0.08f * boxcoll.size.x * ((-4.5f + i) / 4.5f) * transform.right, -transform.up, 0.4f * boxcoll.size.y);
+            RaycastHit2D hit = Physics2D.Raycast(transform.position + 0.08f * boxcoll.size.x * ((-4.5f + i) / 4.5f) * transform.right, -transform.up, 0.2f * boxcoll.size.y);
             if (hit.collider != null)
             {
                 Debug.DrawLine(transform.position + 0.08f * boxcoll.size.x * ((-4.5f + i)/4.5f) * transform.right, hit.point, Color.green);
@@ -117,25 +150,27 @@ public class glooScript : MonoBehaviour, GlooGenericObject {
             }
         }
 
-        if(numPoints > 1)
+        if(numPoints > 4)
         {
             globalNormal /= numPoints;
             globalNormal.Normalize();
             Debug.DrawLine(transform.position, new Vector2(transform.position.x, transform.position.y) + 2 * globalNormal, Color.cyan);
 
             float angle = Vector2.Angle(transform.position + transform.up, new Vector2(transform.position.x, transform.position.y) + globalNormal);
-           
-            if (globalNormal.x < transform.up.x)
-                transform.Rotate(new Vector3(0.0f, 0.0f, Math.Min(angle, 20)));
+            
+            if(angle > 15)
+                transform.Rotate(new Vector3(0.0f, 0.0f, Vector2.Angle(transform.position + transform.right, new Vector2(transform.position.x, transform.position.y) + Vector2.right)));
+            else if (globalNormal.x < transform.up.x)
+                transform.Rotate(new Vector3(0.0f, 0.0f, angle));
             else
-                transform.Rotate(new Vector3(0.0f, 0.0f, Math.Max(-angle, -20)));
+                transform.Rotate(new Vector3(0.0f, 0.0f, -angle));
             
         }
         else
         {
-            transform.Rotate(new Vector3(0.0f, 0.0f, Vector2.Angle(transform.position + transform.right, Vector2.right)));
-            Debug.Log(Vector2.Angle(transform.right, Vector2.right));
-        }
+            transform.Rotate(new Vector3(0.0f, 0.0f, Vector2.Angle(transform.position + transform.right, new Vector2(transform.position.x, transform.position.y) + Vector2.right)));
+            //Debug.Log(Vector2.Angle(transform.right, Vector2.right));
+        }*/
 
         Vector2 move = new Vector2(0, 0);
         int currentHash = animator.GetCurrentAnimatorStateInfo(0).shortNameHash;
