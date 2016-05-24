@@ -94,9 +94,6 @@ public class glooScript : MonoBehaviour, GlooGenericObject {
 					}
 				}
 			}
-
-            if (Input.GetKeyDown(GlooConstants.keyTest)) {
-            }
         }        
     }
 

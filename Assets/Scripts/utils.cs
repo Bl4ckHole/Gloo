@@ -11,6 +11,6 @@ namespace Utils{
         public static KeyCode keyDivide = KeyCode.E;
         public static KeyCode keyJump = KeyCode.Space;
 		public static KeyCode keyActivate = KeyCode.A;
-        public static KeyCode keyTest = KeyCode.R;
+        public static KeyCode keyReset = KeyCode.R;
     }
 }
