@@ -83,8 +83,10 @@ public class glooScript : MonoBehaviour, GlooGenericObject {
                 animator.SetBool("DoCreate", true);
                 int facing_int = facing == 1 ? -1 : 1;
                 GameObject newDiv = (GameObject) Instantiate(div, transform.position + new Vector3(boxcoll.size.x / 2.0f * transform.localScale.x + divcoll.size.x, 0, 0)*facing_int, new Quaternion());
+                // TODO : replace the 0 by the colorID SELECTED BY THE USER when he asked for a division!!
                 newDiv.GetComponent<divScript>().setColorID(0);
                 data.divisionsInGloo[0] = false;
+                Destroy(divisionHeartsClones[0]);
                 /*
                 if (facing == 1) {
                     animator.SetTrigger("CreateLeft");
@@ -122,9 +124,13 @@ public class glooScript : MonoBehaviour, GlooGenericObject {
                 {
                     if (objColl.gameObject.tag == "GlooDiv")
                     {
-                        // objColl.gameObject.SendMessage("destroy");
-                        // TODO : animations
-                        data.divisionsInGloo[objColl.gameObject.GetComponent<divScript>().getColorID()] = true;
+                        // TODO : animations disparition
+                        // destroy the division
+                        Destroy(objColl.gameObject);
+                        int i = objColl.gameObject.GetComponent<divScript>().getColorID();
+                        // Recreate the heart of the division inside Gloo
+                        divisionHeartsClones[i] = (GameObject)Instantiate(divisionHearts[i], new Vector3(0.0f, 0.0f, 0.0f), new Quaternion());
+                        data.divisionsInGloo[i] = true;
                     }
                 }
             }
@@ -293,7 +299,10 @@ public class glooScript : MonoBehaviour, GlooGenericObject {
 
         for (int i = 0; i < data.divisionsInGloo.Length; i++)
         {
-            Destroy(divisionHeartsClones[i]);
+            if (data.divisionsInGloo[i] == true)
+            {
+                Destroy(divisionHeartsClones[i]);
+            }
         }
         animator.SetTrigger("Dead");
 
