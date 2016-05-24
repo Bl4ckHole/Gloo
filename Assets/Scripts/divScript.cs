@@ -77,6 +77,7 @@ public class divScript : MonoBehaviour, GlooGenericObject {
                     GlooGenericObject objScript = obj.GetComponent<MonoBehaviour>() as GlooGenericObject;
                     objScript.setData(kvp.Value);
                 }
+				filter_renderer.enabled = false;
                 GameObject cam = GameObject.Find("Main Camera");
                 cam.GetComponent<CameraBehavior>().currenttarget = "Gloo";
             }
