@@ -17,14 +17,9 @@ public class divScript : MonoBehaviour, GlooGenericObject {
     private Vector3 oldPos;
     private Dictionary<string,object> savedData;
     private BoxCollider2D boxcoll;
-<<<<<<< HEAD
-    public float wallJump = 0;
-=======
-    public int wallJump = 0;
 	private GameObject filter;
 	public String filtername;
 	private SpriteRenderer filter_renderer;
->>>>>>> origin/master
 
     private class divData {
         public bool inJump;
@@ -151,7 +146,6 @@ public class divScript : MonoBehaviour, GlooGenericObject {
             if (contact.normal[1] > 0.7)
             {
                 inJump = false;
-                wallJump = 0;
                 break;
             }
             if(Math.Abs(contact.normal[1]) < 0.3) {
