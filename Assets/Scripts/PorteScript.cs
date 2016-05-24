@@ -19,6 +19,5 @@ public class PorteScript : MonoBehaviour {
 		limite.enabled = !isActivated;
 		//animationName.Play ();
 		image.enabled = !isActivated;
-		Debug.Log(!isActivated);
 	}
 }
