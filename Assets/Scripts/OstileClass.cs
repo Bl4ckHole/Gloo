@@ -20,7 +20,7 @@ public class OstileClass : MonoBehaviour
 	{
 		if (coll.gameObject.tag=="Gloo" || coll.gameObject.tag=="GlooDiv")
 		{
-			coll.gameObject.SendMessage ("Die");
+			coll.gameObject.SendMessage ("die");
 		}
 
 	}

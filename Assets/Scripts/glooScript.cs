@@ -24,6 +24,7 @@ public class glooScript : MonoBehaviour, GlooGenericObject {
     /*bool inJump = false;
     public bool recording = false;*/
     public int facing = 1;
+    private GameObject savePoint;
 
     private class glooData {
 
@@ -52,13 +53,17 @@ public class glooScript : MonoBehaviour, GlooGenericObject {
     private bool paused = false;
     public GameObject div;
     public GameObject[] divisionHearts;
+    public GameObject[] divisionHeartsClones;
     public static int divID = 0;
     GameObject pauseMenu;
 
     // Use this for initialization
     void Start() {
+        divisionHeartsClones = new GameObject[divisionHearts.Length];
         for (int i = 0; i < data.divisionsInGloo.Length; i++)
-            Instantiate(divisionHearts[i], new Vector3(0.0f, 0.0f, 0.0f), new Quaternion());
+        {
+            divisionHeartsClones[i] = (GameObject)Instantiate(divisionHearts[i], new Vector3(0.0f, 0.0f, 0.0f), new Quaternion());
+        }
 
         animator = GetComponent<Animator>();
         rbody = GetComponent<Rigidbody2D>();
@@ -122,6 +127,11 @@ public class glooScript : MonoBehaviour, GlooGenericObject {
                         data.divisionsInGloo[objColl.gameObject.GetComponent<divScript>().getColorID()] = true;
                     }
                 }
+            }
+
+            if (Input.GetKeyDown(GlooConstants.keyReset))
+            {
+                this.die();
             }
         }        
     }
@@ -265,5 +275,29 @@ public class glooScript : MonoBehaviour, GlooGenericObject {
         transform.position = data.position;
         animator.SetBool("DoCreate", false);
         animator.SetTrigger(data.createFace);
+    }
+
+    public GameObject getSavePoint()
+    {
+        return savePoint;
+    }
+    public void setSavePoint(GameObject checkpoint)
+    {
+        this.savePoint = checkpoint;
+    }
+
+    public void die()
+    {
+        boxcoll.enabled = false;
+        rbody.isKinematic = true;
+
+        for (int i = 0; i < data.divisionsInGloo.Length; i++)
+        {
+            Destroy(divisionHeartsClones[i]);
+        }
+        animator.SetTrigger("Dead");
+
+        savePoint.SendMessage("Reset");
+        Destroy(this.gameObject,1.3f);
     }
 }
