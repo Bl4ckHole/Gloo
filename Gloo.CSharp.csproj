@@ -76,6 +76,7 @@
     <Compile Include="Assets\Scripts\RushScript.cs" />
     <Compile Include="Assets\Scripts\SuiviDivision.cs" />
     <Compile Include="Assets\Scripts\TriggerClass.cs" />
+    <Compile Include="Assets\Scripts\TutorielScript.cs" />
     <Compile Include="Assets\Scripts\UIMainMenu.cs" />
     <Compile Include="Assets\Scripts\divScript.cs" />
     <Compile Include="Assets\Scripts\glooScript.cs" />
