@@ -53,16 +53,16 @@ public class glooScript : MonoBehaviour, GlooGenericObject {
     private bool paused = false;
     public GameObject div;
     public GameObject[] divisionHearts;
-    public GameObject[] divisionHeartsClones;
+    public GameObject[] DivAndHeartsInAndOutsideGloo;   // when divisionsInGloo[i] = true : DivAndHeartsInAndOutsideGloo[i] stoquera le coeur de la div ; else le coeur sera détruit et on gardera en mémoire la division sortie de gloo
     public static int divID = 0;
     GameObject pauseMenu;
 
     // Use this for initialization
     void Start() {
-        divisionHeartsClones = new GameObject[divisionHearts.Length];
+        DivAndHeartsInAndOutsideGloo = new GameObject[divisionHearts.Length];
         for (int i = 0; i < data.divisionsInGloo.Length; i++)
         {
-            divisionHeartsClones[i] = (GameObject)Instantiate(divisionHearts[i], new Vector3(0.0f, 0.0f, 0.0f), new Quaternion());
+            DivAndHeartsInAndOutsideGloo[i] = (GameObject)Instantiate(divisionHearts[i], new Vector3(0.0f, 0.0f, 0.0f), new Quaternion());
         }
 
         animator = GetComponent<Animator>();
@@ -86,7 +86,8 @@ public class glooScript : MonoBehaviour, GlooGenericObject {
                 // TODO : replace the 0 by the colorID SELECTED BY THE USER when he asked for a division!!
                 newDiv.GetComponent<divScript>().setColorID(0);
                 data.divisionsInGloo[0] = false;
-                Destroy(divisionHeartsClones[0]);
+                Destroy(DivAndHeartsInAndOutsideGloo[0]);
+                DivAndHeartsInAndOutsideGloo[0] = newDiv;
                 /*
                 if (facing == 1) {
                     animator.SetTrigger("CreateLeft");
@@ -119,7 +120,7 @@ public class glooScript : MonoBehaviour, GlooGenericObject {
 
             if (Input.GetKeyDown(GlooConstants.keyAbsorb))
             {
-                Collider2D[] nearbyObjects = Physics2D.OverlapCircleAll(this.transform.position, boxcoll.size.x * this.transform.localScale.x * 5);
+                Collider2D[] nearbyObjects = Physics2D.OverlapCircleAll(this.transform.position, boxcoll.size.x * this.transform.localScale.x * 2);
                 foreach (Collider2D objColl in nearbyObjects)
                 {
                     if (objColl.gameObject.tag == "GlooDiv")
@@ -129,7 +130,7 @@ public class glooScript : MonoBehaviour, GlooGenericObject {
                         Destroy(objColl.gameObject);
                         int i = objColl.gameObject.GetComponent<divScript>().getColorID();
                         // Recreate the heart of the division inside Gloo
-                        divisionHeartsClones[i] = (GameObject)Instantiate(divisionHearts[i], new Vector3(0.0f, 0.0f, 0.0f), new Quaternion());
+                        DivAndHeartsInAndOutsideGloo[i] = (GameObject)Instantiate(divisionHearts[i], new Vector3(0.0f, 0.0f, 0.0f), new Quaternion());
                         data.divisionsInGloo[i] = true;
                     }
                 }
@@ -299,10 +300,7 @@ public class glooScript : MonoBehaviour, GlooGenericObject {
 
         for (int i = 0; i < data.divisionsInGloo.Length; i++)
         {
-            if (data.divisionsInGloo[i] == true)
-            {
-                Destroy(divisionHeartsClones[i]);
-            }
+            Destroy(DivAndHeartsInAndOutsideGloo[i]);
         }
         animator.SetTrigger("Dead");
 
