@@ -17,6 +17,7 @@ public class divScript : MonoBehaviour, GlooGenericObject {
     private Dictionary<string,object> savedData;
     private BoxCollider2D boxcoll;
     public int wallJump = 0;
+    bool finish = false;
 
     private class divData {
         public bool inJump;
@@ -91,7 +92,11 @@ public class divScript : MonoBehaviour, GlooGenericObject {
         }
         else {
             if(record.Count == 0) {
-                Destroy(gameObject);
+                //Destroy(gameObject);
+                finish = true;
+                return;
+            }
+            if (finish) {
                 return;
             }
             ArrayList step = (ArrayList)record.Dequeue();

@@ -31,7 +31,6 @@ public class glooScript : MonoBehaviour, GlooGenericObject {
         public bool recording = false;
         public Vector3 position;
         public string createFace;
-
         public glooData() {
 
         }
@@ -45,9 +44,10 @@ public class glooScript : MonoBehaviour, GlooGenericObject {
     }
 
     private glooData data = new glooData();
-
+    private bool paused = false;
     public GameObject div;
     public static int divID = 0;
+    GameObject pauseMenu;
 
     // Use this for initialization
     void Start() {
@@ -55,6 +55,8 @@ public class glooScript : MonoBehaviour, GlooGenericObject {
         rbody = GetComponent<Rigidbody2D>();
         boxcoll = GetComponent<BoxCollider2D>();
         divcoll = div.GetComponent<BoxCollider2D>();
+        pauseMenu = GameObject.Find("PauseMenu");
+        pauseMenu.SetActive(false);
     }        
 	
 	// Update is called once per frame
@@ -102,7 +104,6 @@ public class glooScript : MonoBehaviour, GlooGenericObject {
 
     void FixedUpdate() {
         float rotation = 0.0f;
-        Debug.Log(rotation);
         Debug.DrawLine(transform.position, transform.position + transform.right, Color.red);
         Debug.DrawLine(transform.position, new Vector2(transform.position.x, transform.position.y) + Vector2.right, Color.blue);
         if (transform.right.y > 0.0f)
@@ -171,6 +172,18 @@ public class glooScript : MonoBehaviour, GlooGenericObject {
             transform.Rotate(new Vector3(0.0f, 0.0f, Vector2.Angle(transform.position + transform.right, new Vector2(transform.position.x, transform.position.y) + Vector2.right)));
             //Debug.Log(Vector2.Angle(transform.right, Vector2.right));
         }*/
+
+        if(Input.GetKey("escape")) {
+            SceneManager.LoadScene("MainMenu");
+        }
+        
+        if(Input.GetKeyDown("p")) {
+            if(Time.timeScale==1) {
+                Time.timeScale = 0;
+                pauseMenu.SetActive(true);
+            }
+        }
+
 
         Vector2 move = new Vector2(0, 0);
         int currentHash = animator.GetCurrentAnimatorStateInfo(0).shortNameHash;
