@@ -11,12 +11,20 @@ public class divScript : MonoBehaviour, GlooGenericObject {
     private Rigidbody2D rbody;
     private float speed = 3.0f;
     private float jumpForce = 7.0f;
+    private int colorID = 0;
     bool inJump = false;
     bool recording = true;
     private Vector3 oldPos;
     private Dictionary<string,object> savedData;
     private BoxCollider2D boxcoll;
+<<<<<<< HEAD
     public float wallJump = 0;
+=======
+    public int wallJump = 0;
+	private GameObject filter;
+	public String filtername;
+	private SpriteRenderer filter_renderer;
+>>>>>>> origin/master
 
     private class divData {
         public bool inJump;
@@ -53,7 +61,10 @@ public class divScript : MonoBehaviour, GlooGenericObject {
             }
         }
         GameObject cam = GameObject.Find("Main Camera");
-        cam.GetComponent<CameraBehavior>().currenttarget = gameObject.name;       
+        cam.GetComponent<CameraBehavior>().currenttarget = gameObject.name;
+		filter = GameObject.Find (filtername);
+		filter_renderer = filter.GetComponent<SpriteRenderer> ();
+		filter_renderer.enabled = true;
     }
 
     // Update is called once per frame
@@ -71,6 +82,7 @@ public class divScript : MonoBehaviour, GlooGenericObject {
                     GlooGenericObject objScript = obj.GetComponent<MonoBehaviour>() as GlooGenericObject;
                     objScript.setData(kvp.Value);
                 }
+				filter_renderer.enabled = false;
                 GameObject cam = GameObject.Find("Main Camera");
                 cam.GetComponent<CameraBehavior>().currenttarget = "Gloo";
             }
@@ -91,6 +103,7 @@ public class divScript : MonoBehaviour, GlooGenericObject {
         }
         else {
             if(record.Count == 0) {
+				filter_renderer.enabled = false;
                 Destroy(gameObject);
                 return;
             }
@@ -181,5 +194,15 @@ public class divScript : MonoBehaviour, GlooGenericObject {
         record = data.record;
         transform.position = data.pos;
         rbody.velocity = data.velocity;
+    }
+
+    public void setColorID(int id)
+    {
+        colorID = id;
+    }
+
+    public int getColorID()
+    {
+        return colorID;
     }
 }
