@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public abstract class OstileClass : MonoBehaviour 
+public class OstileClass : MonoBehaviour 
 {
 
 	// Use this for initialization
