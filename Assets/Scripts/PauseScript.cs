@@ -5,21 +5,27 @@ using UnityEngine.SceneManagement;
 public class PauseScript : MonoBehaviour {
 
     GameObject[] pauseObjects;
-    GameObject ButPlay;
+    GameObject PauseMenu;
 
     // Use this for initialization
     void Start()
     {
-        Time.timeScale = 1;
         pauseObjects = GameObject.FindGameObjectsWithTag("ShowOnPause");
-        ButPlay = GameObject.Find("Play");
+        PauseMenu = GameObject.Find("PauseMenu");
         //hidePaused();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown("enter"))
+        {
+            pauseControl();
+        } 
+        if (Input.GetKeyDown("escape")) {
 
+            LoadLevel("MainMenu");
+        }
     }
 
 
