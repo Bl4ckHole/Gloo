@@ -24,6 +24,9 @@ public class glooScript : MonoBehaviour, GlooGenericObject {
     /*bool inJump = false;
     public bool recording = false;*/
     public int facing = 1;
+	private GameObject filter;
+	public String filtername;
+	private SpriteRenderer filter_renderer;
 
     private class glooData {
 
@@ -62,6 +65,9 @@ public class glooScript : MonoBehaviour, GlooGenericObject {
         rbody = GetComponent<Rigidbody2D>();
         boxcoll = GetComponent<BoxCollider2D>();
         divcoll = div.GetComponent<BoxCollider2D>();
+		filter = GameObject.Find (filtername);
+		filter_renderer = filter.GetComponent<SpriteRenderer> ();
+		filter_renderer.enabled = false;
     }        
 	
 	// Update is called once per frame
