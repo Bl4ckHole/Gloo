@@ -66,7 +66,6 @@ public class divScript : MonoBehaviour, GlooGenericObject {
     void Update() {
         if (recording) {
             if (Input.GetKeyDown(GlooConstants.keyDivide)) {
-				filter_renderer.enabled = true;
                 recording = false;
                 transform.position = oldPos;
                 SpriteRenderer mySprite = gameObject.GetComponent<SpriteRenderer>();
@@ -98,6 +97,7 @@ public class divScript : MonoBehaviour, GlooGenericObject {
         }
         else {
             if(record.Count == 0) {
+				filter_renderer.enabled = false;
                 Destroy(gameObject);
                 return;
             }
