@@ -18,7 +18,6 @@ public class UIMainMenu : MonoBehaviour {
     {
         if(GUI.Button(new Rect(450, 250, 200, 60), "PLAY"))
         {
-            Time.timeScale = 1;
             SceneManager.LoadScene("Level1");
         }
 

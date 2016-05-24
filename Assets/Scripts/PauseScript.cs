@@ -5,43 +5,52 @@ using UnityEngine.SceneManagement;
 public class PauseScript : MonoBehaviour {
 
     GameObject[] pauseObjects;
-    GameObject pauseMenu;
+    GameObject ButPlay;
 
     // Use this for initialization
     void Start()
     {
-        //Time.timeScale = 1;
+        Time.timeScale = 1;
         pauseObjects = GameObject.FindGameObjectsWithTag("ShowOnPause");
-        pauseMenu = GameObject.Find("PauseMenu");
+        ButPlay = GameObject.Find("Play");
         //hidePaused();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey("escape"))
-        {
-            LoadLevel("MainMenu");
-        }
-
-        if (Input.GetKey("enter"))
-        {
-           endPause();
-        }
 
     }
 
 
 
     //controls the pausing of the scene
-    public void endPause()
+    public void pauseControl()
     {
-        Time.timeScale = 1;
-        pauseMenu.SetActive(false);
-        
+        if (Time.timeScale == 0)
+        {
+            Time.timeScale = 1;
+            hidePaused();
+        }
     }
 
-   
+    //shows objects with ShowOnPause tag
+    public void showPaused()
+    {
+        foreach (GameObject g in pauseObjects)
+        {
+            g.SetActive(true);
+        }
+    }
+
+    //hides objects with ShowOnPause tag
+    public void hidePaused()
+    {
+        foreach (GameObject g in pauseObjects)
+        {
+            g.SetActive(false);
+        }
+    }
 
     //loads inputted level
     public void LoadLevel(string level)

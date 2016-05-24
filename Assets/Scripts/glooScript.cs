@@ -97,6 +97,8 @@ public class glooScript : MonoBehaviour, GlooGenericObject {
 				}
 			}
 
+            if (Input.GetKeyDown(GlooConstants.keyTest)) {
+            }
         }        
     }
 
@@ -171,7 +173,9 @@ public class glooScript : MonoBehaviour, GlooGenericObject {
             //Debug.Log(Vector2.Angle(transform.right, Vector2.right));
         }*/
 
-       
+        if(Input.GetKey("escape")) {
+            SceneManager.LoadScene("MainMenu");
+        }
         
         if(Input.GetKeyDown("p")) {
             if(Time.timeScale==1) {
