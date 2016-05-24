@@ -11,6 +11,7 @@ public class divScript : MonoBehaviour, GlooGenericObject {
     private Rigidbody2D rbody;
     private float speed = 3.0f;
     private float jumpForce = 7.0f;
+    private int colorID = 0;
     bool inJump = false;
     bool recording = true;
     private Vector3 oldPos;
@@ -186,5 +187,16 @@ public class divScript : MonoBehaviour, GlooGenericObject {
         record = data.record;
         transform.position = data.pos;
         rbody.velocity = data.velocity;
+    }
+
+
+    public void setColorID(int id)
+    {
+        colorID = id;
+    }
+
+    public int getColorID()
+    {
+        return colorID;
     }
 }

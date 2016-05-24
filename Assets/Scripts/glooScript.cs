@@ -31,8 +31,12 @@ public class glooScript : MonoBehaviour, GlooGenericObject {
         public bool recording = false;
         public Vector3 position;
         public string createFace;
-        public glooData() {
+        public bool[] divisionsInGloo = new bool[1];
 
+        public glooData()
+        {
+            for (int i = 0; i < 1; i++)
+            divisionsInGloo[i] = true;
         }
 
         public glooData(glooData model) {
@@ -40,17 +44,22 @@ public class glooScript : MonoBehaviour, GlooGenericObject {
             recording = model.recording;
             position = model.position;
             createFace = model.createFace;
+            divisionsInGloo = model.divisionsInGloo;
         }        
     }
 
     private glooData data = new glooData();
     private bool paused = false;
     public GameObject div;
+    public GameObject[] divisionHearts;
     public static int divID = 0;
     GameObject pauseMenu;
 
     // Use this for initialization
     void Start() {
+        for (int i = 0; i < data.divisionsInGloo.Length; i++)
+            Instantiate(divisionHearts[i], new Vector3(0.0f, 0.0f, 0.0f), new Quaternion());
+
         animator = GetComponent<Animator>();
         rbody = GetComponent<Rigidbody2D>();
         boxcoll = GetComponent<BoxCollider2D>();
@@ -64,16 +73,20 @@ public class glooScript : MonoBehaviour, GlooGenericObject {
         
         if (!data.recording) {
             int currentHash = animator.GetCurrentAnimatorStateInfo(0).shortNameHash;
-            if (Input.GetKeyDown(GlooConstants.keyDivide) && (currentHash == hashIdleLeft || currentHash == hashIdleRight)) {
+            if (Input.GetKeyDown(GlooConstants.keyDivide) && (currentHash == hashIdleLeft || currentHash == hashIdleRight) && data.divisionsInGloo[0]) {
                 data.recording = true;
                 animator.SetBool("DoCreate", true);
-                /*int facing_int = facing == 1 ? -1 : 1;
-                Instantiate(div, transform.position + new Vector3(boxcoll.size.x / 2.0f + divcoll.size.x, 0, 0)*facing_int, new Quaternion());*/
+                int facing_int = facing == 1 ? -1 : 1;
+                GameObject newDiv = (GameObject) Instantiate(div, transform.position + new Vector3(boxcoll.size.x / 2.0f * transform.localScale.x + divcoll.size.x, 0, 0)*facing_int, new Quaternion());
+                newDiv.GetComponent<divScript>().setColorID(0);
+                data.divisionsInGloo[0] = false;
+                /*
                 if (facing == 1) {
                     animator.SetTrigger("CreateLeft");
                 }else {
                     animator.SetTrigger("CreateRight");
                 }
+                */
             }
             bool right = Input.GetKey(GlooConstants.keyRight);
             bool left = Input.GetKey(GlooConstants.keyLeft);
@@ -97,7 +110,18 @@ public class glooScript : MonoBehaviour, GlooGenericObject {
 				}
 			}
 
-            if (Input.GetKeyDown(GlooConstants.keyTest)) {
+            if (Input.GetKeyDown(GlooConstants.keyAbsorb))
+            {
+                Collider2D[] nearbyObjects = Physics2D.OverlapCircleAll(this.transform.position, boxcoll.size.x * this.transform.localScale.x * 5);
+                foreach (Collider2D objColl in nearbyObjects)
+                {
+                    if (objColl.gameObject.tag == "GlooDiv")
+                    {
+                        // objColl.gameObject.SendMessage("destroy");
+                        // TODO : animations
+                        data.divisionsInGloo[objColl.gameObject.GetComponent<divScript>().getColorID()] = true;
+                    }
+                }
             }
         }        
     }

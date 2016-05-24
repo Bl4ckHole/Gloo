@@ -12,7 +12,6 @@ namespace Utils{
         public static KeyCode keyAbsorb = KeyCode.Return;
         public static KeyCode keyJump = KeyCode.Space;
 		public static KeyCode keyActivate = KeyCode.A;
-        public static KeyCode keyReset = KeyCode.R;
-        
+        public static KeyCode keyReset = KeyCode.R;        
     }
 }
