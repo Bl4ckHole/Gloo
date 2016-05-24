@@ -31,6 +31,7 @@ public abstract class TriggerClass : MonoBehaviour, GlooGenericObject
 	public void TriggerActivate(bool requested)
 	{
 		animator.SetBool("isActivated", requested);
+        isActivated = requested;
 		if (cible == null) 
 		{
 			print ("This Trigger is't linked with any object");
@@ -47,7 +48,7 @@ public abstract class TriggerClass : MonoBehaviour, GlooGenericObject
 
     public void setData(object savedData) {
         TriggerData data = savedData as TriggerData;
-        isActivated = data.isActivated;
+        TriggerActivate(data.isActivated);
         animator.SetBool("isActivated", isActivated);
         animator.SetTrigger(data.isActivated ? "forceActive" : "forceInactive");
     }
