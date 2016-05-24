@@ -16,7 +16,7 @@ public class divScript : MonoBehaviour, GlooGenericObject {
     private Vector3 oldPos;
     private Dictionary<string,object> savedData;
     private BoxCollider2D boxcoll;
-    public int wallJump = 0;
+    public float wallJump = 0;
 
     private class divData {
         public bool inJump;
@@ -111,16 +111,13 @@ public class divScript : MonoBehaviour, GlooGenericObject {
             move += new Vector2(1, 0);
         }
         if (jump && !inJump) {            
-            rbody.AddForce(new Vector2((jumpForce/1.0f)*wallJump, jumpForce), ForceMode2D.Impulse);
-            if (wallJump != 0) {
-                wallJump = 0;
-            }
+            rbody.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
             inJump = true;
         }
+        
         move *= speed;
         float vy = rbody.velocity.y;
-        rbody.velocity = move + new Vector2((inJump && move.x == 0) ? rbody.velocity.x : 0, vy);
-
+        rbody.velocity = move + new Vector2((move.x == 0) ? rbody.velocity.x : 0, vy);
         if (active) {
             Collider2D[] nearbyObjects = Physics2D.OverlapCircleAll(this.transform.position, boxcoll.size.x / 2 * this.transform.localScale.x);
             foreach (Collider2D objColl in nearbyObjects) {
@@ -145,8 +142,11 @@ public class divScript : MonoBehaviour, GlooGenericObject {
                 break;
             }
             if(Math.Abs(contact.normal[1]) < 0.3) {
-                inJump = false;
-                wallJump = contact.normal[1] >= 0 ? -1 : 1;
+                //inJump = false;
+                int wallJump = contact.normal[1] >= 0 ? -1 : 1;
+                if (Input.GetKey(GlooConstants.keyJump)) {
+                    rbody.AddForce(new Vector2(wallJump * (jumpForce / 1.5f), jumpForce/2.0f),ForceMode2D.Impulse);
+                }       
                 break;
             }
         }
