@@ -10,7 +10,7 @@ public class divScript : MonoBehaviour, GlooGenericObject {
     private ArrayList recordBuffer;
     private Rigidbody2D rbody;
     private float speed = 3.0f;
-    private float jumpForce = 7.0f;
+    private float jumpForce = 9.0f;
     private int colorID = 0;
     bool inJump = false;
     bool recording = true;
@@ -198,5 +198,14 @@ public class divScript : MonoBehaviour, GlooGenericObject {
     public int getColorID()
     {
         return colorID;
+    }
+
+    public void die()
+    {
+        boxcoll.enabled = false;
+        rbody.isKinematic = true;
+
+        GameObject Gloo = GameObject.Find("Gloo");
+        Gloo.SendMessage("die");
     }
 }
