@@ -25,6 +25,9 @@ public class glooScript : MonoBehaviour, GlooGenericObject {
     public bool recording = false;*/
     public int facing = 1;
     private GameObject savePoint;
+	private GameObject filter;
+	private	SpriteRenderer filter_renderer;
+	public string filter_name;
 
     private class glooData {
 
@@ -59,6 +62,9 @@ public class glooScript : MonoBehaviour, GlooGenericObject {
 
     // Use this for initialization
     void Start() {
+		filter = GameObject.Find (filter_name);
+		filter_renderer = filter.GetComponent<SpriteRenderer> ();
+		filter_renderer.enabled = false;
         DivAndHeartsInAndOutsideGloo = new GameObject[divisionHearts.Length];
         for (int i = 0; i < data.divisionsInGloo.Length; i++)
         {

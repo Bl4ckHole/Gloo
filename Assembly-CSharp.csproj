@@ -49,6 +49,7 @@
      <Compile Include="Assets\Scripts\AnimatorCreateDivScript.cs" />
      <Compile Include="Assets\Scripts\CameraBehavior.cs" />
      <Compile Include="Assets\Scripts\CameraFollow.cs" />
+     <Compile Include="Assets\Scripts\CheckPointScript.cs" />
      <Compile Include="Assets\Scripts\GlooGenericObject.cs" />
      <Compile Include="Assets\Scripts\LeverScript.cs" />
      <Compile Include="Assets\Scripts\OstileClass.cs" />

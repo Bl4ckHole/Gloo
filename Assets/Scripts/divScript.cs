@@ -19,6 +19,9 @@ public class divScript : MonoBehaviour, GlooGenericObject {
     private BoxCollider2D boxcoll;
     public int wallJump = 0;
     bool finish = false;
+	private GameObject filter;
+	private	SpriteRenderer filter_renderer;
+	public string filter_name;
 
     private class divData {
         public bool inJump;
@@ -40,6 +43,9 @@ public class divScript : MonoBehaviour, GlooGenericObject {
 
     // Use this for initialization
     void Start() {
+		filter = GameObject.Find (filter_name);
+		filter_renderer = filter.GetComponent<SpriteRenderer> ();
+		filter_renderer.enabled = true;
         boxcoll = GetComponent<BoxCollider2D>();
 
         oldPos = transform.position;
@@ -62,6 +68,7 @@ public class divScript : MonoBehaviour, GlooGenericObject {
     void Update() {
         if (recording) {
             if (Input.GetKeyDown(GlooConstants.keyDivide)) {
+				filter_renderer.enabled = false;
                 recording = false;
                 transform.position = oldPos;
                 SpriteRenderer mySprite = gameObject.GetComponent<SpriteRenderer>();
