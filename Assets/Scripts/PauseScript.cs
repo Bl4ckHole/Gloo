@@ -6,6 +6,7 @@ public class PauseScript : MonoBehaviour {
 
     GameObject[] pauseObjects;
     GameObject PauseMenu;
+    bool first = true;
 
     // Use this for initialization
     void Start()
@@ -18,10 +19,12 @@ public class PauseScript : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown("enter"))
-        {
-            pauseControl();
-        } 
+        Time.timeScale = 0;
+        if(Input.GetKeyDown("enter")){
+            Time.timeScale = 1;
+            PauseMenu.SetActive(false);
+        }
+
         if (Input.GetKeyDown("escape")) {
 
             LoadLevel("MainMenu");
@@ -33,11 +36,10 @@ public class PauseScript : MonoBehaviour {
     //controls the pausing of the scene
     public void pauseControl()
     {
-        if (Time.timeScale == 0)
-        {
-            Time.timeScale = 1;
-            hidePaused();
-        }
+        
+           Time.timeScale = 1;
+           hidePaused();
+        
     }
 
     //shows objects with ShowOnPause tag

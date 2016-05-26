@@ -29,6 +29,7 @@ public class glooScript : MonoBehaviour, GlooGenericObject {
 	private	SpriteRenderer filter_renderer;
 	public string filter_name;
 
+
     private class glooData {
 
         public bool inJump = false;
@@ -219,17 +220,18 @@ public class glooScript : MonoBehaviour, GlooGenericObject {
             transform.Rotate(new Vector3(0.0f, 0.0f, Vector2.Angle(transform.position + transform.right, new Vector2(transform.position.x, transform.position.y) + Vector2.right)));
             //Debug.Log(Vector2.Angle(transform.right, Vector2.right));
         }*/
+        /*
 
         if(Input.GetKey("escape")) {
             SceneManager.LoadScene("MainMenu");
-        }
+        }*/
         
-        if(Input.GetKeyDown("p")) {
+        if(Input.GetKeyUp("p")) {
             if(Time.timeScale==1) {
-                Time.timeScale = 0;
                 pauseMenu.SetActive(true);
             }
-        }
+            }
+
 
 
         Vector2 move = new Vector2(0, 0);
