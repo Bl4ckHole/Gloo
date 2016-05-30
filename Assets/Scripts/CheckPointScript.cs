@@ -8,6 +8,7 @@ public class CheckPointScript : MonoBehaviour {
     public bool IsStartPoint;
     public GameObject GlooPrefab;
     private Dictionary<string, object> savedData;
+    private bool ck = false;
 
     // Use this for initialization
     void Start ()
@@ -26,10 +27,9 @@ public class CheckPointScript : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D coll)
     {
-        if (coll.gameObject.tag == "Gloo" && !animator.GetBool("Checked"))
+        if ((coll.gameObject.tag == "Gloo") && (!ck))
         {
             // save world
-            /*
             savedData = new Dictionary<string, object>();
             GameObject[] allObjects = FindObjectsOfType<GameObject>();
             foreach (GameObject obj in allObjects)
@@ -40,9 +40,10 @@ public class CheckPointScript : MonoBehaviour {
                     savedData.Add(obj.name, objScript.getData());
                 }
             }
-            */
+            
 
             // checkpoint checked
+            ck= true;
             coll.gameObject.GetComponent<glooScript>().setSavePoint(this.gameObject);
             animator.SetTrigger("Checked");
         }
@@ -50,7 +51,6 @@ public class CheckPointScript : MonoBehaviour {
 
     void Reset()
     {
-        /*
         // reset world
         foreach (KeyValuePair<string, object> kvp in savedData)
         {
@@ -60,7 +60,6 @@ public class CheckPointScript : MonoBehaviour {
             GlooGenericObject objScript = obj.GetComponent<MonoBehaviour>() as GlooGenericObject;
             objScript.setData(kvp.Value);
         }
-        */
         CreateGloo();
     }
 
