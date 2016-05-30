@@ -15,12 +15,22 @@ public class TutorielScript : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void FixedUpdate () {
-		if (Mathf.Abs (this.transform.position.x - target.transform.position.x) <= distance) {
-			image.enabled = true;
-		} else {
-			image.enabled = false;
-		}
-
-	}
+	void FixedUpdate ()
+    {
+        if (target != null)
+        {
+            if (Mathf.Abs(this.transform.position.x - target.transform.position.x) <= distance)
+            {
+                image.enabled = true;
+            }
+            else {
+                image.enabled = false;
+            }
+        }
+        else
+        {
+            // Gloo has been destroyed (die or restart) need to find the new Gloo
+            target = GameObject.Find("Gloo");
+        }
+    }
 }
