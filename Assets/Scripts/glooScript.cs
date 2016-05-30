@@ -76,8 +76,6 @@ public class glooScript : MonoBehaviour, GlooGenericObject {
         rbody = GetComponent<Rigidbody2D>();
         boxcoll = GetComponent<BoxCollider2D>();
         divcoll = div.GetComponent<BoxCollider2D>();
-        pauseMenu = GameObject.Find("PauseMenu");
-        pauseMenu.SetActive(false);
     }        
 	
 	// Update is called once per frame
@@ -292,6 +290,11 @@ public class glooScript : MonoBehaviour, GlooGenericObject {
         animator.SetTrigger(data.createFace);
     }
 
+    public void setPauseMenu(GameObject menu)
+    {
+        pauseMenu = menu;
+    }
+
     public GameObject getSavePoint()
     {
         return savePoint;
@@ -312,7 +315,7 @@ public class glooScript : MonoBehaviour, GlooGenericObject {
         }
         animator.SetTrigger("Dead");
 
-        savePoint.SendMessage("Reset");
+        savePoint.SendMessage("Reset", pauseMenu);
         Destroy(this.gameObject,1.3f);
     }
 }

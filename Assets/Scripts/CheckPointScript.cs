@@ -49,24 +49,31 @@ public class CheckPointScript : MonoBehaviour {
         }
     }
 
-    void Reset()
+    void Reset(GameObject pauseMenu)
     {
         // reset world
         foreach (KeyValuePair<string, object> kvp in savedData)
         {
             GameObject obj = GameObject.Find(kvp.Key);
-            if (obj == null)
-                continue;
+            if (obj == null || obj.tag=="Gloo" || obj.tag == "GlooDiv")
+                    continue;
             GlooGenericObject objScript = obj.GetComponent<MonoBehaviour>() as GlooGenericObject;
             objScript.setData(kvp.Value);
         }
-        CreateGloo();
+        CreateGloo(pauseMenu);
     }
 
     void CreateGloo()
     {
+        GameObject pauseMenu = GameObject.Find("PauseMenu");
+        pauseMenu.SetActive(false);
+        CreateGloo(pauseMenu);
+    }
+    void CreateGloo(GameObject pauseMenu)
+    {
         GameObject Gloo = (GameObject) Instantiate(GlooPrefab, transform.position, new Quaternion());
         Gloo.GetComponent<glooScript>().setSavePoint(this.gameObject);
         Gloo.name = "Gloo";
+        Gloo.GetComponent<glooScript>().setPauseMenu(pauseMenu);
     }
 }
