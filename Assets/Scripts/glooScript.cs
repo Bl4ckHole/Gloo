@@ -12,7 +12,7 @@ public class glooScript : MonoBehaviour, GlooGenericObject {
     public BoxCollider2D boxcoll;
     public BoxCollider2D divcoll;
     private float speed = 3.0f;
-    private float jumpForce = 7.0f;
+    private float jumpForce = 30.0f;
     private int hashLeft = Animator.StringToHash("run_left");
     private int hashRight = Animator.StringToHash("run_right");
     private int hashJumpToR = Animator.StringToHash("JumpToStandR");
