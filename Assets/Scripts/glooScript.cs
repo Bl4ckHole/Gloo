@@ -21,6 +21,9 @@ public class glooScript : MonoBehaviour, GlooGenericObject {
     private int hashJumpR = Animator.StringToHash("jump_right");
     private int hashIdleLeft = Animator.StringToHash("stand_left");
     private int hashIdleRight = Animator.StringToHash("stand_right");
+    private int hashDivLeft = Animator.StringToHash("glooCreationDivisionLeft");
+    private int hashDivRight = Animator.StringToHash("glooCreationDivisionRight");
+
     /*bool inJump = false;
     public bool recording = false;*/
     public int facing = 1;
@@ -86,6 +89,8 @@ public class glooScript : MonoBehaviour, GlooGenericObject {
             if (Input.GetKeyDown(GlooConstants.keyDivide) && (currentHash == hashIdleLeft || currentHash == hashIdleRight) && data.divisionsInGloo[0]) {
                 data.recording = true;
                 animator.SetBool("DoCreate", true);
+//                animator.Play(facing == 1 ? hashDivLeft : hashDivRight);
+
                 int facing_int = facing == 1 ? -1 : 1;
                 GameObject newDiv = (GameObject) Instantiate(div, transform.position + new Vector3(boxcoll.size.x / 2.0f * transform.localScale.x + divcoll.size.x, 0, 0)*facing_int, new Quaternion());
                 // TODO : replace the 0 by the colorID SELECTED BY THE USER when he asked for a division!!
@@ -93,13 +98,6 @@ public class glooScript : MonoBehaviour, GlooGenericObject {
                 data.divisionsInGloo[0] = false;
                 Destroy(DivAndHeartsInAndOutsideGloo[0]);
                 DivAndHeartsInAndOutsideGloo[0] = newDiv;
-                /*
-                if (facing == 1) {
-                    animator.SetTrigger("CreateLeft");
-                }else {
-                    animator.SetTrigger("CreateRight");
-                }
-                */
             }
             bool right = Input.GetKey(GlooConstants.keyRight);
             bool left = Input.GetKey(GlooConstants.keyLeft);
@@ -279,7 +277,6 @@ public class glooScript : MonoBehaviour, GlooGenericObject {
         glooData toSave = new glooData(data);
         toSave.recording = false;
         toSave.position = transform.position;
-        toSave.createFace = facing == 1 ? "CreateLeft" : "CreateRight";
         return toSave;
     }
 
@@ -287,7 +284,6 @@ public class glooScript : MonoBehaviour, GlooGenericObject {
         data = (glooData) savedData;
         transform.position = data.position;
         animator.SetBool("DoCreate", false);
-        animator.SetTrigger(data.createFace);
     }
 
     public void setPauseMenu(GameObject menu)
