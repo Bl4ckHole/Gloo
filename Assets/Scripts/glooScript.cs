@@ -31,7 +31,7 @@ public class glooScript : MonoBehaviour, GlooGenericObject {
 	private GameObject filter;
 	private	SpriteRenderer filter_renderer;
 	public string filter_name;
-
+    bool divAnimationAsStarted;
 
     private class glooData {
 
@@ -83,21 +83,36 @@ public class glooScript : MonoBehaviour, GlooGenericObject {
 	
 	// Update is called once per frame
 	void Update () {
-        
+
+        if (animator.GetBool("DoCreate"))
+        {
+            int currentHash = animator.GetCurrentAnimatorStateInfo(0).shortNameHash;
+            if (currentHash == hashDivLeft || currentHash == hashDivRight)
+            {
+                divAnimationAsStarted = true;
+            }
+            else
+            {
+                if (divAnimationAsStarted)
+                {
+                    divAnimationAsStarted = false;
+                    animator.SetBool("DoCreate", false);
+
+                    int facing_int = facing == 1 ? -1 : 1;
+                    GameObject newDiv = (GameObject)Instantiate(div, transform.position + new Vector3((boxcoll.size.x / 1.7f * transform.localScale.x + divcoll.size.x) * facing_int, -boxcoll.size.y/3.0f * transform.localScale.y, 0), new Quaternion());
+                    // TODO : replace the 0 by the colorID SELECTED BY THE USER when he asked for a division!!
+                    newDiv.GetComponent<divScript>().setColorID(0);
+                    data.divisionsInGloo[0] = false;
+                    Destroy(DivAndHeartsInAndOutsideGloo[0]);
+                    DivAndHeartsInAndOutsideGloo[0] = newDiv;
+                }
+            }
+        }
         if (!data.recording) {
             int currentHash = animator.GetCurrentAnimatorStateInfo(0).shortNameHash;
             if (Input.GetKeyDown(GlooConstants.keyDivide) && (currentHash == hashIdleLeft || currentHash == hashIdleRight) && data.divisionsInGloo[0]) {
                 data.recording = true;
                 animator.SetBool("DoCreate", true);
-//                animator.Play(facing == 1 ? hashDivLeft : hashDivRight);
-
-                int facing_int = facing == 1 ? -1 : 1;
-                GameObject newDiv = (GameObject) Instantiate(div, transform.position + new Vector3(boxcoll.size.x / 2.0f * transform.localScale.x + divcoll.size.x, 0, 0)*facing_int, new Quaternion());
-                // TODO : replace the 0 by the colorID SELECTED BY THE USER when he asked for a division!!
-                newDiv.GetComponent<divScript>().setColorID(0);
-                data.divisionsInGloo[0] = false;
-                Destroy(DivAndHeartsInAndOutsideGloo[0]);
-                DivAndHeartsInAndOutsideGloo[0] = newDiv;
             }
             bool right = Input.GetKey(GlooConstants.keyRight);
             bool left = Input.GetKey(GlooConstants.keyLeft);
@@ -278,7 +293,6 @@ public class glooScript : MonoBehaviour, GlooGenericObject {
     public void setData(object savedData) {
         data = (glooData) savedData;
         transform.position = data.position;
-        animator.SetBool("DoCreate", false);
     }
 
     public void setPauseMenu(GameObject menu)
