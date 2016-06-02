@@ -3,18 +3,29 @@ using System.Collections;
 using System.Collections.Generic;
 
 namespace Utils{
-    
+
     public static class GlooConstants
     {
-        public static KeyCode keyLeft = KeyCode.Q;
-        public static KeyCode keyRight = KeyCode.D;
-        public static KeyCode keyJump = KeyCode.Space;
-        public static KeyCode keyDivide = KeyCode.E;
-        public static KeyCode keySpecial = KeyCode.Return;
+        public static KeyCode defaultLeft = KeyCode.Q;
+        public static KeyCode defaultRight = KeyCode.D;
+        public static KeyCode defaultJump = KeyCode.Space;
+        public static KeyCode defaultDivide = KeyCode.E;
+        public static KeyCode defaultSpecial = KeyCode.Return;
         // gloo absorbtion is consideres as his special capacity  so uses THE SAME key
-        public static KeyCode keyAbsorb = keySpecial;
-        public static KeyCode keyActivate = KeyCode.A;
-        public static KeyCode keyReset = KeyCode.R;
+        public static KeyCode defaultAbsorb = keySpecial;
+        public static KeyCode defaultActivate = KeyCode.A;
+        public static KeyCode defaultReset = KeyCode.R;
+
+
+        public static KeyCode keyLeft = defaultLeft;
+        public static KeyCode keyRight = defaultRight;
+        public static KeyCode keyJump = defaultJump;
+        public static KeyCode keyDivide = defaultDivide;
+        public static KeyCode keySpecial = defaultSpecial;
+        // gloo absorbtion is consideres as his special capacity  so uses THE SAME key
+        public static KeyCode keyAbsorb = defaultAbsorb;
+        public static KeyCode keyActivate = defaultActivate;
+        public static KeyCode keyReset = defaultReset;
 
         public static Dictionary<string, KeyCode> getKeys()
         {
@@ -42,6 +53,19 @@ namespace Utils{
             KeyCode keyAbsorb = keySpecial;
             KeyCode keyActivate = newKeys["Activate"];
             KeyCode keyReset = newKeys["Reset"];
+        }
+
+        public static void setDefaultKeys(Dictionary<string, KeyCode> newKeys)
+        {
+            KeyCode keyLeft = defaultLeft;
+            KeyCode keyRight = defaultRight;
+            KeyCode keyJump = defaultJump;
+            KeyCode keyDivide = defaultDivide;
+            KeyCode keySpecial = defaultSpecial;
+            // gloo absorbtion is consideres as his special capacity  so uses THE SAME key
+            KeyCode keyAbsorb = defaultAbsorb;
+            KeyCode keyActivate = defaultActivate;
+            KeyCode keyReset = defaultReset;
         }
     }
 }
