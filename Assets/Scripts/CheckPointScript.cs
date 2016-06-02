@@ -65,8 +65,8 @@ public class CheckPointScript : MonoBehaviour {
 
     void CreateGloo()
     {
-        GameObject pauseMenu = GameObject.Find("PauseMenu");
-        pauseMenu.SetActive(false);
+        GameObject pauseMenu = GameObject.Find("Menu");
+        //pauseMenu.SetActive(false);
         CreateGloo(pauseMenu);
     }
     void CreateGloo(GameObject pauseMenu)
