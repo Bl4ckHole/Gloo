@@ -12,7 +12,7 @@ namespace Utils{
         public static KeyCode defaultDivide = KeyCode.E;
         public static KeyCode defaultSpecial = KeyCode.Return;
         // gloo absorbtion is consideres as his special capacity  so uses THE SAME key
-        public static KeyCode defaultAbsorb = keySpecial;
+        public static KeyCode defaultAbsorb = defaultSpecial;
         public static KeyCode defaultActivate = KeyCode.A;
         public static KeyCode defaultReset = KeyCode.R;
 
