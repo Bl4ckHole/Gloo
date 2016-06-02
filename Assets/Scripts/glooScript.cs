@@ -222,11 +222,6 @@ public class glooScript : MonoBehaviour, GlooGenericObject {
             SceneManager.LoadScene("MainMenu");
         }*/
         
-        if(Input.GetKeyUp("p")) {
-            if(Time.timeScale==1) {
-                pauseMenu.SetActive(true);
-            }
-            }
 
 
 
