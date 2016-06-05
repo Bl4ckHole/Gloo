@@ -63,6 +63,26 @@ public class glooScript : MonoBehaviour, GlooGenericObject {
     public GameObject[] DivAndHeartsInAndOutsideGloo;   // when divisionsInGloo[i] = true : DivAndHeartsInAndOutsideGloo[i] stoquera le coeur de la div ; else le coeur sera détruit et on gardera en mémoire la division sortie de gloo
     public static int divID = 0;
     GameObject pauseMenu;
+    int division_selectionnee = 0;
+
+    public GameObject[] get_divisions_dispo() {
+        return DivAndHeartsInAndOutsideGloo;
+    }
+
+
+    public void setDivisionSelectionnee(int n) {
+        division_selectionnee = n;
+    }
+
+    public void setDataRecording(bool b) {
+        data.recording = b;
+    }
+    
+    public bool getDataRecording() {
+        return data.recording;
+    }
+
+
 
     // Use this for initialization
     void Start() {
@@ -79,10 +99,23 @@ public class glooScript : MonoBehaviour, GlooGenericObject {
         rbody = GetComponent<Rigidbody2D>();
         boxcoll = GetComponent<BoxCollider2D>();
         divcoll = div.GetComponent<BoxCollider2D>();
-    }        
-	
-	// Update is called once per frame
-	void Update () {
+    }
+    public int getcurrentHash() {
+        return animator.GetCurrentAnimatorStateInfo(0).shortNameHash;
+    }
+
+    public int getHashleft() {
+        return hashIdleLeft;
+    }
+
+    public int getHashright()
+    {
+        return hashIdleRight;
+    }
+
+
+    // Update is called once per frame
+    void Update () {
 
         if (animator.GetBool("DoCreate"))
         {
@@ -101,19 +134,19 @@ public class glooScript : MonoBehaviour, GlooGenericObject {
                     int facing_int = facing == 1 ? -1 : 1;
                     GameObject newDiv = (GameObject)Instantiate(div, transform.position + new Vector3((boxcoll.size.x / 1.7f * transform.localScale.x + divcoll.size.x) * facing_int, -boxcoll.size.y/3.0f * transform.localScale.y, 0), new Quaternion());
                     // TODO : replace the 0 by the colorID SELECTED BY THE USER when he asked for a division!!
-                    newDiv.GetComponent<divScript>().setColorID(0);
-                    data.divisionsInGloo[0] = false;
-                    Destroy(DivAndHeartsInAndOutsideGloo[0]);
-                    DivAndHeartsInAndOutsideGloo[0] = newDiv;
+                    newDiv.GetComponent<divScript>().setColorID(division_selectionnee);
+                    data.divisionsInGloo[division_selectionnee] = false;
+                    Destroy(DivAndHeartsInAndOutsideGloo[division_selectionnee]);
+                    DivAndHeartsInAndOutsideGloo[division_selectionnee] = newDiv;
                 }
             }
         }
         if (!data.recording) {
             int currentHash = animator.GetCurrentAnimatorStateInfo(0).shortNameHash;
-            if (Input.GetKeyDown(GlooConstants.keyDivide) && (currentHash == hashIdleLeft || currentHash == hashIdleRight) && data.divisionsInGloo[0]) {
+            /*if (Input.GetKeyDown(GlooConstants.keyDivide) && (currentHash == hashIdleLeft || currentHash == hashIdleRight) && data.divisionsInGloo[0]) {
                 data.recording = true;
                 animator.SetBool("DoCreate", true);
-            }
+            }*/
             bool right = Input.GetKey(GlooConstants.keyRight);
             bool left = Input.GetKey(GlooConstants.keyLeft);
             if (left) {
