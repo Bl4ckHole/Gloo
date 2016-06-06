@@ -7,32 +7,9 @@ using UnityEngine.SceneManagement;
 
 public class glooScript : MonoBehaviour, GlooGenericObject {
 
-    private Animator animator;
-    private Rigidbody2D rbody;
-    public BoxCollider2D boxcoll;
-    public BoxCollider2D divcoll;
-    private float speed = 3.0f;
-    private float jumpForce = 30.0f;
-    private int hashLeft = Animator.StringToHash("run_left");
-    private int hashRight = Animator.StringToHash("run_right");
-    private int hashJumpToR = Animator.StringToHash("JumpToStandR");
-    private int hashJumpToL = Animator.StringToHash("JumpToStandL");
-    private int hashJumpL = Animator.StringToHash("jump_left");
-    private int hashJumpR = Animator.StringToHash("jump_right");
-    private int hashIdleLeft = Animator.StringToHash("stand_left");
-    private int hashIdleRight = Animator.StringToHash("stand_right");
-    private int hashDivLeft = Animator.StringToHash("glooCreationDivisionLeft");
-    private int hashDivRight = Animator.StringToHash("glooCreationDivisionRight");
-
-    /*bool inJump = false;
-    public bool recording = false;*/
-    public int facing = 1;
-    private GameObject savePoint;
-	private GameObject filter;
-	private	SpriteRenderer filter_renderer;
-	public string filter_name;
-    bool divAnimationAsStarted;
-
+    //*****************************************************************************************************************
+    //******************************************************CLASS******************************************************
+    //*****************************************************************************************************************
     private class glooData {
 
         public bool inJump = false;
@@ -56,6 +33,36 @@ public class glooScript : MonoBehaviour, GlooGenericObject {
         }        
     }
 
+    //*****************************************************************************************************************
+    //****************************************************Variables****************************************************
+    //*****************************************************************************************************************
+
+    private Animator animator;
+    private Rigidbody2D rbody;
+    public BoxCollider2D boxcoll;
+    public BoxCollider2D divcoll;
+    private float speed = 3.0f;
+    private float jumpForce = 30.0f;
+    private int hashLeft = Animator.StringToHash("run_left");
+    private int hashRight = Animator.StringToHash("run_right");
+    private int hashJumpToR = Animator.StringToHash("JumpToStandR");
+    private int hashJumpToL = Animator.StringToHash("JumpToStandL");
+    private int hashJumpL = Animator.StringToHash("jump_left");
+    private int hashJumpR = Animator.StringToHash("jump_right");
+    private int hashIdleLeft = Animator.StringToHash("stand_left");
+    private int hashIdleRight = Animator.StringToHash("stand_right");
+    private int hashDivLeft = Animator.StringToHash("glooCreationDivisionLeft");
+    private int hashDivRight = Animator.StringToHash("glooCreationDivisionRight");
+
+    /*bool inJump = false;
+    public bool recording = false;*/
+    public int facing = 1;
+    private GameObject savePoint;
+    private GameObject filter;
+    private SpriteRenderer filter_renderer;
+    public string filter_name;
+    bool divAnimationAsStarted;
+
     private glooData data = new glooData();
     private bool paused = false;
     public GameObject div;
@@ -65,24 +72,11 @@ public class glooScript : MonoBehaviour, GlooGenericObject {
     GameObject pauseMenu;
     int division_selectionnee = 0;
 
-    public GameObject[] get_divisions_dispo() {
-        return DivAndHeartsInAndOutsideGloo;
-    }
 
 
-    public void setDivisionSelectionnee(int n) {
-        division_selectionnee = n;
-    }
-
-    public void setDataRecording(bool b) {
-        data.recording = b;
-    }
-    
-    public bool getDataRecording() {
-        return data.recording;
-    }
-
-
+    //*****************************************************************************************************************
+    //*************************************************Unity Functions*************************************************
+    //*****************************************************************************************************************
 
     // Use this for initialization
     void Start() {
@@ -227,52 +221,6 @@ public class glooScript : MonoBehaviour, GlooGenericObject {
         }
         
 
-        /*Vector2 globalNormal = new Vector2(0.0f, 0.0f);
-        int numPoints = 0;
-        Debug.DrawLine(transform.position + 0.1f * transform.right, transform.position + transform.up + 0.1f * transform.right, Color.yellow);
-
-        for(int i = 0; i < 10; i++)
-        {
-            RaycastHit2D hit = Physics2D.Raycast(transform.position + 0.08f * boxcoll.size.x * ((-4.5f + i) / 4.5f) * transform.right, -transform.up, 0.2f * boxcoll.size.y);
-            if (hit.collider != null)
-            {
-                Debug.DrawLine(transform.position + 0.08f * boxcoll.size.x * ((-4.5f + i)/4.5f) * transform.right, hit.point, Color.green);
-                Debug.DrawLine(hit.point, hit.point + 0.3f * hit.normal.normalized, Color.red);
-                globalNormal += hit.normal;
-                numPoints += 1;
-            }
-        }
-
-        if(numPoints > 4)
-        {
-            globalNormal /= numPoints;
-            globalNormal.Normalize();
-            Debug.DrawLine(transform.position, new Vector2(transform.position.x, transform.position.y) + 2 * globalNormal, Color.cyan);
-
-            float angle = Vector2.Angle(transform.position + transform.up, new Vector2(transform.position.x, transform.position.y) + globalNormal);
-            
-            if(angle > 15)
-                transform.Rotate(new Vector3(0.0f, 0.0f, Vector2.Angle(transform.position + transform.right, new Vector2(transform.position.x, transform.position.y) + Vector2.right)));
-            else if (globalNormal.x < transform.up.x)
-                transform.Rotate(new Vector3(0.0f, 0.0f, angle));
-            else
-                transform.Rotate(new Vector3(0.0f, 0.0f, -angle));
-            
-        }
-        else
-        {
-            transform.Rotate(new Vector3(0.0f, 0.0f, Vector2.Angle(transform.position + transform.right, new Vector2(transform.position.x, transform.position.y) + Vector2.right)));
-            //Debug.Log(Vector2.Angle(transform.right, Vector2.right));
-        }*/
-        /*
-
-        if(Input.GetKey("escape")) {
-            SceneManager.LoadScene("MainMenu");
-        }*/
-        
-
-
-
         Vector2 move = new Vector2(0, 0);
         int currentHash = animator.GetCurrentAnimatorStateInfo(0).shortNameHash;
         if (currentHash == hashLeft || (currentHash== hashJumpToL && Input.GetKey(GlooConstants.keyLeft)) || (currentHash == hashJumpL && Input.GetKey(GlooConstants.keyLeft))) {
@@ -316,6 +264,31 @@ public class glooScript : MonoBehaviour, GlooGenericObject {
         }
     }
 
+    //*****************************************************************************************************************
+    //**************************************************Our Fonctions**************************************************
+    //*****************************************************************************************************************
+
+    public void die()
+    {
+        boxcoll.enabled = false;
+        rbody.isKinematic = true;
+
+        for (int i = 0; i < data.divisionsInGloo.Length; i++)
+        {
+            Destroy(DivAndHeartsInAndOutsideGloo[i]);
+        }
+        animator.SetTrigger("Dead");
+
+        savePoint.SendMessage("Reset", pauseMenu);
+        Destroy(this.gameObject, 1.3f);
+    }
+
+
+
+    //*****************************************************************************************************************
+    //************************************************Getters & Setters************************************************
+    //*****************************************************************************************************************
+
     public object getData() {
         glooData toSave = new glooData(data);
         toSave.recording = false;
@@ -342,18 +315,27 @@ public class glooScript : MonoBehaviour, GlooGenericObject {
         this.savePoint = checkpoint;
     }
 
-    public void die()
+    public GameObject[] get_divisions_dispo()
     {
-        boxcoll.enabled = false;
-        rbody.isKinematic = true;
-
-        for (int i = 0; i < data.divisionsInGloo.Length; i++)
-        {
-            Destroy(DivAndHeartsInAndOutsideGloo[i]);
-        }
-        animator.SetTrigger("Dead");
-
-        savePoint.SendMessage("Reset", pauseMenu);
-        Destroy(this.gameObject,1.3f);
+        return DivAndHeartsInAndOutsideGloo;
     }
+
+
+    public void setDivisionSelectionnee(int n)
+    {
+        division_selectionnee = n;
+    }
+
+    public void setDataRecording(bool b)
+    {
+        data.recording = b;
+    }
+
+    public bool getDataRecording()
+    {
+        return data.recording;
+    }
+
+
 }
+
