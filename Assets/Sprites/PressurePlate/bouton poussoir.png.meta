@@ -1,0 +1,267 @@
+fileFormatVersion: 2
+guid: d0b2d9dbb0d5c0a4baa9f9a970eb4abf
+timeCreated: 1465300146
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: bouton poussoir_0
+    21300002: bouton poussoir_1
+    21300004: bouton poussoir_2
+    21300006: bouton poussoir_3
+    21300008: bouton poussoir_4
+    21300010: bouton poussoir_5
+    21300012: bouton poussoir_6
+    21300014: bouton poussoir_7
+    21300016: bouton poussoir_8
+    21300018: bouton poussoir_9
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: bouton poussoir_0
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 1212
+        width: 1107
+        height: 509
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 72.49307, y: 72.350464}
+        - {x: 65.49307, y: 31.350464}
+        - {x: -21.506927, y: 45.350464}
+        - {x: -139.50693, y: 56.350464}
+        - {x: -155.50693, y: 40.350464}
+        - {x: -155.50693, y: -42.649536}
+        - {x: -149.50693, y: -65.649536}
+        - {x: 38.493073, y: -71.649536}
+        - {x: 156.49307, y: -71.649536}
+        - {x: 156.49307, y: -35.649536}
+        - {x: 119.49307, y: 72.350464}
+    - name: bouton poussoir_1
+      rect:
+        serializedVersion: 2
+        x: 1220
+        y: 1212
+        width: 1100
+        height: 491
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -96.403015, y: 52.850464}
+        - {x: -154.40302, y: 50.850464}
+        - {x: -154.40302, y: -69.149536}
+        - {x: 155.59698, y: -69.149536}
+        - {x: 155.59698, y: -26.149536}
+        - {x: 139.59698, y: 47.850464}
+        - {x: 116.596985, y: 69.850464}
+        - {x: 38.596985, y: 69.850464}
+        - {x: -73.403015, y: 5.850464}
+    - name: bouton poussoir_2
+      rect:
+        serializedVersion: 2
+        x: 2416
+        y: 1212
+        width: 1100
+        height: 474
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 75.45441, y: 52.350464}
+        - {x: 73.45441, y: 41.350464}
+        - {x: -39.545593, y: 17.350464}
+        - {x: -92.54559, y: 41.350464}
+        - {x: -140.5456, y: 61.350464}
+        - {x: -154.5456, y: 36.350464}
+        - {x: -154.5456, y: -48.649536}
+        - {x: -151.5456, y: -61.649536}
+        - {x: 53.454407, y: -66.649536}
+        - {x: 155.4544, y: -66.649536}
+        - {x: 155.4544, y: -25.649536}
+        - {x: 125.45441, y: 65.350464}
+        - {x: 118.45441, y: 67.350464}
+        - {x: 86.45441, y: 67.350464}
+        - {x: 77.45441, y: 64.350464}
+    - name: bouton poussoir_3
+      rect:
+        serializedVersion: 2
+        x: 3613
+        y: 1212
+        width: 1093
+        height: 456
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -142.40741, y: 64.850464}
+        - {x: -153.40741, y: 40.850464}
+        - {x: -153.40741, y: -49.149536}
+        - {x: -150.40741, y: -59.149536}
+        - {x: 58.59259, y: -64.149536}
+        - {x: 154.59259, y: -64.149536}
+        - {x: 154.59259, y: 0.85046387}
+        - {x: 122.59259, y: 64.850464}
+    - name: bouton poussoir_4
+      rect:
+        serializedVersion: 2
+        x: 4802
+        y: 1212
+        width: 1093
+        height: 438
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 122.48425, y: -22.649536}
+        - {x: 110.48425, y: -13.649536}
+        - {x: 122.48425, y: 33.350464}
+        - {x: 115.48425, y: 62.350464}
+        - {x: 76.48425, y: 62.350464}
+        - {x: 72.48425, y: 61.350464}
+        - {x: 48.484253, y: 62.350464}
+        - {x: -150.51575, y: 62.350464}
+        - {x: -153.51575, y: 60.350464}
+        - {x: -153.51575, y: -61.649536}
+        - {x: 154.48425, y: -61.649536}
+        - {x: 154.48425, y: -53.649536}
+        - {x: 142.48425, y: -41.649536}
+    - name: bouton poussoir_5
+      rect:
+        serializedVersion: 2
+        x: 5995
+        y: 1212
+        width: 1086
+        height: 420
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -144.50085, y: 59.850464}
+        - {x: -152.50085, y: 41.850464}
+        - {x: -152.50085, y: -59.149536}
+        - {x: 153.49915, y: -59.149536}
+        - {x: 153.49915, y: 35.850464}
+        - {x: 149.49915, y: 59.850464}
+    - name: bouton poussoir_6
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 336
+        width: 1086
+        height: 399
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -152.38365, y: 56.854584}
+        - {x: -152.38365, y: -46.145416}
+        - {x: -151.38365, y: -50.145416}
+        - {x: 49.61635, y: -56.145416}
+        - {x: 153.61635, y: -56.145416}
+        - {x: 153.61635, y: 56.854584}
+    - name: bouton poussoir_7
+      rect:
+        serializedVersion: 2
+        x: 1202
+        y: 336
+        width: 1082
+        height: 381
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -151.9577, y: 54.354584}
+        - {x: -151.9577, y: -47.645416}
+        - {x: 16.042297, y: -53.645416}
+        - {x: 153.0423, y: -53.645416}
+        - {x: 153.0423, y: 54.354584}
+    - name: bouton poussoir_8
+      rect:
+        serializedVersion: 2
+        x: 2385
+        y: 336
+        width: 1082
+        height: 371
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -151.75098, y: 52.854584}
+        - {x: -151.75098, y: -46.145416}
+        - {x: 51.249023, y: -52.145416}
+        - {x: 153.24902, y: -52.145416}
+        - {x: 153.24902, y: -26.145416}
+        - {x: 135.24902, y: 52.854584}
+    - name: bouton poussoir_9
+      rect:
+        serializedVersion: 2
+        x: 3567
+        y: 336
+        width: 1082
+        height: 364
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 103.17499, y: -16.145416}
+        - {x: 122.17499, y: 20.854584}
+        - {x: 110.17499, y: 51.854584}
+        - {x: -151.82501, y: 51.854584}
+        - {x: -151.82501, y: -46.145416}
+        - {x: -14.825012, y: -51.145416}
+        - {x: 153.17499, y: -51.145416}
+        - {x: 153.17499, y: -48.145416}
+        - {x: 139.17499, y: -34.145416}
+        - {x: 128.17499, y: -26.145416}
+        - {x: 114.17499, y: -19.145416}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
