@@ -1,0 +1,278 @@
+fileFormatVersion: 2
+guid: 7430bc353aa79e64389112a5b586f886
+timeCreated: 1465300308
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: bouton poussoirinverse_0
+    21300002: bouton poussoirinverse_1
+    21300004: bouton poussoirinverse_2
+    21300006: bouton poussoirinverse_3
+    21300008: bouton poussoirinverse_4
+    21300010: bouton poussoirinverse_5
+    21300012: bouton poussoirinverse_6
+    21300014: bouton poussoirinverse_7
+    21300016: bouton poussoirinverse_8
+    21300018: bouton poussoirinverse_9
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 3552, y: 393, z: 2772, w: 1261}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: bouton poussoirinverse_0
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 1317
+        width: 1083
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 82.92857, y: 50.471436}
+        - {x: -147.07143, y: 50.471436}
+        - {x: -147.07143, y: -47.528564}
+        - {x: -21.071426, y: -49.528564}
+        - {x: 147.92857, y: -49.528564}
+        - {x: 147.92857, y: -34.528564}
+        - {x: 122.92857, y: 44.471436}
+    - name: bouton poussoirinverse_1
+      rect:
+        serializedVersion: 2
+        x: 1201
+        y: 1317
+        width: 1085
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 115.98572, y: 39.471436}
+        - {x: 101.98572, y: 51.471436}
+        - {x: -136.01428, y: 51.471436}
+        - {x: -147.01428, y: 42.471436}
+        - {x: -147.01428, y: -50.528564}
+        - {x: 148.98572, y: -50.528564}
+        - {x: 148.98572, y: -45.528564}
+        - {x: 136.98572, y: -31.528564}
+    - name: bouton poussoirinverse_2
+      rect:
+        serializedVersion: 2
+        x: 2382
+        y: 1317
+        width: 1083
+        height: 383
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 124.04291, y: -24.028564}
+        - {x: 118.04291, y: -20.028564}
+        - {x: 113.04291, y: -17.028564}
+        - {x: 100.04291, y: -11.028564}
+        - {x: 114.04291, y: 23.971436}
+        - {x: 115.04291, y: 49.971436}
+        - {x: 104.04291, y: 52.971436}
+        - {x: 71.04291, y: 52.971436}
+        - {x: 64.04291, y: 48.971436}
+        - {x: -26.957092, y: 52.971436}
+        - {x: -131.95709, y: 52.971436}
+        - {x: -146.95709, y: 37.971436}
+        - {x: -146.95709, y: 10.971436}
+        - {x: -144.95709, y: 3.9714355}
+        - {x: -146.95709, y: -25.028564}
+        - {x: -146.95709, y: -46.028564}
+        - {x: -42.957092, y: -50.028564}
+        - {x: 57.042908, y: -52.028564}
+        - {x: 148.04291, y: -52.028564}
+        - {x: 148.04291, y: -47.028564}
+        - {x: 136.04291, y: -34.028564}
+    - name: bouton poussoirinverse_3
+      rect:
+        serializedVersion: 2
+        x: 3561
+        y: 1317
+        width: 1086
+        height: 402
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -147.44281, y: 55.471436}
+        - {x: -147.44281, y: -47.528564}
+        - {x: -146.44281, y: -48.528564}
+        - {x: -41.44281, y: -52.528564}
+        - {x: 5.55719, y: -54.528564}
+        - {x: 148.55719, y: -54.528564}
+        - {x: 148.55719, y: 15.471436}
+        - {x: 122.55719, y: 55.471436}
+    - name: bouton poussoirinverse_4
+      rect:
+        serializedVersion: 2
+        x: 4743
+        y: 1317
+        width: 1091
+        height: 420
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -28.114258, y: 57.971436}
+        - {x: -148.11426, y: 57.971436}
+        - {x: -148.11426, y: -57.028564}
+        - {x: 148.88574, y: -57.028564}
+        - {x: 148.88574, y: -19.028564}
+        - {x: 124.88574, y: 48.971436}
+        - {x: 120.88574, y: 57.971436}
+        - {x: 61.885742, y: 57.971436}
+        - {x: 37.885742, y: 39.971436}
+    - name: bouton poussoirinverse_5
+      rect:
+        serializedVersion: 2
+        x: 5930
+        y: 1317
+        width: 1094
+        height: 435
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 75.57153, y: 59.971436}
+        - {x: -148.42847, y: 59.971436}
+        - {x: -148.42847, y: -59.028564}
+        - {x: 149.57153, y: -59.028564}
+        - {x: 149.57153, y: -28.028564}
+        - {x: 118.57153, y: 55.971436}
+        - {x: 108.57153, y: 59.971436}
+        - {x: 81.57153, y: 59.971436}
+        - {x: 78.57153, y: 58.971436}
+    - name: bouton poussoirinverse_6
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 385
+        width: 1097
+        height: 453
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 125.11429, y: 62.500008}
+        - {x: -35.88571, y: 62.500008}
+        - {x: -51.88571, y: 57.500008}
+        - {x: -148.88571, y: 61.500008}
+        - {x: -148.88571, y: -55.499992}
+        - {x: 65.11429, y: -61.499992}
+        - {x: 150.11429, y: -61.499992}
+        - {x: 150.11429, y: -48.499992}
+        - {x: 125.11429, y: 51.500008}
+    - name: bouton poussoirinverse_7
+      rect:
+        serializedVersion: 2
+        x: 1210
+        y: 385
+        width: 1098
+        height: 472
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -149.07141, y: 65.00001}
+        - {x: -149.07141, y: -39.999992}
+        - {x: -147.07141, y: -53.999992}
+        - {x: -146.07141, y: -58.999992}
+        - {x: 38.92859, y: -63.999992}
+        - {x: 149.92859, y: -63.999992}
+        - {x: 149.92859, y: -29.999992}
+        - {x: 121.92859, y: 65.00001}
+    - name: bouton poussoirinverse_8
+      rect:
+        serializedVersion: 2
+        x: 2404
+        y: 385
+        width: 1103
+        height: 490
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 73.51434, y: 43.500008}
+        - {x: -115.48566, y: 58.500008}
+        - {x: -149.48566, y: 37.500008}
+        - {x: -149.48566, y: -34.499992}
+        - {x: -147.48566, y: -64.49999}
+        - {x: -125.48566, y: -66.49999}
+        - {x: 150.51434, y: -66.49999}
+        - {x: 150.51434, y: 16.500008}
+        - {x: 141.51434, y: 67.50001}
+        - {x: 80.51434, y: 67.50001}
+        - {x: 72.51434, y: 54.500008}
+    - name: bouton poussoirinverse_9
+      rect:
+        serializedVersion: 2
+        x: 3601
+        y: 385
+        width: 1107
+        height: 508
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 121.91431, y: 46.000008}
+        - {x: 113.91431, y: 70.00001}
+        - {x: 78.91431, y: 70.00001}
+        - {x: 71.91431, y: 68.00001}
+        - {x: -150.0857, y: 62.000008}
+        - {x: -150.0857, y: -37.999992}
+        - {x: -146.0857, y: -64.99999}
+        - {x: 29.914307, y: -68.99999}
+        - {x: 150.9143, y: -68.99999}
+        - {x: 150.9143, y: -61.999992}
+        - {x: 108.91431, y: -14.999992}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

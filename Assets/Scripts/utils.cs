@@ -6,15 +6,15 @@ namespace Utils{
 
     public static class GlooConstants
     {
-        public static KeyCode defaultLeft = KeyCode.Q;
-        public static KeyCode defaultRight = KeyCode.D;
-        public static KeyCode defaultJump = KeyCode.Space;
-        public static KeyCode defaultDivide = KeyCode.E;
-        public static KeyCode defaultSpecial = KeyCode.Return;
+        private static KeyCode defaultLeft = KeyCode.Q;
+        private static KeyCode defaultRight = KeyCode.D;
+        private static KeyCode defaultJump = KeyCode.Space;
+        private static KeyCode defaultDivide = KeyCode.E;
+        private static KeyCode defaultSpecial = KeyCode.Return;
         // gloo absorbtion is consideres as his special capacity  so uses THE SAME key
-        public static KeyCode defaultAbsorb = defaultSpecial;
-        public static KeyCode defaultActivate = KeyCode.A;
-        public static KeyCode defaultReset = KeyCode.R;
+        private static KeyCode defaultAbsorb = defaultSpecial;
+        private static KeyCode defaultActivate = KeyCode.A;
+        private static KeyCode defaultReset = KeyCode.R;
 
 
         public static KeyCode keyLeft = defaultLeft;
@@ -31,41 +31,41 @@ namespace Utils{
         {
             Dictionary<string, KeyCode> keys = new Dictionary<string, KeyCode>();
 
-            keys.Add("Left", keyLeft);
-            keys.Add("Right", keyRight);
-            keys.Add("Jump", keyJump);
-            keys.Add("Divide", keyDivide);
-            keys.Add("Special", keySpecial);
-            keys.Add("Activate", keyActivate);
-            keys.Add("Reset", keyDivide);
+            keys.Add("DEPLACEMENT GAUCHE", keyLeft);
+            keys.Add("DEPLACEMENT DROITE", keyRight);
+            keys.Add("SAUT", keyJump);
+            keys.Add("SE DIVISER", keyDivide);
+            keys.Add("CAPACITE SPECIALE", keySpecial);
+            keys.Add("ACTIONNER OBJET", keyActivate);
+            keys.Add("RETOUR AU DERNIER POINT DE CONTROLE", keyReset);
 
             return keys;
         }
 
         public static void setKeys(Dictionary<string, KeyCode> newKeys)
         {
-            KeyCode keyLeft = newKeys["Left"];
-            KeyCode keyRight = newKeys["Right"];
-            KeyCode keyJump = newKeys["Jump"];
-            KeyCode keyDivide = newKeys["Divide"];
-            KeyCode keySpecial = newKeys["Special"];
-            // gloo absorbtion is consideres as his special capacity  so uses THE SAME key
-            KeyCode keyAbsorb = keySpecial;
-            KeyCode keyActivate = newKeys["Activate"];
-            KeyCode keyReset = newKeys["Reset"];
+            keyLeft = newKeys["DEPLACEMENT GAUCHE"];
+            keyRight = newKeys["DEPLACEMENT DROITE"];
+            keyJump = newKeys["SAUT"];
+            keyDivide = newKeys["SE DIVISER"];
+            keySpecial = newKeys["CAPACITE SPECIALE"];
+            // gloo absorbtion is considered as his special capacity  so uses THE SAME key
+            keyAbsorb = keySpecial;
+            keyActivate = newKeys["ACTIONNER OBJET"];
+            keyReset = newKeys["RETOUR AU DERNIER POINT DE CONTROLE"];
         }
 
-        public static void setDefaultKeys(Dictionary<string, KeyCode> newKeys)
+        public static void resetToDefaultConfig()
         {
-            KeyCode keyLeft = defaultLeft;
-            KeyCode keyRight = defaultRight;
-            KeyCode keyJump = defaultJump;
-            KeyCode keyDivide = defaultDivide;
-            KeyCode keySpecial = defaultSpecial;
-            // gloo absorbtion is consideres as his special capacity  so uses THE SAME key
-            KeyCode keyAbsorb = defaultAbsorb;
-            KeyCode keyActivate = defaultActivate;
-            KeyCode keyReset = defaultReset;
+            keyLeft = defaultLeft;
+            keyRight = defaultRight;
+            keyJump = defaultJump;
+            keyDivide = defaultDivide;
+            keySpecial = defaultSpecial;
+            // gloo absorbtion is considered as his special capacity  so uses THE SAME key
+            keyAbsorb = defaultAbsorb;
+            keyActivate = defaultActivate;
+            keyReset = defaultReset;
         }
     }
 }
