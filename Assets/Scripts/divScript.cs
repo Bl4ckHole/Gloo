@@ -13,7 +13,7 @@ public class divScript : MonoBehaviour, GlooGenericObject {
     private float jumpForce = 9.0f;
     private int colorID = 0;
     bool inJump = false;
-    private bool recording = false;
+    bool recording = true;
     private Vector3 oldPos;
     private Dictionary<string,object> savedData;
     private BoxCollider2D boxcoll;
@@ -200,7 +200,6 @@ public class divScript : MonoBehaviour, GlooGenericObject {
     public void setColorID(int id)
     {
         colorID = id;
-        recording = true;
     }
 
     public int getColorID()
