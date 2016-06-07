@@ -53,10 +53,8 @@
      <Compile Include="Assets\Scripts\GlooGenericObject.cs" />
      <Compile Include="Assets\Scripts\LeverScript.cs" />
      <Compile Include="Assets\Scripts\OstileClass.cs" />
-     <Compile Include="Assets\Scripts\PauseMenu.cs" />
      <Compile Include="Assets\Scripts\PauseScript.cs" />
      <Compile Include="Assets\Scripts\PorteScript.cs" />
-     <Compile Include="Assets\Scripts\PositionToSaveScript.cs" />
      <Compile Include="Assets\Scripts\PressurePlateScript.cs" />
      <Compile Include="Assets\Scripts\RushScript.cs" />
      <Compile Include="Assets\Scripts\SuiviDivision.cs" />
