@@ -49,31 +49,41 @@ public class CheckPointScript : MonoBehaviour {
         }
     }
 
-    void Reset(GameObject pauseMenu)
+    void Reset()
     {
+        bool[] divAvailable= new bool[1];
+
         // reset world
         foreach (KeyValuePair<string, object> kvp in savedData)
         {
             GameObject obj = GameObject.Find(kvp.Key);
-            if (obj == null || obj.tag=="Gloo" || obj.tag == "GlooDiv")
-                    continue;
-            GlooGenericObject objScript = obj.GetComponent<MonoBehaviour>() as GlooGenericObject;
-            objScript.setData(kvp.Value);
+            if (obj == null || obj.tag == "GlooDiv")
+                continue;
+
+            if (obj.tag == "Gloo")
+            {
+                divAvailable = obj.GetComponent<glooScript>().getDivAvailable();                
+            }
+            else
+            {
+                GlooGenericObject objScript = obj.GetComponent<MonoBehaviour>() as GlooGenericObject;
+                objScript.setData(kvp.Value);
+            }
+
         }
-        CreateGloo(pauseMenu);
+        CreateGloo(divAvailable);
     }
 
-    void CreateGloo()
+
+    void CreateGloo(bool[] divAvailable = null)
     {
-        GameObject pauseMenu = GameObject.Find("Menu");
-        //pauseMenu.SetActive(false);
-        CreateGloo(pauseMenu);
-    }
-    void CreateGloo(GameObject pauseMenu)
-    {
-        GameObject Gloo = (GameObject) Instantiate(GlooPrefab, transform.position, new Quaternion());
+        GameObject Gloo = (GameObject)Instantiate(GlooPrefab, transform.position, new Quaternion());
         Gloo.GetComponent<glooScript>().setSavePoint(this.gameObject);
         Gloo.name = "Gloo";
-        Gloo.GetComponent<glooScript>().setPauseMenu(pauseMenu);
+
+        if (divAvailable != null)
+        {
+            Gloo.GetComponent<glooScript>().setDivInGloo(divAvailable);
+        }
     }
 }
