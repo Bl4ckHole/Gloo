@@ -1,9 +1,55 @@
 fileFormatVersion: 2
 guid: 91d709cd8c65d974daed35774a0d6303
-timeCreated: 1465300035
+timeCreated: 1465305758
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: liane_0
+    21300002: liane_1
+    21300004: liane_2
+    21300006: liane_3
+    21300008: liane_4
+    21300010: liane_5
+    21300012: liane_6
+    21300014: liane_7
+    21300016: liane_8
+    21300018: liane_9
+    21300020: liane_10
+    21300022: liane_11
+    21300024: liane_12
+    21300026: liane_13
+    21300028: liane_14
+    21300030: liane_15
+    21300032: liane_16
+    21300034: liane_17
+    21300036: liane_18
+    21300038: liane_19
+    21300040: liane_20
+    21300042: liane_21
+    21300044: liane_22
+    21300046: liane_23
+    21300048: liane_24
+    21300050: liane_25
+    21300052: liane_26
+    21300054: liane_27
+    21300056: liane_28
+    21300058: liane_29
+    21300060: liane_30
+    21300062: liane_31
+    21300064: liane_32
+    21300066: liane_33
+    21300068: liane_34
+    21300070: liane_35
+    21300072: liane_36
+    21300074: liane_37
+    21300076: liane_38
+    21300078: liane_39
+    21300080: liane_40
+    21300082: liane_41
+    21300084: liane_42
+    21300086: liane_43
+    21300088: liane_44
+    21300090: liane_45
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -49,7 +95,1022 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: liane_0
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 7450
+        width: 1488
+        height: 428
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 157, y: 13.5}
+        - {x: 142, y: -1.5}
+        - {x: 142, y: -32.5}
+        - {x: 146, y: -39.5}
+        - {x: 165, y: -53.5}
+        - {x: 175, y: -53.5}
+        - {x: 175, y: 11.5}
+        - {x: 174, y: 13.5}
+    - name: liane_1
+      rect:
+        serializedVersion: 2
+        x: 1482
+        y: 7470
+        width: 1488
+        height: 428
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 154, y: -3.5}
+        - {x: 141, y: -13.5}
+        - {x: 141, y: -53.5}
+        - {x: 166, y: -53.5}
+        - {x: 170, y: -51.5}
+        - {x: 170, y: -3.5}
+    - name: liane_2
+      rect:
+        serializedVersion: 2
+        x: 2962
+        y: 7394
+        width: 1488
+        height: 428
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 167, y: 27.5}
+        - {x: 155, y: 27.5}
+        - {x: 135, y: 1.5}
+        - {x: 135, y: -53.5}
+        - {x: 157, y: -53.5}
+        - {x: 172, y: -23.5}
+        - {x: 173, y: -2.5}
+        - {x: 173, y: 21.5}
+    - name: liane_3
+      rect:
+        serializedVersion: 2
+        x: 4470
+        y: 7386
+        width: 1488
+        height: 428
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 142, y: 27.5}
+        - {x: 120, y: 4.5}
+        - {x: 117, y: -39.5}
+        - {x: 117, y: -53.5}
+        - {x: 137, y: -53.5}
+        - {x: 151, y: -46.5}
+        - {x: 162, y: 14.5}
+        - {x: 162, y: 20.5}
+        - {x: 154, y: 27.5}
+    - name: liane_4
+      rect:
+        serializedVersion: 2
+        x: 5974
+        y: 7378
+        width: 1488
+        height: 428
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 135, y: 30.5}
+        - {x: 121, y: 23.5}
+        - {x: 99, y: -33.5}
+        - {x: 99, y: -52.5}
+        - {x: 100, y: -53.5}
+        - {x: 135, y: -53.5}
+        - {x: 152, y: -6.5}
+        - {x: 152, y: 27.5}
+        - {x: 148, y: 30.5}
+    - name: liane_5
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 6558
+        width: 1488
+        height: 428
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 167, y: 33.5}
+        - {x: 160, y: 33.5}
+        - {x: 148, y: 24.5}
+        - {x: 139, y: 2.5}
+        - {x: 112, y: -39.5}
+        - {x: 112, y: -53.5}
+        - {x: 155, y: -53.5}
+        - {x: 175, y: -11.5}
+        - {x: 175, y: 28.5}
+        - {x: 174, y: 29.5}
+    - name: liane_6
+      rect:
+        serializedVersion: 2
+        x: 1482
+        y: 6570
+        width: 1488
+        height: 428
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 156, y: 30.5}
+        - {x: 101, y: -33.5}
+        - {x: 100, y: -35.5}
+        - {x: 100, y: -53.5}
+        - {x: 162, y: -53.5}
+        - {x: 175, y: -9.5}
+        - {x: 175, y: 30.5}
+    - name: liane_7
+      rect:
+        serializedVersion: 2
+        x: 2962
+        y: 6558
+        width: 1488
+        height: 428
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 138, y: 33.5}
+        - {x: 84, y: -20.5}
+        - {x: 84, y: -36.5}
+        - {x: 90, y: -46.5}
+        - {x: 108, y: -53.5}
+        - {x: 156, y: -53.5}
+        - {x: 172, y: -20.5}
+        - {x: 172, y: 33.5}
+    - name: liane_8
+      rect:
+        serializedVersion: 2
+        x: 4470
+        y: 6534
+        width: 1488
+        height: 428
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 103, y: 39.5}
+        - {x: 60, y: -8.5}
+        - {x: 60, y: -42.5}
+        - {x: 87, y: -53.5}
+        - {x: 144, y: -53.5}
+        - {x: 163, y: -14.5}
+        - {x: 163, y: 39.5}
+    - name: liane_9
+      rect:
+        serializedVersion: 2
+        x: 5974
+        y: 6554
+        width: 1326
+        height: 428
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 165.5, y: 33.5}
+        - {x: 103.5, y: 33.5}
+        - {x: 56.5, y: 10.5}
+        - {x: 56.5, y: -26.5}
+        - {x: 106.5, y: -53.5}
+        - {x: 141.5, y: -53.5}
+        - {x: 161.5, y: -32.5}
+        - {x: 166.5, y: -5.5}
+        - {x: 166.5, y: 32.5}
+    - name: liane_10
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 5722
+        width: 1488
+        height: 428
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 61, y: 30.5}
+        - {x: 42, y: 23.5}
+        - {x: 42, y: -27.5}
+        - {x: 45, y: -32.5}
+        - {x: 90, y: -53.5}
+        - {x: 157, y: -53.5}
+        - {x: 176, y: -24.5}
+        - {x: 176, y: 30.5}
+    - name: liane_11
+      rect:
+        serializedVersion: 2
+        x: 1482
+        y: 5730
+        width: 1488
+        height: 428
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 78, y: 29.5}
+        - {x: 36, y: 15.5}
+        - {x: 28, y: -9.5}
+        - {x: 28, y: -29.5}
+        - {x: 29, y: -31.5}
+        - {x: 105, y: -53.5}
+        - {x: 164, y: -53.5}
+        - {x: 178, y: -38.5}
+        - {x: 178, y: 29.5}
+    - name: liane_12
+      rect:
+        serializedVersion: 2
+        x: 2962
+        y: 5750
+        width: 1488
+        height: 428
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 84, y: 24.5}
+        - {x: 18, y: -14.5}
+        - {x: 18, y: -30.5}
+        - {x: 19, y: -31.5}
+        - {x: 67, y: -53.5}
+        - {x: 141, y: -53.5}
+        - {x: 163, y: -46.5}
+        - {x: 175, y: -13.5}
+        - {x: 175, y: 24.5}
+    - name: liane_13
+      rect:
+        serializedVersion: 2
+        x: 4470
+        y: 5766
+        width: 1488
+        height: 428
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 148, y: 20.5}
+        - {x: 146, y: 19.5}
+        - {x: 131, y: 16.5}
+        - {x: 116, y: 11.5}
+        - {x: 2, y: -15.5}
+        - {x: 2, y: -36.5}
+        - {x: 5, y: -39.5}
+        - {x: 63, y: -53.5}
+        - {x: 138, y: -53.5}
+        - {x: 165, y: -29.5}
+        - {x: 165, y: 17.5}
+        - {x: 158, y: 20.5}
+    - name: liane_14
+      rect:
+        serializedVersion: 2
+        x: 5974
+        y: 5766
+        width: 1488
+        height: 428
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 155, y: 20.5}
+        - {x: 93, y: 20.5}
+        - {x: -12, y: -14.5}
+        - {x: -14, y: -16.5}
+        - {x: -14, y: -33.5}
+        - {x: 36, y: -53.5}
+        - {x: 98, y: -53.5}
+        - {x: 110, y: -50.5}
+        - {x: 156, y: -13.5}
+        - {x: 156, y: 17.5}
+    - name: liane_15
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 4946
+        width: 1488
+        height: 428
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 123, y: 21.5}
+        - {x: 122, y: 20.5}
+        - {x: -3, y: -2.5}
+        - {x: -3, y: -39.5}
+        - {x: 46, y: -53.5}
+        - {x: 125, y: -53.5}
+        - {x: 178, y: -22.5}
+        - {x: 178, y: 21.5}
+    - name: liane_16
+      rect:
+        serializedVersion: 2
+        x: 1482
+        y: 4938
+        width: 1488
+        height: 428
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 171, y: 23.5}
+        - {x: 64, y: 23.5}
+        - {x: -15, y: 3.5}
+        - {x: -15, y: -28.5}
+        - {x: 34, y: -53.5}
+        - {x: 131, y: -53.5}
+        - {x: 137, y: -51.5}
+        - {x: 179, y: -6.5}
+        - {x: 179, y: 19.5}
+    - name: liane_17
+      rect:
+        serializedVersion: 2
+        x: 2962
+        y: 4938
+        width: 1488
+        height: 428
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 31, y: 24.5}
+        - {x: -30, y: 13.5}
+        - {x: -30, y: -9.5}
+        - {x: -29, y: -9.5}
+        - {x: -4, y: -25.5}
+        - {x: 12, y: -31.5}
+        - {x: 66, y: -53.5}
+        - {x: 99, y: -53.5}
+        - {x: 135, y: -49.5}
+        - {x: 176, y: -11.5}
+        - {x: 176, y: 24.5}
+    - name: liane_18
+      rect:
+        serializedVersion: 2
+        x: 4470
+        y: 4938
+        width: 1488
+        height: 428
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 54, y: 23.5}
+        - {x: -51, y: 9.5}
+        - {x: -51, y: 0.5}
+        - {x: -24, y: -27.5}
+        - {x: 24, y: -53.5}
+        - {x: 98, y: -53.5}
+        - {x: 165, y: -17.5}
+        - {x: 165, y: 23.5}
+    - name: liane_19
+      rect:
+        serializedVersion: 2
+        x: 5974
+        y: 4934
+        width: 1488
+        height: 428
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 86, y: 24.5}
+        - {x: 80, y: 9.5}
+        - {x: 7, y: 15.5}
+        - {x: 6, y: 3.5}
+        - {x: -54, y: 21.5}
+        - {x: -70, y: 24.5}
+        - {x: -70, y: -3.5}
+        - {x: -10, y: -53.5}
+        - {x: 106, y: -53.5}
+        - {x: 128, y: -34.5}
+        - {x: 156, y: -8.5}
+        - {x: 156, y: 24.5}
+    - name: liane_20
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 4150
+        width: 1488
+        height: 428
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -58, y: 25.5}
+        - {x: -58, y: -7.5}
+        - {x: 20, y: -53.5}
+        - {x: 139, y: -53.5}
+        - {x: 178, y: -21.5}
+        - {x: 178, y: 19.5}
+        - {x: 174, y: 25.5}
+    - name: liane_21
+      rect:
+        serializedVersion: 2
+        x: 1482
+        y: 4150
+        width: 1488
+        height: 428
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -66, y: 33.5}
+        - {x: -66, y: 16.5}
+        - {x: -15, y: -53.5}
+        - {x: 146, y: -53.5}
+        - {x: 179, y: -17.5}
+        - {x: 179, y: 18.5}
+        - {x: 169, y: 33.5}
+    - name: liane_22
+      rect:
+        serializedVersion: 2
+        x: 2962
+        y: 4154
+        width: 1488
+        height: 428
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 36, y: 40.5}
+        - {x: -78, y: 40.5}
+        - {x: -78, y: 26.5}
+        - {x: -21, y: -32.5}
+        - {x: -18, y: -33.5}
+        - {x: 36, y: -53.5}
+        - {x: 111, y: -53.5}
+        - {x: 176, y: -11.5}
+        - {x: 176, y: 16.5}
+        - {x: 164, y: 30.5}
+    - name: liane_23
+      rect:
+        serializedVersion: 2
+        x: 4470
+        y: 4158
+        width: 1488
+        height: 428
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 165, y: -14.5}
+        - {x: 165, y: 24.5}
+        - {x: 103, y: 40.5}
+        - {x: 7, y: 46.5}
+        - {x: -97, y: 46.5}
+        - {x: -97, y: 32.5}
+        - {x: -49, y: -50.5}
+        - {x: 8, y: -53.5}
+        - {x: 71, y: -53.5}
+        - {x: 72, y: -50.5}
+        - {x: 73, y: -46.5}
+        - {x: 120, y: -40.5}
+    - name: liane_24
+      rect:
+        serializedVersion: 2
+        x: 5974
+        y: 4162
+        width: 1488
+        height: 428
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 130, y: 22.5}
+        - {x: 100, y: 17.5}
+        - {x: -47, y: 45.5}
+        - {x: -120, y: 45.5}
+        - {x: -120, y: 27.5}
+        - {x: -52, y: -52.5}
+        - {x: -45, y: -53.5}
+        - {x: 91, y: -53.5}
+        - {x: 115, y: -44.5}
+        - {x: 156, y: -22.5}
+        - {x: 156, y: 16.5}
+        - {x: 144, y: 22.5}
+    - name: liane_25
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 3374
+        width: 1488
+        height: 428
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 129, y: 5.5}
+        - {x: 136, y: 0.5}
+        - {x: 102, y: 2.5}
+        - {x: 97, y: -3.5}
+        - {x: 38, y: 12.5}
+        - {x: -52, y: 47.5}
+        - {x: -111, y: 47.5}
+        - {x: -112, y: 45.5}
+        - {x: -112, y: 21.5}
+        - {x: -18, y: -46.5}
+        - {x: -7, y: -53.5}
+        - {x: 166, y: -53.5}
+        - {x: 178, y: -51.5}
+        - {x: 178, y: 23.5}
+        - {x: 130, y: 23.5}
+    - name: liane_26
+      rect:
+        serializedVersion: 2
+        x: 1482
+        y: 3370
+        width: 1488
+        height: 428
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -125, y: 51.5}
+        - {x: -125, y: 12.5}
+        - {x: -41, y: -53.5}
+        - {x: 113, y: -53.5}
+        - {x: 139, y: -45.5}
+        - {x: 179, y: -10.5}
+        - {x: 179, y: 34.5}
+        - {x: 131, y: 51.5}
+    - name: liane_27
+      rect:
+        serializedVersion: 2
+        x: 2962
+        y: 3370
+        width: 1488
+        height: 428
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 122, y: 6.5}
+        - {x: 99, y: 0.5}
+        - {x: 95, y: -3.5}
+        - {x: 95, y: -9.5}
+        - {x: 26, y: 17.5}
+        - {x: 22, y: 6.5}
+        - {x: 23, y: 0.5}
+        - {x: -45, y: 49.5}
+        - {x: -125, y: 49.5}
+        - {x: -129, y: 38.5}
+        - {x: -129, y: 23.5}
+        - {x: -127, y: 18.5}
+        - {x: -62, y: -53.5}
+        - {x: 124, y: -53.5}
+        - {x: 176, y: -41.5}
+        - {x: 176, y: 15.5}
+        - {x: 171, y: 26.5}
+        - {x: 139, y: 21.5}
+        - {x: 126, y: 16.5}
+    - name: liane_28
+      rect:
+        serializedVersion: 2
+        x: 4470
+        y: 3366
+        width: 1488
+        height: 428
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 4, y: 15.5}
+        - {x: 11, y: 1.5}
+        - {x: 14, y: -1.5}
+        - {x: -57, y: 49.5}
+        - {x: -140, y: 49.5}
+        - {x: -140, y: 13.5}
+        - {x: -46, y: -53.5}
+        - {x: 87, y: -53.5}
+        - {x: 165, y: -18.5}
+        - {x: 165, y: 30.5}
+        - {x: 74, y: 26.5}
+    - name: liane_29
+      rect:
+        serializedVersion: 2
+        x: 5974
+        y: 3362
+        width: 1488
+        height: 428
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 110, y: 24.5}
+        - {x: 106, y: 8.5}
+        - {x: 111, y: 5.5}
+        - {x: 114, y: 4.5}
+        - {x: 6, y: 49.5}
+        - {x: -145, y: 49.5}
+        - {x: -150, y: 46.5}
+        - {x: -150, y: -28.5}
+        - {x: -73, y: -53.5}
+        - {x: 113, y: -53.5}
+        - {x: 156, y: -15.5}
+        - {x: 156, y: 19.5}
+        - {x: 144, y: 25.5}
+        - {x: 140, y: 24.5}
+    - name: liane_30
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 2578
+        width: 1488
+        height: 428
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 133, y: 24.5}
+        - {x: 129, y: 16.5}
+        - {x: 129, y: 8.5}
+        - {x: 102, y: 14.5}
+        - {x: 44, y: 4.5}
+        - {x: 41, y: -0.5}
+        - {x: 41, y: -3.5}
+        - {x: 41, y: 0.5}
+        - {x: 51, y: 26.5}
+        - {x: -45, y: 49.5}
+        - {x: -121, y: 49.5}
+        - {x: -127, y: 44.5}
+        - {x: -127, y: -32.5}
+        - {x: -92, y: -53.5}
+        - {x: 157, y: -53.5}
+        - {x: 178, y: -49.5}
+        - {x: 178, y: 26.5}
+        - {x: 162, y: 28.5}
+    - name: liane_31
+      rect:
+        serializedVersion: 2
+        x: 1482
+        y: 2578
+        width: 1488
+        height: 428
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -114, y: 49.5}
+        - {x: -127, y: 36.5}
+        - {x: -127, y: -27.5}
+        - {x: -59, y: -53.5}
+        - {x: 149, y: -53.5}
+        - {x: 179, y: -19.5}
+        - {x: 179, y: 44.5}
+        - {x: 90, y: 49.5}
+    - name: liane_32
+      rect:
+        serializedVersion: 2
+        x: 2962
+        y: 2578
+        width: 1488
+        height: 428
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -130, y: 50.5}
+        - {x: -130, y: 1.5}
+        - {x: -118, y: -5.5}
+        - {x: -107, y: -11.5}
+        - {x: -88, y: -10.5}
+        - {x: -76, y: 9.5}
+        - {x: -87, y: 11.5}
+        - {x: -85, y: 23.5}
+        - {x: -32, y: -53.5}
+        - {x: 80, y: -53.5}
+        - {x: 176, y: -19.5}
+        - {x: 176, y: 50.5}
+    - name: liane_33
+      rect:
+        serializedVersion: 2
+        x: 4470
+        y: 2578
+        width: 1488
+        height: 428
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -112, y: -53.5}
+        - {x: 79, y: -53.5}
+        - {x: 165, y: -13.5}
+        - {x: 165, y: 27.5}
+        - {x: 163, y: 44.5}
+        - {x: 127, y: 50.5}
+        - {x: -143, y: 50.5}
+        - {x: -143, y: -34.5}
+    - name: liane_34
+      rect:
+        serializedVersion: 2
+        x: 5974
+        y: 2578
+        width: 1488
+        height: 428
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 77, y: 16.5}
+        - {x: 22, y: 4.5}
+        - {x: 19, y: -0.5}
+        - {x: 19, y: -3.5}
+        - {x: 19, y: 0.5}
+        - {x: 29, y: 26.5}
+        - {x: -71, y: 50.5}
+        - {x: -141, y: 50.5}
+        - {x: -152, y: 34.5}
+        - {x: -152, y: -10.5}
+        - {x: -95, y: -53.5}
+        - {x: 101, y: -53.5}
+        - {x: 156, y: -26.5}
+        - {x: 156, y: 28.5}
+        - {x: 105, y: 32.5}
+    - name: liane_35
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 1790
+        width: 1488
+        height: 428
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -26, y: 50.5}
+        - {x: -127, y: 50.5}
+        - {x: -131, y: 44.5}
+        - {x: -131, y: -34.5}
+        - {x: -83, y: -53.5}
+        - {x: 150, y: -53.5}
+        - {x: 178, y: -18.5}
+        - {x: 178, y: 25.5}
+        - {x: 130, y: 39.5}
+    - name: liane_36
+      rect:
+        serializedVersion: 2
+        x: 1482
+        y: 1790
+        width: 1488
+        height: 428
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -126, y: 51.5}
+        - {x: -133, y: 43.5}
+        - {x: -133, y: -6.5}
+        - {x: -97, y: -23.5}
+        - {x: -30, y: -28.5}
+        - {x: -26, y: -28.5}
+        - {x: -23, y: -25.5}
+        - {x: -9, y: -43.5}
+        - {x: -2, y: -42.5}
+        - {x: 3, y: -37.5}
+        - {x: 60, y: -53.5}
+        - {x: 92, y: -53.5}
+        - {x: 179, y: -11.5}
+        - {x: 179, y: 34.5}
+        - {x: 60, y: 51.5}
+    - name: liane_37
+      rect:
+        serializedVersion: 2
+        x: 2962
+        y: 1794
+        width: 1488
+        height: 428
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -152, y: 51.5}
+        - {x: -152, y: -22.5}
+        - {x: -76, y: -53.5}
+        - {x: 109, y: -53.5}
+        - {x: 176, y: -34.5}
+        - {x: 176, y: 30.5}
+        - {x: 92, y: 51.5}
+    - name: liane_38
+      rect:
+        serializedVersion: 2
+        x: 4470
+        y: 1794
+        width: 1488
+        height: 428
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: 33.5}
+        - {x: -44, y: 27.5}
+        - {x: -70, y: 51.5}
+        - {x: -173, y: 51.5}
+        - {x: -173, y: -44.5}
+        - {x: -132, y: -53.5}
+        - {x: 127, y: -53.5}
+        - {x: 165, y: -18.5}
+        - {x: 165, y: 20.5}
+        - {x: 150, y: 27.5}
+      - - {x: 183, y: 54.5}
+        - {x: 183, y: 52.5}
+        - {x: 186, y: 48.5}
+        - {x: 187, y: 48.5}
+        - {x: 187, y: 54.5}
+    - name: liane_39
+      rect:
+        serializedVersion: 2
+        x: 5974
+        y: 1794
+        width: 1488
+        height: 428
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -73, y: 54.5}
+        - {x: -186, y: 54.5}
+        - {x: -186, y: 43.5}
+        - {x: -184, y: 40.5}
+        - {x: -168, y: 33.5}
+        - {x: -163, y: -10.5}
+        - {x: -149, y: -25.5}
+        - {x: -108, y: -20.5}
+        - {x: -57, y: -26.5}
+        - {x: -57, y: -13.5}
+        - {x: -50, y: -17.5}
+        - {x: -50, y: -16.5}
+        - {x: -52, y: -17.5}
+        - {x: -55, y: -21.5}
+        - {x: -58, y: -47.5}
+        - {x: -35, y: -53.5}
+        - {x: 93, y: -53.5}
+        - {x: 156, y: -10.5}
+        - {x: 156, y: 5.5}
+        - {x: 153, y: 43.5}
+    - name: liane_40
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 1010
+        width: 1488
+        height: 428
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 165, y: 12.5}
+        - {x: 157, y: 34.5}
+        - {x: 81, y: 28.5}
+        - {x: 29, y: 16.5}
+        - {x: 28, y: 5.5}
+        - {x: 28, y: 2.5}
+        - {x: 28, y: 13.5}
+        - {x: 25, y: 19.5}
+        - {x: 14, y: 21.5}
+        - {x: 10, y: 7.5}
+        - {x: 14, y: 4.5}
+        - {x: -74, y: 53.5}
+        - {x: -78, y: 54.5}
+        - {x: -186, y: 54.5}
+        - {x: -186, y: 20.5}
+        - {x: -169, y: -39.5}
+        - {x: -13, y: -53.5}
+        - {x: 82, y: -53.5}
+        - {x: 123, y: -33.5}
+        - {x: 165, y: -11.5}
+      - - {x: 173, y: 54.5}
+        - {x: 166, y: 50.5}
+        - {x: 166, y: 43.5}
+        - {x: 176, y: 40.5}
+        - {x: 187, y: 40.5}
+        - {x: 187, y: 54.5}
+    - name: liane_41
+      rect:
+        serializedVersion: 2
+        x: 1482
+        y: 1010
+        width: 1488
+        height: 428
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -82, y: 54.5}
+        - {x: -186, y: 54.5}
+        - {x: -186, y: 44.5}
+        - {x: -180, y: 41.5}
+        - {x: -128, y: -10.5}
+        - {x: -91, y: -34.5}
+        - {x: -22, y: -53.5}
+        - {x: 127, y: -53.5}
+        - {x: 182, y: -13.5}
+        - {x: 182, y: 43.5}
+        - {x: 20, y: 48.5}
+      - - {x: 183, y: 47.5}
+        - {x: 183, y: 45.5}
+        - {x: 185, y: 43.5}
+        - {x: 187, y: 43.5}
+        - {x: 187, y: 50.5}
+        - {x: 186, y: 50.5}
+    - name: liane_42
+      rect:
+        serializedVersion: 2
+        x: 2962
+        y: 1010
+        width: 1488
+        height: 428
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -186, y: 54.5}
+        - {x: -186, y: 42.5}
+        - {x: -139, y: -37.5}
+        - {x: -67, y: -53.5}
+        - {x: 133, y: -53.5}
+        - {x: 187, y: -16.5}
+        - {x: 187, y: 34.5}
+        - {x: -22, y: 54.5}
+    - name: liane_43
+      rect:
+        serializedVersion: 2
+        x: 4470
+        y: 1010
+        width: 1488
+        height: 430
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -143, y: -48.5}
+        - {x: -123, y: -53.5}
+        - {x: 138, y: -53.5}
+        - {x: 187, y: -13.5}
+        - {x: 187, y: 17.5}
+        - {x: 182, y: 43.5}
+        - {x: 49, y: 54.5}
+        - {x: -186, y: 54.5}
+        - {x: -186, y: 42.5}
+    - name: liane_44
+      rect:
+        serializedVersion: 2
+        x: 5974
+        y: 1010
+        width: 1492
+        height: 428
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -186.5, y: 54.5}
+        - {x: -186.5, y: 32.5}
+        - {x: -156.5, y: -50.5}
+        - {x: -126.5, y: -53.5}
+        - {x: 187.5, y: -53.5}
+        - {x: 187.5, y: 47.5}
+        - {x: 73.5, y: 54.5}
+    - name: liane_45
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 226
+        width: 1488
+        height: 428
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 137, y: 17.5}
+        - {x: 140, y: 7.5}
+        - {x: 104, y: 8.5}
+        - {x: 47, y: 23.5}
+        - {x: 39, y: 23.5}
+        - {x: 34, y: 17.5}
+        - {x: 35, y: 11.5}
+        - {x: 40, y: 6.5}
+        - {x: 42, y: 6.5}
+        - {x: 32, y: 6.5}
+        - {x: 3, y: 10.5}
+        - {x: -5, y: 11.5}
+        - {x: -11, y: 27.5}
+        - {x: -15, y: 28.5}
+        - {x: -47, y: 54.5}
+        - {x: -186, y: 54.5}
+        - {x: -186, y: 40.5}
+        - {x: -130, y: -24.5}
+        - {x: 24, y: -53.5}
+        - {x: 106, y: -53.5}
+        - {x: 187, y: -15.5}
+        - {x: 187, y: 21.5}
+        - {x: 164, y: 27.5}
     outline: []
   spritePackingTag: 
   userData: 
