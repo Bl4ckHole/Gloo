@@ -70,7 +70,7 @@ public class glooScript : MonoBehaviour, GlooGenericObject {
     private GameObject[] divAndHeartsInAndOutsideGloo;   // when divisionsInGloo[i] = true : divAndHeartsInAndOutsideGloo[i] stoquera le coeur de la div ; else le coeur sera détruit et on gardera en mémoire la division sortie de gloo
     public static int divID = 0;
     int division_selectionnee = 0;
-    int maxDivision = 1;
+    int maxDivision = 5;
 
 
 
@@ -313,7 +313,8 @@ public class glooScript : MonoBehaviour, GlooGenericObject {
 
                         int facing_int = facing == 1 ? -1 : 1;
                         GameObject newDiv = (GameObject)Instantiate(divisions[division_selectionnee], transform.position + new Vector3((boxcoll.size.x / 1.2f * transform.localScale.x) * facing_int, -boxcoll.size.y / 3.0f * transform.localScale.y, 0), new Quaternion());
-                    
+
+                        newDiv.name = "division_" + division_selectionnee;
                         newDiv.GetComponent<divScript>().setColorID(division_selectionnee);
 
                         divisionsInGloo[division_selectionnee] = false;

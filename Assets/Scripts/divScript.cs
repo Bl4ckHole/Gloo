@@ -11,7 +11,7 @@ public class divScript : MonoBehaviour, GlooGenericObject {
     private Rigidbody2D rbody;
     private float speed = 3.0f;
     private float jumpForce = 9.0f;
-    private int colorID = 0;
+    public int colorID = 0;
     bool inJump = false;
     private bool recording = false;
     private Vector3 oldPos;
@@ -43,6 +43,8 @@ public class divScript : MonoBehaviour, GlooGenericObject {
 
     // Use this for initialization
     void Start() {
+        this.name = "division_" + colorID;
+
 		filter = GameObject.Find (filter_name);
 		filter_renderer = filter.GetComponent<SpriteRenderer> ();
 		filter_renderer.enabled = true;
