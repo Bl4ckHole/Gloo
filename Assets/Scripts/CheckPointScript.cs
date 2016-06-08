@@ -29,23 +29,34 @@ public class CheckPointScript : MonoBehaviour {
     {
         if ((coll.gameObject.tag == "Gloo") && (!ck))
         {
-            // save world
-            savedData = new Dictionary<string, object>();
-            GameObject[] allObjects = FindObjectsOfType<GameObject>();
-            foreach (GameObject obj in allObjects)
+            bool[] divAvailable = coll.gameObject.GetComponent<glooScript>().getDivAvailable();
+            bool[] divInGloo = coll.gameObject.GetComponent <glooScript> ().getDivInGloo();
+            bool containAllDivs = true;
+            for (int i=0; i< divAvailable.Length; i++)
             {
-                if (obj.GetComponent<MonoBehaviour>() is GlooGenericObject)
-                {
-                    GlooGenericObject objScript = obj.GetComponent<MonoBehaviour>() as GlooGenericObject;
-                    savedData.Add(obj.name, objScript.getData());
-                }
+                containAllDivs = containAllDivs && (divAvailable[i] == divInGloo[i]);
             }
+
+            if (containAllDivs)
+            {
+                // save world
+                savedData = new Dictionary<string, object>();
+                GameObject[] allObjects = FindObjectsOfType<GameObject>();
+                foreach (GameObject obj in allObjects)
+                {
+                    if (obj.GetComponent<MonoBehaviour>() is GlooGenericObject)
+                    {
+                        GlooGenericObject objScript = obj.GetComponent<MonoBehaviour>() as GlooGenericObject;
+                        savedData.Add(obj.name, objScript.getData());
+                    }
+                }
             
 
-            // checkpoint checked
-            ck= true;
-            coll.gameObject.GetComponent<glooScript>().setSavePoint(this.gameObject);
-            animator.SetTrigger("Checked");
+                // checkpoint checked
+                ck= true;
+                coll.gameObject.GetComponent<glooScript>().setSavePoint(this.gameObject);
+                animator.SetTrigger("Checked");
+            }
         }
     }
 

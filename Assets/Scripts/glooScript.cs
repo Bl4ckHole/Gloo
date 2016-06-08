@@ -389,12 +389,12 @@ public class glooScript : MonoBehaviour, GlooGenericObject {
     }
     public bool[] getDivAvailable()
     {
-        bool[] res = divisionsInGloo;
+        bool[] res = new bool[divisionsInGloo.Length];
         for (int i = 0; i < divisionsInGloo.Length; i++)
         {
             if (divAndHeartsInAndOutsideGloo[i]!=null)
             {
-                res[i] = res[i] || (divAndHeartsInAndOutsideGloo[i].tag == "GlooDiv");
+                res[i] = divisionsInGloo[i] || (divAndHeartsInAndOutsideGloo[i].tag == "GlooDiv");
             }
         }
         return res;
@@ -412,9 +412,9 @@ public class glooScript : MonoBehaviour, GlooGenericObject {
         }
     }
 
-    public GameObject[] get_divisions_dispo()
+    public bool[] getDivInGloo()
     {
-        return divAndHeartsInAndOutsideGloo;
+        return divisionsInGloo;
     }
 
 
