@@ -175,8 +175,10 @@ public class glooScript : MonoBehaviour, GlooGenericObject {
         {
             float width = 0.09f;
             float ray_size = 0.2f;
+            Physics2D.queriesHitTriggers = false;
             RaycastHit2D hit1 = Physics2D.Raycast(transform.position - width * boxcoll.size.x * transform.right, -transform.up, ray_size * boxcoll.size.y);
             RaycastHit2D hit2 = Physics2D.Raycast(transform.position + width * boxcoll.size.x * transform.right, -transform.up, ray_size * boxcoll.size.y);
+            Physics2D.queriesHitTriggers = true;
             Debug.DrawLine(transform.position - width * boxcoll.size.x * transform.right, transform.position - width * boxcoll.size.x * transform.right - ray_size * boxcoll.size.y * transform.up, Color.green);
             Debug.DrawLine(transform.position + width * boxcoll.size.x * transform.right, transform.position + width * boxcoll.size.x * transform.right - ray_size * boxcoll.size.y * transform.up, Color.green);
             if (hit1.collider != null && hit2.collider != null)
