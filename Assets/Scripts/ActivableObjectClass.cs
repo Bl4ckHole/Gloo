@@ -12,8 +12,8 @@ public class ActivableObjectClass : MonoBehaviour {
 	void Start () {
 		limite = GetComponent<EdgeCollider2D> ();
 		limite.enabled = false;
-		image = GetComponent<SpriteRenderer> ();
-		image.enabled = false;
+//		image = GetComponent<SpriteRenderer> ();
+//		image.enabled = false;
 		animator = GetComponent<Animator>();
 	}
 	
@@ -21,6 +21,6 @@ public class ActivableObjectClass : MonoBehaviour {
 	public void Activate (bool isActivated) {
 		limite.enabled = isActivated;
 		animator.SetBool(hashisActivated,isActivated);
-		image.enabled = isActivated;
+//		image.enabled = isActivated;
 	}
 }

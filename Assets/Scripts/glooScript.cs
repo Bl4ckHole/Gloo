@@ -70,7 +70,7 @@ public class glooScript : MonoBehaviour, GlooGenericObject {
     private GameObject[] divAndHeartsInAndOutsideGloo;   // when divisionsInGloo[i] = true : divAndHeartsInAndOutsideGloo[i] stoquera le coeur de la div ; else le coeur sera détruit et on gardera en mémoire la division sortie de gloo
     public static int divID = 0;
     int division_selectionnee = 0;
-    int maxDivision = 1;
+    int maxDivision = 5;
 
 
 
@@ -175,8 +175,10 @@ public class glooScript : MonoBehaviour, GlooGenericObject {
         {
             float width = 0.09f;
             float ray_size = 0.2f;
+            Physics2D.queriesHitTriggers = false;
             RaycastHit2D hit1 = Physics2D.Raycast(transform.position - width * boxcoll.size.x * transform.right, -transform.up, ray_size * boxcoll.size.y);
             RaycastHit2D hit2 = Physics2D.Raycast(transform.position + width * boxcoll.size.x * transform.right, -transform.up, ray_size * boxcoll.size.y);
+            Physics2D.queriesHitTriggers = true;
             Debug.DrawLine(transform.position - width * boxcoll.size.x * transform.right, transform.position - width * boxcoll.size.x * transform.right - ray_size * boxcoll.size.y * transform.up, Color.green);
             Debug.DrawLine(transform.position + width * boxcoll.size.x * transform.right, transform.position + width * boxcoll.size.x * transform.right - ray_size * boxcoll.size.y * transform.up, Color.green);
             if (hit1.collider != null && hit2.collider != null)
@@ -313,7 +315,8 @@ public class glooScript : MonoBehaviour, GlooGenericObject {
 
                         int facing_int = facing == 1 ? -1 : 1;
                         GameObject newDiv = (GameObject)Instantiate(divisions[division_selectionnee], transform.position + new Vector3((boxcoll.size.x / 1.2f * transform.localScale.x) * facing_int, -boxcoll.size.y / 3.0f * transform.localScale.y, 0), new Quaternion());
-                    
+
+                        newDiv.name = "division_" + division_selectionnee;
                         newDiv.GetComponent<divScript>().setColorID(division_selectionnee);
 
                         divisionsInGloo[division_selectionnee] = false;
@@ -389,12 +392,12 @@ public class glooScript : MonoBehaviour, GlooGenericObject {
     }
     public bool[] getDivAvailable()
     {
-        bool[] res = divisionsInGloo;
+        bool[] res = new bool[divisionsInGloo.Length];
         for (int i = 0; i < divisionsInGloo.Length; i++)
         {
             if (divAndHeartsInAndOutsideGloo[i]!=null)
             {
-                res[i] = res[i] || (divAndHeartsInAndOutsideGloo[i].tag == "GlooDiv");
+                res[i] = divisionsInGloo[i] || (divAndHeartsInAndOutsideGloo[i].tag == "GlooDiv");
             }
         }
         return res;
@@ -412,9 +415,9 @@ public class glooScript : MonoBehaviour, GlooGenericObject {
         }
     }
 
-    public GameObject[] get_divisions_dispo()
+    public bool[] getDivInGloo()
     {
-        return divAndHeartsInAndOutsideGloo;
+        return divisionsInGloo;
     }
 
 
