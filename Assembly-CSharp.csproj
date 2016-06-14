@@ -51,6 +51,7 @@
      <Compile Include="Assets\Scripts\CameraFollow.cs" />
      <Compile Include="Assets\Scripts\CheckPointScript.cs" />
      <Compile Include="Assets\Scripts\GlooGenericObject.cs" />
+     <Compile Include="Assets\Scripts\KillingFloorScript.cs" />
      <Compile Include="Assets\Scripts\LeverScript.cs" />
      <Compile Include="Assets\Scripts\OstileClass.cs" />
      <Compile Include="Assets\Scripts\PauseMenu.cs" />
