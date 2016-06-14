@@ -10,7 +10,7 @@ namespace Utils{
         private static KeyCode defaultRight = KeyCode.D;
         private static KeyCode defaultJump = KeyCode.Space;
         private static KeyCode defaultDivide = KeyCode.E;
-        private static KeyCode defaultSpecial = KeyCode.Return;
+        private static KeyCode defaultSpecial = KeyCode.S;
         // gloo absorbtion is consideres as his special capacity  so uses THE SAME key
         private static KeyCode defaultAbsorb = defaultSpecial;
         private static KeyCode defaultActivate = KeyCode.A;
