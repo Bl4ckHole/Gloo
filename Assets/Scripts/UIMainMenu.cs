@@ -111,8 +111,8 @@ public class UIMainMenu : MonoBehaviour
 
             if (GUI.Button(new Rect(mainPageColumnPos_x, mainPageStartPos_y + 3 * (mainPageButtonSize_y + 20) + 40, mainPageButtonSize_x, mainPageButtonSize_y), "QUITTER"))
             {
-                /*Time.timeScale = 1;
-                Application.Quit();*/
+                Time.timeScale = 1;
+                Application.Quit();
             }
 
             GUI.skin.GetStyle("label").fontSize = 40;

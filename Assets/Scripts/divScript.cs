@@ -62,8 +62,7 @@ public class divScript : MonoBehaviour, GlooGenericObject {
                 savedData.Add(obj.name, objScript.getData());
             }
         }
-        GameObject cam = GameObject.Find("Main Camera");
-        cam.GetComponent<CameraBehavior>().currenttarget = gameObject.name;       
+     
     }
 
     // Update is called once per frame
@@ -201,6 +200,8 @@ public class divScript : MonoBehaviour, GlooGenericObject {
 
     public void setColorID(int id)
     {
+        GameObject cam = GameObject.Find("Main Camera");
+        cam.GetComponent<CameraBehavior>().currenttarget = gameObject.name;
         colorID = id;
         recording = true;
     }
