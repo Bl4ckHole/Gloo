@@ -135,7 +135,7 @@ public class divScript : MonoBehaviour, GlooGenericObject {
                 //les 0.7 sont la pour normaliser à l'arrache et éviter des auts muraux gigantesques 
 
                 if ((canJumpWallLeft && wallJump==1)||(canJumpWallRight && wallJump==-1)) {
-                    rbody.AddForce(new Vector2((jumpForce) * wallJump * 0.7f, jumpForce * 0.7f), ForceMode2D.Impulse);
+                    rbody.AddForce(new Vector2((jumpForce) * wallJump*0.7f , jumpForce*1.2f), ForceMode2D.Impulse);
                     if (wallJump == -1)
                     {
                         canJumpWallRight = false;
