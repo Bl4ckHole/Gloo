@@ -13,6 +13,7 @@ public class divScript : MonoBehaviour, GlooGenericObject {
     private float jumpForce = 9.0f;
     public int colorID = 0;
     bool inJump = false;
+    bool inJumpWall = false;
     private bool recording = false;
     private Vector3 oldPos;
     private Dictionary<string,object> savedData;
@@ -22,6 +23,10 @@ public class divScript : MonoBehaviour, GlooGenericObject {
 	private GameObject filter;
 	private	SpriteRenderer filter_renderer;
 	public string filter_name;
+    private bool canMoveLeft =true;
+    private bool canMoveRight = true;
+    private bool canJumpWallLeft = true;
+    private bool canJumpWallRight = true;
 
     private class divData {
         public bool inJump;
@@ -95,7 +100,7 @@ public class divScript : MonoBehaviour, GlooGenericObject {
         if (recording) {
             right = Input.GetKey(GlooConstants.keyRight);
             left = Input.GetKey(GlooConstants.keyLeft);
-            jump = Input.GetKey(GlooConstants.keyJump);
+            jump = Input.GetKeyDown(GlooConstants.keyJump);
             active = Input.GetKeyDown(GlooConstants.keyActivate);
             RecordKeys();
         }
@@ -118,19 +123,44 @@ public class divScript : MonoBehaviour, GlooGenericObject {
         }        
 
         Vector2 move = new Vector2(0, 0);
-        if (left) {
+        if (left && canMoveLeft) {
             move += new Vector2(-1, 0);
         }
-        if (right) {
+        if (right && canMoveRight) {
             move += new Vector2(1, 0);
         }
-        if (jump && !inJump) {            
-            rbody.AddForce(new Vector2((jumpForce/1.0f)*wallJump, jumpForce), ForceMode2D.Impulse);
-            if (wallJump != 0) {
-                wallJump = 0;
+        
+        if (jump && (!inJump || inJumpWall)) {
+            if (wallJump!=0) {
+                //les 0.7 sont la pour normaliser à l'arrache et éviter des auts muraux gigantesques 
+
+                if ((canJumpWallLeft && wallJump==1)||(canJumpWallRight && wallJump==-1)) {
+                    rbody.AddForce(new Vector2((jumpForce) * wallJump * 0.7f, jumpForce * 0.7f), ForceMode2D.Impulse);
+                    if (wallJump == -1)
+                    {
+                        canJumpWallRight = false;
+                        canJumpWallLeft = true;
+                    }
+                    if (wallJump == 1)
+                    {
+                        canJumpWallLeft = false;
+                        canJumpWallRight = true;
+                    }
+                    wallJump = 0;
+                    canMoveLeft = true;
+                    canMoveRight = true;
+                }
+
+                
             }
+            else {
+                rbody.AddForce(new Vector2(0.0f, jumpForce), ForceMode2D.Impulse);
+            }
+
+            inJumpWall = false;
             inJump = true;
         }
+        
         move *= speed;
         float vy = rbody.velocity.y;
         rbody.velocity = move + new Vector2((inJump && move.x == 0) ? rbody.velocity.x : 0, vy);
@@ -147,23 +177,31 @@ public class divScript : MonoBehaviour, GlooGenericObject {
 
     void OnCollisionStay2D(Collision2D coll) {
 
-        if (!inJump)
+        if (!inJump) {
+            canJumpWallLeft = true;
+            canJumpWallRight = true;
             return;
-
+        }
         foreach (ContactPoint2D contact in coll.contacts)
         {
-            if (contact.normal[1] > 0.7)
+            if (contact.normal[1] > 0.8)
             {
+                canMoveLeft = true;
+                canMoveRight = true;
                 inJump = false;
                 wallJump = 0;
                 break;
             }
-            if(Math.Abs(contact.normal[1]) < 0.3) {
-                inJump = false;
-                wallJump = contact.normal[1] >= 0 ? -1 : 1;
-                break;
+            if (Math.Abs(contact.normal[1]) < 0.2) {
+                inJumpWall = true;
+                wallJump = contact.normal[0] >= 0 ? 1 : -1;
+                canMoveLeft &= (wallJump == -1);
+                canMoveRight &= (wallJump == 1);
             }
         }
+
+        
+
     }
 
     void RecordKeys() {
