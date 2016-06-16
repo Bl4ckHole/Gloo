@@ -27,6 +27,9 @@ public class divScript : MonoBehaviour, GlooGenericObject {
     private bool canMoveRight = true;
     private bool canJumpWallLeft = true;
     private bool canJumpWallRight = true;
+    private bool canDoubleJump = true;
+    private bool shouldDoubleJump = false;
+    private bool oldJump = false;
 
     private class divData {
         public bool inJump;
@@ -120,7 +123,14 @@ public class divScript : MonoBehaviour, GlooGenericObject {
                 jump |= k == GlooConstants.keyJump;
                 active |= k == GlooConstants.keyActivate;
             }
-        }        
+        }
+        if(!jump && oldJump) {
+            if(inJump && canDoubleJump) {
+                shouldDoubleJump = true;
+                canDoubleJump = false;
+            }
+        }
+        oldJump = jump;
 
         Vector2 move = new Vector2(0, 0);
         if (left && canMoveLeft) {
@@ -130,7 +140,7 @@ public class divScript : MonoBehaviour, GlooGenericObject {
             move += new Vector2(1, 0);
         }
         
-        if (jump && (!inJump || inJumpWall)) {
+        if (jump && (!inJump || shouldDoubleJump || inJumpWall)) {
             if (wallJump!=0) {
                 //les 0.7 sont la pour normaliser à l'arrache et éviter des auts muraux gigantesques 
 
@@ -159,6 +169,7 @@ public class divScript : MonoBehaviour, GlooGenericObject {
 
             inJumpWall = false;
             inJump = true;
+            shouldDoubleJump = false;
         }
         
         move *= speed;
@@ -189,6 +200,8 @@ public class divScript : MonoBehaviour, GlooGenericObject {
                 canMoveLeft = true;
                 canMoveRight = true;
                 inJump = false;
+                canDoubleJump = true;
+                shouldDoubleJump = false;
                 wallJump = 0;
                 break;
             }
