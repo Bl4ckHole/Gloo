@@ -87,9 +87,13 @@ public class glooScript : MonoBehaviour, GlooGenericObject {
         if (divisionsInGloo == null)
         {
             divisionsInGloo = new bool[maxDivision];
+            
         }
             divAndHeartsInAndOutsideGloo = new GameObject[maxDivision];
-
+        if(SceneManager.GetActiveScene().name=="Level2") {
+            divisionsInGloo[0] = true;
+            divAndHeartsInAndOutsideGloo[0] = (GameObject)Instantiate(divisionHearts[0], new Vector3(0.0f, 0.0f, 0.0f), new Quaternion());
+        }
 
         animator = GetComponent<Animator>();
         rbody = GetComponent<Rigidbody2D>();

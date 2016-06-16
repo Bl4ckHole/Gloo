@@ -18,7 +18,8 @@ public class NextLevelScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void OnCollisionStay2D(Collision2D coll) {
-		if (coll.gameObject.tag == "Gloo") {
+        gloo = GameObject.Find("Gloo");
+        if (coll.gameObject.tag == "Gloo") {
 			print ("OK");
 			divOk = gloo.GetComponent<glooScript> ().getDivInGloo ();
 			compteur = 0;
@@ -27,7 +28,7 @@ public class NextLevelScript : MonoBehaviour {
 					compteur += 1;
 				}
 			}
-			if (compteur == divNeeded) {
+			if (compteur >= divNeeded) {
 				SceneManager.LoadScene(nextLevel);
 			}
 		}
