@@ -153,7 +153,7 @@ public class glooScript : MonoBehaviour, GlooGenericObject {
 
             if (Input.GetKeyDown(GlooConstants.keyAbsorb))
             {
-                Collider2D[] nearbyObjects = Physics2D.OverlapCircleAll(this.transform.position, boxcoll.size.x * this.transform.localScale.x * 2);
+                Collider2D[] nearbyObjects = Physics2D.OverlapCircleAll(this.transform.position, boxcoll.size.x * this.transform.localScale.x * 3);
                 foreach (Collider2D objColl in nearbyObjects)
                 {
                     if (objColl.gameObject.tag == "GlooDiv")
