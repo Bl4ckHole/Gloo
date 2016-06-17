@@ -213,9 +213,15 @@ public class divScript : MonoBehaviour, GlooGenericObject {
             }
         }
 
-        
-
     }
+
+
+    void OnCollisionExit2D() {
+        canMoveLeft = true;
+        canMoveRight = true;
+    }
+
+
 
     void RecordKeys() {
         ArrayList keys = new ArrayList { GlooConstants.keyJump, GlooConstants.keyLeft, GlooConstants.keyRight};
