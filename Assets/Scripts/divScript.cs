@@ -186,6 +186,10 @@ public class divScript : MonoBehaviour, GlooGenericObject {
         }
     }
 
+
+
+
+
     void OnCollisionStay2D(Collision2D coll) {
 
         if (!inJump) {

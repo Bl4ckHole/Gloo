@@ -92,7 +92,7 @@ public class glooScript : MonoBehaviour, GlooGenericObject {
             divAndHeartsInAndOutsideGloo = new GameObject[maxDivision];
         if(SceneManager.GetActiveScene().name=="Level2") {
             divisionsInGloo[0] = true;
-            divAndHeartsInAndOutsideGloo[0] = (GameObject)Instantiate(divisionHearts[0], new Vector3(0.0f, 0.0f, 0.0f), new Quaternion());
+            updateDivInGloo();
         }
 
         animator = GetComponent<Animator>();
@@ -100,6 +100,15 @@ public class glooScript : MonoBehaviour, GlooGenericObject {
         boxcoll = GetComponent<BoxCollider2D>();
     }
 
+
+    public void setDivHearts(GameObject[] dHearts) {
+        divisionHearts = dHearts;
+    }
+
+    public void setDivHeartsInAndOut(GameObject[] dHearts)
+    {
+        divAndHeartsInAndOutsideGloo = dHearts;
+    }
 
 
     // Update is called once per frame

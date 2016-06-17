@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class CheckPointScript : MonoBehaviour {
 
@@ -9,6 +10,9 @@ public class CheckPointScript : MonoBehaviour {
     public GameObject GlooPrefab;
     private Dictionary<string, object> savedData;
     private bool ck = false;
+    //private GameObject[] divisionHearts;
+    //private GameObject[] divAndHeartsInAndOutsideGloo;
+    //int maxDivision = 5;
 
     // Use this for initialization
     void Start ()
@@ -17,6 +21,18 @@ public class CheckPointScript : MonoBehaviour {
         if (IsStartPoint)
         {
             CreateGloo();
+
+            /*if (SceneManager.GetActiveScene().name == "Level2")
+            {
+                divAndHeartsInAndOutsideGloo = new GameObject[maxDivision];
+                divisionHearts = new GameObject[maxDivision];
+                Debug.Log("Coucou");
+                GameObject Gloo = GameObject.Find("Gloo");
+                divAndHeartsInAndOutsideGloo[0] = (GameObject)Instantiate(divisionHearts[0], new Vector3(0.0f, 0.0f, 0.0f), new Quaternion());
+                Gloo.GetComponent<glooScript>().setDivHearts(divisionHearts);
+                Gloo.GetComponent<glooScript>().setDivHeartsInAndOut(divAndHeartsInAndOutsideGloo);
+            }*/
+
         }
 	}
 	
