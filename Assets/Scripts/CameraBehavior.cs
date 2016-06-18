@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 
@@ -73,8 +74,34 @@ public class CameraBehavior : MonoBehaviour
             transform.position = resultat;
         }
         transform.position += move;
+        Debug.Log(transform.position);
 
+        if (SceneManager.GetActiveScene().name == "Level1")
+        {
+            if (transform.position.y > 15)
+                transform.position -= new Vector3(0, transform.position.y - 15);
+            if (transform.position.y < -15)
+                transform.position -= new Vector3(0, transform.position.y + 15);
+
+            if (transform.position.x > 55)
+                transform.position -= new Vector3(transform.position.x - 55, 0);
+            if (transform.position.x < -10)
+                transform.position -= new Vector3(transform.position.x + 10, 0);
         }
+
+        if (SceneManager.GetActiveScene().name == "Level2")
+        {
+            if (transform.position.y > -40)
+                transform.position -= new Vector3(0, transform.position.y + 40);
+            if (transform.position.y < -60)
+                transform.position -= new Vector3(0, transform.position.y + 60);
+
+            if (transform.position.x > -45)
+                transform.position -= new Vector3(transform.position.x + 45, 0);
+            if (transform.position.x < -82)
+                transform.position -= new Vector3(transform.position.x + 82, 0);
+        }
+    }
 
 
     void setCurrentTarget(string nom) {
