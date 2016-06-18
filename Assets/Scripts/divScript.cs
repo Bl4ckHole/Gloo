@@ -30,6 +30,7 @@ public class divScript : MonoBehaviour, GlooGenericObject {
     private bool canDoubleJump = true;
     private bool shouldDoubleJump = false;
     private bool oldJump = false;
+    private GameObject level;
 
     private class divData {
         public bool inJump;
@@ -70,7 +71,8 @@ public class divScript : MonoBehaviour, GlooGenericObject {
                 savedData.Add(obj.name, objScript.getData());
             }
         }
-     
+        level = GameObject.Find("Plateforme");
+
     }
 
     // Update is called once per frame
@@ -78,6 +80,8 @@ public class divScript : MonoBehaviour, GlooGenericObject {
         if (recording) {
             if (Input.GetKeyDown(GlooConstants.keyDivide)) {
 				filter_renderer.enabled = false;
+                level.GetComponent<AudioSource>().mute = false;
+                filter.GetComponent<AudioSource>().mute = true;
                 recording = false;
                 transform.position = oldPos;
                 SpriteRenderer mySprite = gameObject.GetComponent<SpriteRenderer>();

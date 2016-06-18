@@ -7,7 +7,7 @@ public class RushScript : OstileClass, GlooGenericObject
 	private int distanceDeDetection = 20;
 	private Rigidbody2D body;
 	private BoxCollider2D boxcoll;
-	private float speed = 15.0f;
+	private float speed = 5.0f;
 
     private class RushData
     {

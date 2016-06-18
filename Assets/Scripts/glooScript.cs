@@ -58,6 +58,7 @@ public class glooScript : MonoBehaviour, GlooGenericObject {
     public string filter_name;
     private bool divAnimationAsStarted;
     private bool alreadyReseted = false;
+    private GameObject level;
     
     private glooData data = new glooData();
     private bool paused = false;
@@ -98,6 +99,7 @@ public class glooScript : MonoBehaviour, GlooGenericObject {
         animator = GetComponent<Animator>();
         rbody = GetComponent<Rigidbody2D>();
         boxcoll = GetComponent<BoxCollider2D>();
+        level = GameObject.Find("Plateforme");
     }
 
 
@@ -325,7 +327,8 @@ public class glooScript : MonoBehaviour, GlooGenericObject {
                         divisionRequested = false;
                         animator.SetBool("DoCreate", false);
                         divAnimationAsStarted = false;
-
+                        level.GetComponent<AudioSource>().mute = true;
+                        filter.GetComponent<AudioSource>().mute = false;
                         int facing_int = facing == 1 ? -1 : 1;
                         GameObject newDiv = (GameObject)Instantiate(divisions[division_selectionnee], transform.position + new Vector3((boxcoll.size.x / 1.2f * transform.localScale.x) * facing_int, -boxcoll.size.y / 3.0f * transform.localScale.y, 0), new Quaternion());
 

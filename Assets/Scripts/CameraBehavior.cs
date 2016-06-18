@@ -74,7 +74,6 @@ public class CameraBehavior : MonoBehaviour
             transform.position = resultat;
         }
         transform.position += move;
-        Debug.Log(transform.position);
 
         if (SceneManager.GetActiveScene().name == "Level1")
         {
