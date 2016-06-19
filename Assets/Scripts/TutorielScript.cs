@@ -59,7 +59,13 @@ public class TutorielScript : MonoBehaviour {
     {
         if (target != null || target2 != null)
         {
-			if (Mathf.Abs(this.transform.position.x - target.transform.position.x) <= distance || Mathf.Abs(this.transform.position.x - target2.transform.position.x) <= distance)
+            bool condition;
+            if (target2!=null) {
+                condition = Mathf.Abs(this.transform.position.x - target.transform.position.x) <= distance || Mathf.Abs(this.transform.position.x - target2.transform.position.x) <= distance;
+            } else {
+                condition = Mathf.Abs(this.transform.position.x - target.transform.position.x) <= distance;
+            }
+			if (condition)
             {
                 image.enabled = true;
                 for(int i = 0; i < keys.Length; i++)

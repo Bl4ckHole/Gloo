@@ -73,6 +73,7 @@ public class glooScript : MonoBehaviour, GlooGenericObject {
     int division_selectionnee = 0;
     int maxDivision = 5;
     private bool HasJoystick=false;
+    private AudioSource[] sons;
 
 
 
@@ -111,6 +112,7 @@ public class glooScript : MonoBehaviour, GlooGenericObject {
                 // TODO Si HasJoystick == True faire un set Keys propre, qui permet de revenir au clavier si il déconnecte 
             }
         }
+        sons = GetComponents<AudioSource>();
 
 
 
@@ -129,11 +131,6 @@ public class glooScript : MonoBehaviour, GlooGenericObject {
 
     // Update is called once per frame
     void Update () {
-
-        if (Input.GetKeyDown("joystick button 7")) {
-            Debug.Log("1");
-        }
-
 
         if (updateDivInGlooRequest)
         {
@@ -254,6 +251,34 @@ public class glooScript : MonoBehaviour, GlooGenericObject {
         move *= speed;
         float vy = rbody.velocity.y;
         rbody.velocity = move + new Vector2((data.inJump && move.x == 0) ? rbody.velocity.x : 0, vy);
+
+
+        foreach (AudioSource son in sons) {
+            if (rbody.velocity == new Vector2(0, 0)) {
+                if (son.clip.ToString()== "marche (UnityEngine.AudioClip)") {
+                    son.mute = true;
+                }
+                if (son.clip.ToString()== "gloo attente (UnityEngine.AudioClip)") {
+                    son.mute = false;
+                }
+            }
+            else {
+                if (son.clip.ToString() == "gloo attente (UnityEngine.AudioClip)")
+                { 
+                    son.mute = true;
+                } if (son.clip.ToString() == "marche (UnityEngine.AudioClip)") {
+                    if (move.y==0) {
+                        son.mute = false;
+                        if (data.inJump) {
+                            son.mute = true;
+                        }
+                    } else {
+                        son.mute = true;
+                    }
+                }
+            }
+        }
+
 
 
         if ((Input.GetKeyDown(GlooConstants.keyReset)|| Input.GetKeyDown("joystick button 6")) && !alreadyReseted)
