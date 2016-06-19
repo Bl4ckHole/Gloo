@@ -30,9 +30,21 @@ public class UIMainMenu : MonoBehaviour
 
     private Dictionary<string, KeyCode> keySettings = GlooConstants.getKeys();
 
+    void Update() {
+
+        if(Input.GetKeyDown("return")||Input.GetKeyDown("joystick button 7")) {
+            Time.timeScale = 1;
+            SceneManager.LoadScene("Level1");
+        }
+
+
+    }
+
+
+
     void OnGUI()
     {
-        GUI.backgroundColor = Color.red;
+        GUI.backgroundColor = Color.clear;
 
         if (levelSelection)
         {
@@ -82,7 +94,7 @@ public class UIMainMenu : MonoBehaviour
                 keySettings = GlooConstants.getKeys();
             }
 
-            if (GUI.Button(new Rect(controlRightColumnPos_x, controlStartPos_y + count * (controlButtonSize_y + 20), controlButtonSize_x, controlButtonSize_y), "VALIDER"))
+            if (GUI.Button(new Rect(controlRightColumnPos_x , controlStartPos_y + count * (controlButtonSize_y + 20), controlButtonSize_x, controlButtonSize_y), "VALIDER"))
             {
                 GlooConstants.setKeys(keySettings);
                 controlSettings = false;
@@ -92,31 +104,50 @@ public class UIMainMenu : MonoBehaviour
 
         else
         {
-
-            if (GUI.Button(new Rect(mainPageColumnPos_x, mainPageStartPos_y, mainPageButtonSize_x, mainPageButtonSize_y), "NOUVELLE PARTIE"))
-            {
-                Time.timeScale = 1;
-                SceneManager.LoadScene("Level1");
-            }
-
-            if (GUI.Button(new Rect(mainPageColumnPos_x, mainPageStartPos_y + mainPageButtonSize_y + 20, mainPageButtonSize_x, mainPageButtonSize_y), "CONTINUER"))
-            {
-                levelSelection = true;
-            }
-
-            if (GUI.Button(new Rect(mainPageColumnPos_x, mainPageStartPos_y + 2 * (mainPageButtonSize_y + 20), mainPageButtonSize_x, mainPageButtonSize_y), "CONTRÔLES"))
-            {
-                controlSettings = true;
-            }
-
-            if (GUI.Button(new Rect(mainPageColumnPos_x, mainPageStartPos_y + 3 * (mainPageButtonSize_y + 20) + 40, mainPageButtonSize_x, mainPageButtonSize_y), "QUITTER"))
+            //Quitter 
+            if (GUI.Button(new Rect(mainPageColumnPos_x + 2 * mainPageButtonSize_x, mainPageStartPos_y-110, mainPageButtonSize_x, mainPageButtonSize_y), ""))
             {
                 Time.timeScale = 1;
                 Application.Quit();
             }
 
+            /*if (GUI.Button(new Rect(mainPageColumnPos_x, mainPageStartPos_y + mainPageButtonSize_y + 20, mainPageButtonSize_x, mainPageButtonSize_y), ""))
+            {
+                levelSelection = true;
+            }*/
+
+            //controles
+            if (GUI.Button(new Rect(mainPageColumnPos_x + 2* mainPageButtonSize_x -20, mainPageStartPos_y + 2 * (mainPageButtonSize_y + 20) +30 , mainPageButtonSize_x, mainPageButtonSize_y), ""))
+            {
+                controlSettings = true;
+            }
+            //jeu
+            if (GUI.Button(new Rect(mainPageColumnPos_x+40, mainPageStartPos_y + 3 * (mainPageButtonSize_y + 20) + 40+40, mainPageButtonSize_x, mainPageButtonSize_y+60), ""))
+            {
+                Time.timeScale = 1;
+                SceneManager.LoadScene("Level1");
+       
+            }
+
+            //cinématique 
+
+            if (GUI.Button(new Rect(mainPageColumnPos_x -2* mainPageButtonSize_x -40, mainPageStartPos_y + 3 * (mainPageButtonSize_y + 20) + 40 , mainPageButtonSize_x+50, mainPageButtonSize_y + 40), ""))
+            {
+                //Load la cinematique
+
+            }
+
+            // générique 
+            if (GUI.Button(new Rect(mainPageColumnPos_x - 2 * mainPageButtonSize_x -40, mainPageStartPos_y + 5 * (mainPageButtonSize_y + 20) + 40 +10 , mainPageButtonSize_x+40, mainPageButtonSize_y + 40), ""))
+            {
+                //Load le générique
+
+            }
+
+
+
             GUI.skin.GetStyle("label").fontSize = 40;
-            GUI.Label(new Rect(mainPageColumnPos_x + 40, mainPageStartPos_y - 100, 300, 100), "GLOO");
+            //GUI.Label(new Rect(mainPageColumnPos_x + 40, mainPageStartPos_y - 100, 300, 100), "GLOO");
 
         }
     }

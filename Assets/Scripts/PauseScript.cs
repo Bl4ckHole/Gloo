@@ -24,7 +24,7 @@ public class PauseScript : MonoBehaviour {
 
         
 
-        if (Input.GetKeyDown("p")){
+        if (Input.GetKeyDown("p") || Input.GetKeyDown("joystick button 7")){
             if (Time.timeScale == 1)
             {
                 Time.timeScale = 0;
@@ -36,7 +36,7 @@ public class PauseScript : MonoBehaviour {
             }
         }
 
-        if (Input.GetKeyDown("escape")) {
+        if (Input.GetKeyDown("escape") || Input.GetKeyDown("joystick button 6")) {
             if (Time.timeScale == 0) {
                 LoadLevel("MainMenu");
             }

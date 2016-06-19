@@ -1,0 +1,338 @@
+fileFormatVersion: 2
+guid: ae074c74894c7e34f84a3f113bf37179
+timeCreated: 1466326637
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Division saute (droite)_0
+    21300002: Division saute (droite)_1
+    21300004: Division saute (droite)_2
+    21300006: Division saute (droite)_3
+    21300008: Division saute (droite)_4
+    21300010: Division saute (droite)_5
+    21300012: Division saute (droite)_6
+    21300014: Division saute (droite)_7
+    21300016: Division saute (droite)_8
+    21300018: Division saute (droite)_9
+    21300020: Division saute (droite)_10
+    21300022: Division saute (droite)_11
+    21300024: Division saute (droite)_12
+    21300026: Division saute (droite)_13
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Division saute (droite)_0
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 10985
+        width: 1105
+        height: 923
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 43.455017, y: 75.28076}
+        - {x: -28.544983, y: 75.28076}
+        - {x: -88.54498, y: 43.28076}
+        - {x: -88.54498, y: -73.71924}
+        - {x: 60.455017, y: -73.71924}
+        - {x: 89.45502, y: -67.71924}
+        - {x: 89.45502, y: 21.280762}
+        - {x: 66.45502, y: 50.28076}
+    - name: Division saute (droite)_1
+      rect:
+        serializedVersion: 2
+        x: 2623
+        y: 10973
+        width: 1111
+        height: 729
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -48.060486, y: 59.8573}
+        - {x: -89.060486, y: -11.1427}
+        - {x: -89.060486, y: -58.1427}
+        - {x: 85.939514, y: -58.1427}
+        - {x: 89.939514, y: -53.1427}
+        - {x: 89.939514, y: 9.8573}
+        - {x: 61.939514, y: 59.8573}
+    - name: Division saute (droite)_2
+      rect:
+        serializedVersion: 2
+        x: 5106
+        y: 10973
+        width: 1161
+        height: 767
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -19.061523, y: 62.8573}
+        - {x: -93.06152, y: 24.8573}
+        - {x: -93.06152, y: -61.1427}
+        - {x: 83.93848, y: -61.1427}
+        - {x: 93.93848, y: -55.1427}
+        - {x: 93.93848, y: -19.1427}
+        - {x: 62.938477, y: 62.8573}
+    - name: Division saute (droite)_3
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 8485
+        width: 1217
+        height: 1016
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 74.44054, y: 81.556885}
+        - {x: 12.4405365, y: 81.556885}
+        - {x: -97.55946, y: -35.443115}
+        - {x: -97.55946, y: -70.443115}
+        - {x: -81.55946, y: -81.443115}
+        - {x: 80.44054, y: -81.443115}
+        - {x: 98.44054, y: -73.443115}
+        - {x: 98.44054, y: 22.556885}
+        - {x: 95.44054, y: 59.556885}
+    - name: Division saute (droite)_4
+      rect:
+        serializedVersion: 2
+        x: 2636
+        y: 8485
+        width: 1248
+        height: 1153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 42.023254, y: 92.556885}
+        - {x: 14.023254, y: 79.556885}
+        - {x: -99.976746, y: -44.443115}
+        - {x: -99.976746, y: -80.443115}
+        - {x: -78.976746, y: -92.443115}
+        - {x: 87.023254, y: -92.443115}
+        - {x: 101.023254, y: -73.443115}
+        - {x: 101.023254, y: 74.556885}
+        - {x: 84.023254, y: 92.556885}
+    - name: Division saute (droite)_5
+      rect:
+        serializedVersion: 2
+        x: 5443
+        y: 8728
+        width: 1005
+        height: 966
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -26.543945, y: 77.5072}
+        - {x: -80.543945, y: -3.4927979}
+        - {x: -80.543945, y: -76.4928}
+        - {x: -79.543945, y: -77.4928}
+        - {x: -32.543945, y: -77.4928}
+        - {x: 46.456055, y: -49.492798}
+        - {x: 81.456055, y: 5.507202}
+        - {x: 81.456055, y: 68.5072}
+        - {x: 79.456055, y: 77.5072}
+    - name: Division saute (droite)_6
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 6502
+        width: 998
+        height: 798
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 67.1091, y: 64.70264}
+        - {x: -18.8909, y: 64.70264}
+        - {x: -79.8909, y: 6.7026367}
+        - {x: -79.8909, y: -64.29736}
+        - {x: 0.10910034, y: -64.29736}
+        - {x: 81.1091, y: -49.297363}
+        - {x: 81.1091, y: 32.702637}
+        - {x: 73.1091, y: 60.702637}
+    - name: Division saute (droite)_7
+      rect:
+        serializedVersion: 2
+        x: 3048
+        y: 6570
+        width: 1035
+        height: 748
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -0.93743896, y: 60.102417}
+        - {x: -67.93744, y: 9.102417}
+        - {x: -82.93744, y: -6.897583}
+        - {x: -82.93744, y: -49.897583}
+        - {x: -63.93744, y: -59.897583}
+        - {x: 19.062561, y: -59.897583}
+        - {x: 73.06256, y: -54.897583}
+        - {x: 84.06256, y: -30.897583}
+        - {x: 84.06256, y: 36.102417}
+        - {x: 68.06256, y: 60.102417}
+    - name: Division saute (droite)_8
+      rect:
+        serializedVersion: 2
+        x: 5974
+        y: 6395
+        width: 992
+        height: 880
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -79.430176, y: 71.05176}
+        - {x: -79.430176, y: -47.948242}
+        - {x: -33.430176, y: -70.94824}
+        - {x: 80.569824, y: -70.94824}
+        - {x: 80.569824, y: 43.051758}
+        - {x: 69.569824, y: 71.05176}
+    - name: Division saute (droite)_9
+      rect:
+        serializedVersion: 2
+        x: 1419
+        y: 3639
+        width: 786
+        height: 892
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -19.049118, y: 72.2937}
+        - {x: -38.049118, y: 65.2937}
+        - {x: -63.049118, y: 11.293701}
+        - {x: -63.049118, y: -51.7063}
+        - {x: -44.049118, y: -71.7063}
+        - {x: 63.950882, y: -71.7063}
+        - {x: 63.950882, y: 72.2937}
+    - name: Division saute (droite)_10
+      rect:
+        serializedVersion: 2
+        x: 3946
+        y: 3502
+        width: 985
+        height: 804
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -25.997437, y: 65.334045}
+        - {x: -78.99744, y: -10.665955}
+        - {x: -78.99744, y: -60.665955}
+        - {x: -76.99744, y: -64.665955}
+        - {x: 65.00256, y: -64.665955}
+        - {x: 80.00256, y: -53.665955}
+        - {x: 80.00256, y: -9.665955}
+        - {x: 43.002563, y: 65.334045}
+    - name: Division saute (droite)_11
+      rect:
+        serializedVersion: 2
+        x: 6373
+        y: 3496
+        width: 1110
+        height: 735
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -17.97467, y: 59.872314}
+        - {x: -75.97467, y: -6.1276855}
+        - {x: -88.97467, y: -27.127686}
+        - {x: -88.97467, y: -59.127686}
+        - {x: 90.02533, y: -59.127686}
+        - {x: 90.02533, y: 49.872314}
+        - {x: 61.02533, y: 59.872314}
+    - name: Division saute (droite)_12
+      rect:
+        serializedVersion: 2
+        x: 1326
+        y: 1020
+        width: 1110
+        height: 922
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 52.043945, y: 73.995346}
+        - {x: 49.043945, y: 74.995346}
+        - {x: -44.956055, y: 74.995346}
+        - {x: -88.956055, y: 41.995346}
+        - {x: -88.956055, y: -74.004654}
+        - {x: 74.043945, y: -74.004654}
+        - {x: 87.043945, y: -72.004654}
+        - {x: 90.043945, y: -58.004654}
+        - {x: 90.043945, y: 37.995346}
+    - name: Division saute (droite)_13
+      rect:
+        serializedVersion: 2
+        x: 3821
+        y: 1020
+        width: 1104
+        height: 922
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 61.46637, y: 74.995346}
+        - {x: -53.53363, y: 74.995346}
+        - {x: -88.53363, y: 14.995346}
+        - {x: -88.53363, y: -56.004654}
+        - {x: -76.53363, y: -74.004654}
+        - {x: 67.46637, y: -74.004654}
+        - {x: 89.46637, y: -57.004654}
+        - {x: 89.46637, y: 31.995346}
+        - {x: 88.46637, y: 36.995346}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

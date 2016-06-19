@@ -1,9 +1,22 @@
 fileFormatVersion: 2
 guid: 6be82832560eb3f44a9c20ab74e612c1
-timeCreated: 1462286494
+timeCreated: 1466263322
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: divisionjaune_13
+    21300002: divisionjaune_14
+    21300004: divisionjaune_15
+    21300006: divisionjaune_16
+    21300008: divisionjaune_17
+    21300010: divisionjaune_18
+    21300012: divisionjaune_19
+    21300014: divisionjaune_20
+    21300016: divisionjaune_21
+    21300018: divisionjaune_22
+    21300020: divisionjaune_23
+    21300022: divisionjaune_24
+    21300024: divisionjaune_25
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -30,7 +43,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 16
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0
@@ -38,7 +51,7 @@ TextureImporter:
   rGBM: 0
   compressionQuality: 50
   allowsAlphaSplitting: 0
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -49,7 +62,257 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: divisionjaune_13
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 44
+        width: 440
+        height: 120
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -21, y: 21.9044}
+        - {x: -28, y: 11.9044}
+        - {x: -29, y: 8.9044}
+        - {x: -29, y: -11.0956}
+        - {x: -27, y: -12.0956}
+        - {x: 6, y: -12.0956}
+        - {x: 8, y: -6.0956}
+        - {x: 8, y: 17.9044}
+        - {x: 0, y: 21.9044}
+    - name: divisionjaune_14
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 44
+        width: 440
+        height: 120
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -22.181274, y: 21.9044}
+        - {x: -29.181274, y: 19.9044}
+        - {x: -29.181274, y: -7.0956}
+        - {x: -23.181274, y: -10.0956}
+        - {x: 7.8187256, y: -10.0956}
+        - {x: 7.8187256, y: 19.9044}
+        - {x: 5.8187256, y: 21.9044}
+    - name: divisionjaune_15
+      rect:
+        serializedVersion: 2
+        x: 920
+        y: 44
+        width: 440
+        height: 120
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -2.3625488, y: 21.9044}
+        - {x: -23.362549, y: 21.9044}
+        - {x: -31.362549, y: 11.9044}
+        - {x: -31.362549, y: -3.0956001}
+        - {x: -26.362549, y: -8.0956}
+        - {x: -6.362549, y: -8.0956}
+        - {x: 1.6374512, y: -7.0956}
+        - {x: 4.637451, y: -2.0956001}
+        - {x: 4.637451, y: 15.9044}
+    - name: divisionjaune_16
+      rect:
+        serializedVersion: 2
+        x: 1380
+        y: 44
+        width: 440
+        height: 120
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -34.543823, y: -5.0956}
+        - {x: -32.543823, y: -9.0956}
+        - {x: -3.5438232, y: -9.0956}
+        - {x: 1.4561768, y: -8.0956}
+        - {x: 1.4561768, y: 17.9044}
+        - {x: -0.54382324, y: 21.9044}
+        - {x: -27.543823, y: 21.9044}
+        - {x: -34.543823, y: 10.9044}
+    - name: divisionjaune_17
+      rect:
+        serializedVersion: 2
+        x: 1840
+        y: 44
+        width: 440
+        height: 120
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -29.725098, y: 21.9044}
+        - {x: -37.725098, y: 12.9044}
+        - {x: -37.725098, y: -10.0956}
+        - {x: -36.725098, y: -11.0956}
+        - {x: -1.7250977, y: -11.0956}
+        - {x: -0.72509766, y: -7.0956}
+        - {x: -0.72509766, y: 14.9044}
+        - {x: -9.725098, y: 21.9044}
+    - name: divisionjaune_18
+      rect:
+        serializedVersion: 2
+        x: 2300
+        y: 44
+        width: 440
+        height: 120
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -28.906372, y: 20.9044}
+        - {x: -37.906372, y: 13.9044}
+        - {x: -37.906372, y: -14.0956}
+        - {x: -2.906372, y: -14.0956}
+        - {x: -1.9063721, y: -10.0956}
+        - {x: -1.9063721, y: 16.9044}
+        - {x: -9.906372, y: 20.9044}
+    - name: divisionjaune_19
+      rect:
+        serializedVersion: 2
+        x: 2760
+        y: 44
+        width: 440
+        height: 120
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -9.0876465, y: 17.9044}
+        - {x: -27.087646, y: 17.9044}
+        - {x: -36.087646, y: 5.9044}
+        - {x: -36.087646, y: -15.0956}
+        - {x: -29.087646, y: -18.0956}
+        - {x: -2.0876465, y: -18.0956}
+        - {x: -0.087646484, y: -13.0956}
+        - {x: -0.087646484, y: 12.9044}
+    - name: divisionjaune_20
+      rect:
+        serializedVersion: 2
+        x: 3220
+        y: 44
+        width: 440
+        height: 120
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -19.26892, y: 14.9044}
+        - {x: -26.26892, y: 13.9044}
+        - {x: -34.26892, y: -1.0956001}
+        - {x: -34.26892, y: -15.0956}
+        - {x: -26.26892, y: -20.0956}
+        - {x: -1.2689209, y: -20.0956}
+        - {x: 2.731079, y: -10.0956}
+        - {x: 2.731079, y: 1.9043999}
+        - {x: -6.268921, y: 14.9044}
+    - name: divisionjaune_21
+      rect:
+        serializedVersion: 2
+        x: 3680
+        y: 44
+        width: 440
+        height: 120
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -21.450195, y: 12.9044}
+        - {x: -29.450195, y: 1.9043999}
+        - {x: -30.450195, y: -2.0956001}
+        - {x: -30.450195, y: -20.0956}
+        - {x: 2.5498047, y: -20.0956}
+        - {x: 5.5498047, y: -19.0956}
+        - {x: 5.5498047, y: 6.9044}
+        - {x: -5.4501953, y: 12.9044}
+    - name: divisionjaune_22
+      rect:
+        serializedVersion: 2
+        x: 4140
+        y: 44
+        width: 440
+        height: 120
+      alignment: 9
+      pivot: {x: 0.477144, y: 0.41619474}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -14.224976, y: 16.310947}
+        - {x: -23.224976, y: 13.310947}
+        - {x: -23.224976, y: -16.689053}
+        - {x: 10.775024, y: -16.689053}
+        - {x: 12.775024, y: -12.689053}
+        - {x: 12.775024, y: 12.310947}
+        - {x: 8.775024, y: 16.310947}
+    - name: divisionjaune_23
+      rect:
+        serializedVersion: 2
+        x: 4600
+        y: 44
+        width: 440
+        height: 120
+      alignment: 9
+      pivot: {x: 0.522856, y: 0.54190165}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20.21936, y: 12.201164}
+        - {x: -27.21936, y: -1.7988358}
+        - {x: -27.21936, y: -20.798836}
+        - {x: -26.21936, y: -21.798836}
+        - {x: 7.7806396, y: -21.798836}
+        - {x: 9.78064, y: -19.798836}
+        - {x: 9.78064, y: -0.79883575}
+        - {x: 3.7806396, y: 12.201164}
+    - name: divisionjaune_24
+      rect:
+        serializedVersion: 2
+        x: 5060
+        y: 44
+        width: 440
+        height: 120
+      alignment: 9
+      pivot: {x: 0.53428286, y: 0.458097}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16.10376, y: 18.607689}
+        - {x: -25.10376, y: 7.607689}
+        - {x: -26.10376, y: 4.607689}
+        - {x: -26.10376, y: -13.392311}
+        - {x: -24.10376, y: -16.392311}
+        - {x: 4.89624, y: -16.392311}
+        - {x: 9.89624, y: -14.392311}
+        - {x: 9.89624, y: 11.607689}
+        - {x: -1.1037598, y: 18.607689}
+    - name: divisionjaune_25
+      rect:
+        serializedVersion: 2
+        x: 5520
+        y: 44
+        width: 359
+        height: 120
+      alignment: 9
+      pivot: {x: 0.6680762, y: 0.41619474}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -14.11438, y: 23.310947}
+        - {x: -16.11438, y: 22.310947}
+        - {x: -25.11438, y: 11.310947}
+        - {x: -25.11438, y: -3.6890526}
+        - {x: -23.11438, y: -10.689053}
+        - {x: 1.8856201, y: -10.689053}
+        - {x: 7.88562, y: -9.689053}
+        - {x: 10.88562, y: -7.6890526}
+        - {x: 10.88562, y: 11.310947}
+        - {x: 5.88562, y: 23.310947}
     outline: []
   spritePackingTag: 
   userData: 

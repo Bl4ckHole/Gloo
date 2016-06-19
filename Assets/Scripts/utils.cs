@@ -17,6 +17,7 @@ namespace Utils{
         private static KeyCode defaultReset = KeyCode.R;
 
 
+
         public static KeyCode keyLeft = defaultLeft;
         public static KeyCode keyRight = defaultRight;
         public static KeyCode keyJump = defaultJump;

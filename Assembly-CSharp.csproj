@@ -71,6 +71,7 @@
      <None Include="Assets\Conventions a respecter.txt" />
      <None Include="Assets\Backgrounds\gg.txt" />
      <None Include="Assets\Menus\gg.txt" />
+     <None Include="Assets\Sounds\gg.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

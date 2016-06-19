@@ -72,6 +72,7 @@ public class glooScript : MonoBehaviour, GlooGenericObject {
     public static int divID = 0;
     int division_selectionnee = 0;
     int maxDivision = 5;
+    private bool HasJoystick=false;
 
 
 
@@ -100,6 +101,19 @@ public class glooScript : MonoBehaviour, GlooGenericObject {
         rbody = GetComponent<Rigidbody2D>();
         boxcoll = GetComponent<BoxCollider2D>();
         level = GameObject.Find("Plateforme");
+
+        foreach (String gpad in Input.GetJoystickNames())
+        {
+            Debug.Log(gpad);
+            if (gpad=="Controller (GAMEPAD)") {
+                Debug.Log("Ok - controlleur reconnu");
+                HasJoystick = true;
+                // TODO Si HasJoystick == True faire un set Keys propre, qui permet de revenir au clavier si il déconnecte 
+            }
+        }
+
+
+
     }
 
 
@@ -116,7 +130,12 @@ public class glooScript : MonoBehaviour, GlooGenericObject {
     // Update is called once per frame
     void Update () {
 
-        if(updateDivInGlooRequest)
+        if (Input.GetKeyDown("joystick button 7")) {
+            Debug.Log("1");
+        }
+
+
+        if (updateDivInGlooRequest)
         {
             updateDivInGloo();
         }
@@ -127,12 +146,12 @@ public class glooScript : MonoBehaviour, GlooGenericObject {
 
         if (!data.recording) {
             int currentHash = animator.GetCurrentAnimatorStateInfo(0).shortNameHash;
-            if (Input.GetKeyDown(GlooConstants.keyDivide) && (currentHash == hashIdleLeft || currentHash == hashIdleRight))
+            if ((Input.GetKeyDown(GlooConstants.keyDivide)|| Input.GetKey("joystick button 1")) && (currentHash == hashIdleLeft || currentHash == hashIdleRight))
             {
                 divisionRequested=true;
             }
-            bool right = Input.GetKey(GlooConstants.keyRight);
-            bool left = Input.GetKey(GlooConstants.keyLeft);
+            bool right = Input.GetKey(GlooConstants.keyRight) || (Input.GetAxis("Horizontal")>0);
+            bool left = Input.GetKey(GlooConstants.keyLeft) || (Input.GetAxis("Horizontal") < 0);
             if (left) {
                 facing = 1;
             } else if (right) {
@@ -141,7 +160,7 @@ public class glooScript : MonoBehaviour, GlooGenericObject {
             animator.SetBool("GoLeft", left);
             animator.SetBool("GoRight", right && !left);
             animator.SetBool("Jump", data.inJump);
-			if (Input.GetKeyDown (GlooConstants.keyActivate)) 
+			if (Input.GetKeyDown (GlooConstants.keyActivate)|| Input.GetKey("joystick button 3")) 
 			{
 				Collider2D[] nearbyObjects = Physics2D.OverlapCircleAll(this.transform.position, boxcoll.size.x/2 * this.transform.localScale.x);
 				foreach (Collider2D objColl in nearbyObjects) 
@@ -153,7 +172,7 @@ public class glooScript : MonoBehaviour, GlooGenericObject {
 				}
 			}
 
-            if (Input.GetKeyDown(GlooConstants.keyAbsorb))
+            if (Input.GetKeyDown(GlooConstants.keyAbsorb) || Input.GetKey("joystick button 2"))
             {
                 Collider2D[] nearbyObjects = Physics2D.OverlapCircleAll(this.transform.position, boxcoll.size.x * this.transform.localScale.x * 3);
                 foreach (Collider2D objColl in nearbyObjects)
@@ -228,7 +247,7 @@ public class glooScript : MonoBehaviour, GlooGenericObject {
             move += new Vector2(-0.5f, 0);
         }
 
-        if (Input.GetKey(GlooConstants.keyJump) && !data.inJump && !data.recording) {
+        if ((Input.GetKey(GlooConstants.keyJump) || Input.GetKey("joystick button 0")) && !data.inJump && !data.recording) {
             rbody.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
             data.inJump = true;
         }
@@ -237,7 +256,7 @@ public class glooScript : MonoBehaviour, GlooGenericObject {
         rbody.velocity = move + new Vector2((data.inJump && move.x == 0) ? rbody.velocity.x : 0, vy);
 
 
-        if (Input.GetKeyDown(GlooConstants.keyReset) && !alreadyReseted)
+        if ((Input.GetKeyDown(GlooConstants.keyReset)|| Input.GetKeyDown("joystick button 6")) && !alreadyReseted)
         {
             this.die();
         }
@@ -305,7 +324,7 @@ public class glooScript : MonoBehaviour, GlooGenericObject {
                         division_selectionnee -= 1;
                         division_selectionnee %= 1;
                     }
-                    if (Input.GetKeyDown(GlooConstants.keyDivide))
+                    if (Input.GetKeyDown(GlooConstants.keyDivide) || Input.GetKey("joystick button 2"))
                     {
                         data.recording = true;
                         animator.SetBool("DoCreate", true);

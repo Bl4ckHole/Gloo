@@ -7,7 +7,8 @@ public class RushScript : OstileClass, GlooGenericObject
 	private int distanceDeDetection = 20;
 	private Rigidbody2D body;
 	private BoxCollider2D boxcoll;
-	private float speed = 5.0f;
+	private float speed = 7.0f;
+    private Animator animator;
 
     private class RushData
     {
@@ -28,7 +29,8 @@ public class RushScript : OstileClass, GlooGenericObject
 		base.Start ();
 		boxcoll = GetComponent<BoxCollider2D> ();
 		body = GetComponent<Rigidbody2D> ();
-	}
+        animator = GetComponent<Animator>();
+    }
 	
 	// Update is called once per frame
 	void FixedUpdate () 
@@ -41,6 +43,7 @@ public class RushScript : OstileClass, GlooGenericObject
             {
                 if (left.collider.gameObject.tag == "Gloo" || left.collider.gameObject.tag == "GlooDiv")
                 {
+                    animator.SetBool("Move",true);
                     body.velocity = new Vector2(-speed, 0);
                 }
             }
@@ -49,9 +52,13 @@ public class RushScript : OstileClass, GlooGenericObject
             {
                 if (right.collider.gameObject.tag == "Gloo" || right.collider.gameObject.tag == "GlooDiv")
                 {
+                    animator.SetBool("Move", true);
                     body.velocity = new Vector2(speed, 0);
                 }
             }
+        }
+        if (body.velocity.x==0) {
+            animator.SetBool("Move", false);
         }
     }
 

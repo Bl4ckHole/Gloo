@@ -31,6 +31,7 @@ public class divScript : MonoBehaviour, GlooGenericObject {
     private bool shouldDoubleJump = false;
     private bool oldJump = false;
     private GameObject level;
+    private Animator animator;
 
     private class divData {
         public bool inJump;
@@ -72,13 +73,14 @@ public class divScript : MonoBehaviour, GlooGenericObject {
             }
         }
         level = GameObject.Find("Plateforme");
+        animator= GetComponent<Animator>();
 
     }
 
     // Update is called once per frame
     void Update() {
         if (recording) {
-            if (Input.GetKeyDown(GlooConstants.keyDivide)) {
+            if (Input.GetKeyDown(GlooConstants.keyDivide) || Input.GetKey("joystick button 1") ){
 				filter_renderer.enabled = false;
                 level.GetComponent<AudioSource>().mute = false;
                 filter.GetComponent<AudioSource>().mute = true;
@@ -105,10 +107,10 @@ public class divScript : MonoBehaviour, GlooGenericObject {
         bool jump = false;
         bool active = false;
         if (recording) {
-            right = Input.GetKey(GlooConstants.keyRight);
-            left = Input.GetKey(GlooConstants.keyLeft);
-            jump = Input.GetKeyDown(GlooConstants.keyJump);
-            active = Input.GetKeyDown(GlooConstants.keyActivate);
+            right = Input.GetKey(GlooConstants.keyRight) || (Input.GetAxis("Horizontal") > 0);
+            left = Input.GetKey(GlooConstants.keyLeft) || (Input.GetAxis("Horizontal") < 0);
+            jump = Input.GetKeyDown(GlooConstants.keyJump) || Input.GetKey("joystick button 0");
+            active = Input.GetKeyDown(GlooConstants.keyActivate) || Input.GetKey("joystick button 3");
             RecordKeys();
         }
         else {
@@ -138,10 +140,20 @@ public class divScript : MonoBehaviour, GlooGenericObject {
 
         Vector2 move = new Vector2(0, 0);
         if (left && canMoveLeft) {
+            
+            animator.SetBool("GoLeft", true);
             move += new Vector2(-1, 0);
         }
-        if (right && canMoveRight) {
+        else {
+            animator.SetBool("GoLeft", false);
+        }
+        if (right && canMoveRight)
+        {
+            animator.SetBool("GoRight", true);
             move += new Vector2(1, 0);
+        }
+        else {
+            animator.SetBool("GoRight", false);
         }
         
         if (jump && (!inJump || shouldDoubleJump || inJumpWall)) {
@@ -150,6 +162,8 @@ public class divScript : MonoBehaviour, GlooGenericObject {
 
                 if ((canJumpWallLeft && wallJump==1)||(canJumpWallRight && wallJump==-1)) {
                     rbody.velocity = new Vector2(rbody.velocity.x, 0.0f);
+                    animator.SetBool("Jump", false);
+                    animator.SetBool("Jump", true);
                     rbody.AddForce(new Vector2((jumpForce) * wallJump*0.7f , jumpForce*1.2f), ForceMode2D.Impulse);
                     if (wallJump == -1)
                     {
@@ -169,6 +183,7 @@ public class divScript : MonoBehaviour, GlooGenericObject {
                 
             }
             else {
+                animator.SetBool("Jump", true);
                 rbody.velocity = new Vector2(rbody.velocity.x, 0.0f);
                 rbody.AddForce(new Vector2(0.0f, jumpForce), ForceMode2D.Impulse);
             }
@@ -199,6 +214,7 @@ public class divScript : MonoBehaviour, GlooGenericObject {
     void OnCollisionStay2D(Collision2D coll) {
 
         if (!inJump) {
+            animator.SetBool("Jump", false);
             canJumpWallLeft = true;
             canJumpWallRight = true;
             return;
@@ -247,6 +263,24 @@ public class divScript : MonoBehaviour, GlooGenericObject {
                 recordBuffer.Add(code);
             }
         }
+
+        if (Input.GetAxis("Horizontal")>0) {
+            recordBuffer.Add(GlooConstants.keyRight);
+        }
+
+        if (Input.GetAxis("Horizontal") < 0)
+        {
+            recordBuffer.Add(GlooConstants.keyLeft);
+        }
+        if (Input.GetKey("joystick button 0")) {
+            recordBuffer.Add(GlooConstants.keyJump);
+        }
+        if (Input.GetKeyDown("joystick button 3"))
+        {
+            recordBuffer.Add(GlooConstants.keyActivate);
+        }
+
+
         record.Enqueue((ArrayList)recordBuffer.Clone());
     }
 

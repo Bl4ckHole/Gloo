@@ -1,0 +1,30 @@
+Joystick button (unity) -> bouton de la manette 
+0 -> 1 
+1 -> 2
+2 -> 3 
+3 -> 4 
+4 -> LB 
+5 -> RB
+6 -> LT 
+7 -> RT 
+8 -> Back 
+9 -> Start 
+10 -> Appui sur joystick Gauche 
+11 -> Appui sur joystick Droit
+
+
+
+
+Mapping de touches sur la manette 
+
+
+1 -> Saut 
+2 -> Diviser 
+3 -> Absorber une division 
+4 -> Utilise un objet 
+
+Back -> reset 
+Start -> Pause 
+Joystick -> Se déplacer 
+
+Je n'ai pas encore mappé la caméra  
