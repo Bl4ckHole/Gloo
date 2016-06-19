@@ -3,7 +3,7 @@ using System.Collections;
 
 public class PorteScript : MonoBehaviour {
 
-	public Animation animationName;
+	public Animator animator;
 	private PolygonCollider2D limite;
 	private SpriteRenderer image;
 
@@ -13,11 +13,12 @@ public class PorteScript : MonoBehaviour {
 		limite.enabled = true;
 		image = GetComponent<SpriteRenderer> ();
 		image.enabled = true;
+        animator = GetComponent<Animator>();
 	}
 		
 	public void Activate (bool isActivated) {
 		limite.enabled = !isActivated;
-		//animationName.Play ();
+		//animator.SetBool("Activate",isActivated);
 		image.enabled = !isActivated;
 	}
 }
