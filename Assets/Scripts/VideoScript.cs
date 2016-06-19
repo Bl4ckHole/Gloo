@@ -1,0 +1,25 @@
+﻿using UnityEngine;
+using System.Collections;
+using UnityEngine.SceneManagement;
+
+public class VideoScript : MonoBehaviour {
+
+    private MovieTexture movie;
+    public string nextScene = null;
+    private float timer = 0;    
+
+    // Use this for initialization
+	void Start () {
+        movie = (MovieTexture)GetComponent<Renderer>().material.mainTexture;
+        timer = movie.duration;
+        movie.Play();
+    }
+	
+	// Update is called once per frame
+	void Update () {
+        timer -= Time.deltaTime;
+        if(timer <= 0) {
+            SceneManager.LoadScene(nextScene);
+        }
+	}
+}
