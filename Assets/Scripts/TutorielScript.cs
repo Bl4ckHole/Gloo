@@ -5,6 +5,7 @@ using Utils;
 public class TutorielScript : MonoBehaviour {
 
 	GameObject target;
+	GameObject target2;
 	public float distance;
 	private SpriteRenderer image;
     public int id;
@@ -14,6 +15,7 @@ public class TutorielScript : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		target = GameObject.Find ("Gloo");
+		target2 = GameObject.Find ("division_0");
 		image = GetComponent<SpriteRenderer> ();
 
         if (id == 1)
@@ -51,13 +53,13 @@ public class TutorielScript : MonoBehaviour {
             keys[i].transform.localScale *= scaling;
         }
     }
-	
+
 	// Update is called once per frame
 	void Update ()
     {
-        if (target != null)
+        if (target != null || target2 != null)
         {
-            if (Mathf.Abs(this.transform.position.x - target.transform.position.x) <= distance)
+			if (Mathf.Abs(this.transform.position.x - target.transform.position.x) <= distance || Mathf.Abs(this.transform.position.x - target2.transform.position.x) <= distance)
             {
                 image.enabled = true;
                 for(int i = 0; i < keys.Length; i++)
@@ -73,6 +75,7 @@ public class TutorielScript : MonoBehaviour {
         {
             // Gloo has been destroyed (die or restart) need to find the new Gloo
             target = GameObject.Find("Gloo");
+			target2 = GameObject.Find ("division_0");
         }
     }
 }
