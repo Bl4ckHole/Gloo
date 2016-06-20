@@ -45,6 +45,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\LianeScript.cs" />
      <Compile Include="Assets\Scripts\ActivableObjectClass.cs" />
      <Compile Include="Assets\Scripts\AnimatorCreateDivScript.cs" />
      <Compile Include="Assets\Scripts\CameraBehavior.cs" />
@@ -61,14 +62,15 @@
      <Compile Include="Assets\Scripts\PositionToSaveScript.cs" />
      <Compile Include="Assets\Scripts\PressurePlateScript.cs" />
      <Compile Include="Assets\Scripts\RushScript.cs" />
+     <Compile Include="Assets\Scripts\SphereScript.cs" />
      <Compile Include="Assets\Scripts\SuiviDivision.cs" />
      <Compile Include="Assets\Scripts\TriggerClass.cs" />
      <Compile Include="Assets\Scripts\TutorielScript.cs" />
      <Compile Include="Assets\Scripts\UIMainMenu.cs" />
+     <Compile Include="Assets\Scripts\VideoScript.cs" />
      <Compile Include="Assets\Scripts\divScript.cs" />
      <Compile Include="Assets\Scripts\glooScript.cs" />
      <Compile Include="Assets\Scripts\utils.cs" />
-     <Compile Include="Assets\SphereScript.cs" />
      <None Include="Assets\Conventions a respecter.txt" />
      <None Include="Assets\Backgrounds\gg.txt" />
      <None Include="Assets\Menus\gg.txt" />
