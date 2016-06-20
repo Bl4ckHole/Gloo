@@ -29,7 +29,6 @@ public class divScript : MonoBehaviour, GlooGenericObject {
     private bool canJumpWallRight = true;
     private bool canDoubleJump = true;
     private bool shouldDoubleJump = false;
-    private bool oldJump = false;
     private GameObject level;
     private Animator animator;
 
@@ -109,8 +108,8 @@ public class divScript : MonoBehaviour, GlooGenericObject {
         if (recording) {
             right = Input.GetKey(GlooConstants.keyRight) || (Input.GetAxis("Horizontal") > 0);
             left = Input.GetKey(GlooConstants.keyLeft) || (Input.GetAxis("Horizontal") < 0);
-            jump = Input.GetKeyDown(GlooConstants.keyJump) || Input.GetKey("joystick button 0");
-            active = Input.GetKeyDown(GlooConstants.keyActivate) || Input.GetKey("joystick button 3");
+            jump = Input.GetKeyDown(GlooConstants.keyJump) || Input.GetKeyDown("joystick button 0");
+            active = Input.GetKeyDown(GlooConstants.keyActivate) || Input.GetKeyDown("joystick button 3");
             RecordKeys();
         }
         else {
@@ -130,13 +129,10 @@ public class divScript : MonoBehaviour, GlooGenericObject {
                 active |= k == GlooConstants.keyActivate;
             }
         }
-        if(!jump && oldJump) {
-            if(inJump && canDoubleJump) {
-                shouldDoubleJump = true;
-                canDoubleJump = false;
-            }
+        if(inJump && canDoubleJump) {
+            shouldDoubleJump = true;
+            canDoubleJump = false;
         }
-        oldJump = jump;
 
         Vector2 move = new Vector2(0, 0);
         if (left && canMoveLeft) {
