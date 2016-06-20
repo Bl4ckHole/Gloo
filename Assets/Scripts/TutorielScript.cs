@@ -6,7 +6,7 @@ public class TutorielScript : MonoBehaviour {
 
 	GameObject target;
 	GameObject target2;
-	public float distance;
+	public float distance =0.5f;
 	private SpriteRenderer image;
     public int id;
     private GameObject[] keys;
@@ -57,6 +57,7 @@ public class TutorielScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
+        target2 = GameObject.Find("division_0");
         if (target != null || target2 != null)
         {
             bool condition;
