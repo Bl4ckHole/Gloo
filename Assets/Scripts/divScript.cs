@@ -145,7 +145,7 @@ public class divScript : MonoBehaviour, GlooGenericObject {
             }
         }
 
-        oldJump = false;
+        oldJump = jump;
         Vector2 move = new Vector2(0, 0);
         if (left && canMoveLeft) {
             
