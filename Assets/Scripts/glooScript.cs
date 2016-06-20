@@ -182,13 +182,13 @@ public class glooScript : MonoBehaviour, GlooGenericObject {
                 {
                     divIsNearby = true;
 
-                    sphereAbsorption.GetComponent<SphereScript>().setSphereAbsorptionVisibility(true);
+                    ////sphereAbsorption.GetComponent<SphereScript>().setSphereAbsorptionVisibility(true);
                     if (Input.GetKeyDown(GlooConstants.keyAbsorb) || Input.GetKey("joystick button 2"))
                     {
                         // TODO : animations disparition
 
                         // rentre la sphere d'absorption
-                        sphereAbsorption.GetComponent<SphereScript>().setSphereAbsorptionVisibility(false);
+                        ////sphereAbsorption.GetComponent<SphereScript>().setSphereAbsorptionVisibility(false);
                         // destroy the division
                         Destroy(objColl.gameObject);
                         int i = objColl.gameObject.GetComponent<divScript>().getColorID();

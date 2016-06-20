@@ -26,6 +26,22 @@ public class SphereScript : MonoBehaviour {
         Gloo = GameObject.Find("Gloo");
         Vector2 pos = new Vector2(Gloo.transform.position.x,Gloo.transform.position.y); 
         transform.position = pos;
+    
+
+        if ( (Input.GetKeyDown(GlooConstants.keyAbsorb))|| Input.GetKeyDown("joystick button 2"))
+        {
+            bruitage.mute = false;
+            animator.SetBool("GoSphere", true);
+        }
+        if (Input.GetKeyUp(GlooConstants.keyAbsorb) || Input.GetKeyUp("joystick button 2"))
+        {
+            bruitage.mute = true;
+            animator.SetBool("GoSphere", false);
+        }
+    
+
+
+        /*
         if (sphereAbsorptionVisibility)
         {
             displaySphereAbsorption();
@@ -33,7 +49,7 @@ public class SphereScript : MonoBehaviour {
         else
         {
             closeSphereAbsorption();
-        }
+        }*/
     }
 
     public void displaySphereAbsorption()
