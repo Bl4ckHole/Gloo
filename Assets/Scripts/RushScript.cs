@@ -2,7 +2,7 @@
 using System.Collections;
 using System;
 
-public class RushScript : OstileClass, GlooGenericObject
+public class RushScript : KillingClass, GlooGenericObject
 {
 	private int distanceDeDetection = 20;
 	private Rigidbody2D body;

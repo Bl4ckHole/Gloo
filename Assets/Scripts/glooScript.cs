@@ -54,6 +54,7 @@ public class glooScript : MonoBehaviour, GlooGenericObject {
     public int facing = 1;
     private GameObject savePoint;
     private GameObject filter;
+    private GameObject sphereAbsorption;
     private SpriteRenderer filter_renderer;
     public string filter_name;
     private bool divAnimationAsStarted;
@@ -74,7 +75,7 @@ public class glooScript : MonoBehaviour, GlooGenericObject {
     int maxDivision = 5;
     private bool HasJoystick=false;
     private AudioSource[] sons;
-
+    private Collider2D[] nearbyObjects;
 
 
     //*****************************************************************************************************************
@@ -102,6 +103,7 @@ public class glooScript : MonoBehaviour, GlooGenericObject {
         rbody = GetComponent<Rigidbody2D>();
         boxcoll = GetComponent<BoxCollider2D>();
         level = GameObject.Find("Plateforme");
+        sphereAbsorption = GameObject.Find("sphereAbsorption");
 
         foreach (String gpad in Input.GetJoystickNames())
         {
@@ -159,7 +161,7 @@ public class glooScript : MonoBehaviour, GlooGenericObject {
             animator.SetBool("Jump", data.inJump);
 			if (Input.GetKeyDown (GlooConstants.keyActivate)|| Input.GetKey("joystick button 3")) 
 			{
-				Collider2D[] nearbyObjects = Physics2D.OverlapCircleAll(this.transform.position, boxcoll.size.x/2 * this.transform.localScale.x);
+				nearbyObjects = Physics2D.OverlapCircleAll(this.transform.position, boxcoll.size.x/2 * this.transform.localScale.x);
 				foreach (Collider2D objColl in nearbyObjects) 
 				{
 					if (objColl.gameObject.tag == "ManualTrigger") 
@@ -169,14 +171,23 @@ public class glooScript : MonoBehaviour, GlooGenericObject {
 				}
 			}
 
-            if (Input.GetKeyDown(GlooConstants.keyAbsorb) || Input.GetKey("joystick button 2"))
+
+            // detect division nearby to absorb them.
+            nearbyObjects = Physics2D.OverlapCircleAll(this.transform.position, boxcoll.size.x * this.transform.localScale.x * 3);
+            bool divIsNearby = false;
+            foreach (Collider2D objColl in nearbyObjects)
             {
-                Collider2D[] nearbyObjects = Physics2D.OverlapCircleAll(this.transform.position, boxcoll.size.x * this.transform.localScale.x * 3);
-                foreach (Collider2D objColl in nearbyObjects)
+                if (objColl.gameObject.tag == "GlooDiv")
                 {
-                    if (objColl.gameObject.tag == "GlooDiv")
+                    divIsNearby = true;
+
+                    sphereAbsorption.GetComponent<SphereScript>().setSphereAbsorptionVisibility(true);
+                    if (Input.GetKeyDown(GlooConstants.keyAbsorb) || Input.GetKey("joystick button 2"))
                     {
                         // TODO : animations disparition
+
+                        // rentre la sphere d'absorption
+                        sphereAbsorption.GetComponent<SphereScript>().setSphereAbsorptionVisibility(false);
                         // destroy the division
                         Destroy(objColl.gameObject);
                         int i = objColl.gameObject.GetComponent<divScript>().getColorID();
@@ -186,8 +197,12 @@ public class glooScript : MonoBehaviour, GlooGenericObject {
                     }
                 }
             }
+            if(!divIsNearby)
+            {
+                sphereAbsorption.GetComponent<SphereScript>().setSphereAbsorptionVisibility(false);
+            }
 
-        }        
+        }
     }
 
     void FixedUpdate() {

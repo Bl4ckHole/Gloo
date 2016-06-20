@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class OstileClass : MonoBehaviour 
+public class KillingClass : MonoBehaviour 
 {
 
 	// Use this for initialization

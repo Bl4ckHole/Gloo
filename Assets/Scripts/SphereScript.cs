@@ -5,34 +5,51 @@ using UnityEngine.SceneManagement;
 
 public class SphereScript : MonoBehaviour {
 
-    GameObject Gloo;
-    Animator animator;
-    AudioSource bruitage;
+    private GameObject Gloo;
+    private Animator animator;
+    private AudioSource bruitage;
+    private bool sphereAbsorptionVisibility=false;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start ()
+    {
+        this.name = "sphereAbsorption";
         animator = GetComponent<Animator>();
         bruitage = GetComponent<AudioSource>();
         bruitage.mute = true;
     }
 	
 	// Update is called once per frame
-	void Update () {
+	void Update ()
+    {
+
         Gloo = GameObject.Find("Gloo");
         Vector2 pos = new Vector2(Gloo.transform.position.x,Gloo.transform.position.y); 
         transform.position = pos;
-        if (Input.GetKeyDown(GlooConstants.keyAbsorb) || Input.GetKeyDown("joystick button 2"))
+        if (sphereAbsorptionVisibility)
         {
-            bruitage.mute = false;
-            animator.SetBool("GoSphere", true);
+            displaySphereAbsorption();
         }
-        if (Input.GetKeyUp(GlooConstants.keyAbsorb) || Input.GetKeyUp("joystick button 2"))
+        else
         {
-            bruitage.mute = true;
-            animator.SetBool("GoSphere", false);
+            closeSphereAbsorption();
         }
+    }
 
+    public void displaySphereAbsorption()
+    {
+        bruitage.mute = false;
+        animator.SetBool("GoSphere", true);
+    }
 
+    public void closeSphereAbsorption()
+    {
+        bruitage.mute = true;
+        animator.SetBool("GoSphere", false);
+    }
 
+    public void setSphereAbsorptionVisibility(bool visibility)
+    {
+        sphereAbsorptionVisibility = visibility;
     }
 }
