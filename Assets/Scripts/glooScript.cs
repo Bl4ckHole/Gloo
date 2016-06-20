@@ -133,6 +133,7 @@ public class glooScript : MonoBehaviour, GlooGenericObject {
 
     // Update is called once per frame
     void Update () {
+        sphereAbsorption = GameObject.Find("sphereAbsorption");
 
         if (updateDivInGlooRequest)
         {

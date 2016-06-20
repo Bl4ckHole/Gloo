@@ -29,6 +29,7 @@ public class divScript : MonoBehaviour, GlooGenericObject {
     private bool canJumpWallRight = true;
     private bool canDoubleJump = true;
     private bool shouldDoubleJump = false;
+    private bool oldJump = false;
     private GameObject level;
     private Animator animator;
 
@@ -129,11 +130,22 @@ public class divScript : MonoBehaviour, GlooGenericObject {
                 active |= k == GlooConstants.keyActivate;
             }
         }
-        if(inJump && canDoubleJump) {
+
+        /*if(inJump && canDoubleJump) {
             shouldDoubleJump = true;
             canDoubleJump = false;
+        }*/
+
+        if (!jump && oldJump)
+        {
+            if (inJump && canDoubleJump)
+            {
+                shouldDoubleJump = true;
+                canDoubleJump = false;
+            }
         }
 
+        oldJump = jump;
         Vector2 move = new Vector2(0, 0);
         if (left && canMoveLeft) {
             
