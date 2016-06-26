@@ -29,7 +29,7 @@ public class VideoScript2 : MonoBehaviour
         }
         if (timer <= 0 || stop)
         {
-            movie.Stop();
+            //movie.Stop();
             SceneManager.LoadScene("Level1");
         }
     }

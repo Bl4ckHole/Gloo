@@ -24,7 +24,7 @@ public class VideoScript : MonoBehaviour {
             stop = true;
         }
         if(timer <= 0 || stop) {
-            movie.Stop();
+            //movie.Stop();
             SceneManager.LoadScene("MainMenu");
         }
 	}
