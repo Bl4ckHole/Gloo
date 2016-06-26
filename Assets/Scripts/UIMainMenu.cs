@@ -34,8 +34,17 @@ public class UIMainMenu : MonoBehaviour
 
         if(Input.GetKeyDown("return")||Input.GetKeyDown("joystick button 7")) {
             Time.timeScale = 1;
-            SceneManager.LoadScene("Level1");
+            SceneManager.LoadScene("CinematiqueEntreeScene");
         }
+        if (Input.GetKeyDown("joystick button 0")) {
+            SceneManager.LoadScene("Generique");
+        }
+
+        if(Input.GetKeyDown("joystick button 0")) {
+            Time.timeScale = 1;
+            SceneManager.LoadScene("CinematiqueEntreeScene");
+        }
+
 
 
     }
@@ -138,9 +147,9 @@ public class UIMainMenu : MonoBehaviour
             }
 
             // générique 
-            if (GUI.Button(new Rect(mainPageColumnPos_x - 2 * mainPageButtonSize_x -40, mainPageStartPos_y + 5 * (mainPageButtonSize_y + 20) + 40 +10 , mainPageButtonSize_x+40, mainPageButtonSize_y + 40), ""))
+            if (GUI.Button(new Rect(mainPageColumnPos_x - 2 * mainPageButtonSize_x -40, mainPageStartPos_y + 5 * (mainPageButtonSize_y + 20) + 40 +10 , mainPageButtonSize_x+40, mainPageButtonSize_y + 40), "") )
             {
-                //Load le générique
+                SceneManager.LoadScene("Generique");
 
             }
 

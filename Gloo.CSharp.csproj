@@ -67,26 +67,32 @@
     <Compile Include="Assets\Scripts\AnimatorCreateDivScript.cs" />
     <Compile Include="Assets\Scripts\CameraBehavior.cs" />
     <Compile Include="Assets\Scripts\CameraFollow.cs" />
+    <Compile Include="Assets\Scripts\CheckPointScript.cs" />
     <Compile Include="Assets\Scripts\GlooGenericObject.cs" />
+    <Compile Include="Assets\Scripts\KillingClass.cs" />
     <Compile Include="Assets\Scripts\LeverScript.cs" />
-    <Compile Include="Assets\Scripts\OstileClass.cs" />
+    <Compile Include="Assets\Scripts\LianeScript.cs" />
+    <Compile Include="Assets\Scripts\NextLevelScript.cs" />
+    <Compile Include="Assets\Scripts\PauseMenu.cs" />
     <Compile Include="Assets\Scripts\PauseScript.cs" />
     <Compile Include="Assets\Scripts\PorteScript.cs" />
+    <Compile Include="Assets\Scripts\PositionToSaveScript.cs" />
     <Compile Include="Assets\Scripts\PressurePlateScript.cs" />
     <Compile Include="Assets\Scripts\RushScript.cs" />
+    <Compile Include="Assets\Scripts\SphereScript.cs" />
     <Compile Include="Assets\Scripts\SuiviDivision.cs" />
     <Compile Include="Assets\Scripts\TriggerClass.cs" />
     <Compile Include="Assets\Scripts\TutorielScript.cs" />
     <Compile Include="Assets\Scripts\UIMainMenu.cs" />
+    <Compile Include="Assets\Scripts\VideoScript.cs" />
+    <Compile Include="Assets\Scripts\VideoScript2.cs" />
     <Compile Include="Assets\Scripts\divScript.cs" />
     <Compile Include="Assets\Scripts\glooScript.cs" />
     <Compile Include="Assets\Scripts\utils.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\Backgrounds\gg.txt" />
     <None Include="Assets\Conventions a respecter.txt" />
     <None Include="Assets\Menus\gg.txt" />
-    <None Include="Assets\Sounds\gg.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>
