@@ -32,6 +32,7 @@ public class divScript : MonoBehaviour, GlooGenericObject {
     private bool oldJump = false;
     private GameObject level;
     private Animator animator;
+    private Vector3 oldPosGloo;
 
     private class divData {
         public bool inJump;
@@ -322,10 +323,33 @@ public class divScript : MonoBehaviour, GlooGenericObject {
 
     public void die()
     {
-        boxcoll.enabled = false;
-        rbody.isKinematic = true;
+        if (recording) {
+            recordBuffer = new ArrayList();
+            record = new Queue();
+            foreach (KeyValuePair<string, object> kvp in savedData)
+            {
+                GameObject obj = GameObject.Find(kvp.Key);
+                //Debug.Log(kvp.Key.Length);
 
-        GameObject Gloo = GameObject.Find("Gloo");
-        Gloo.SendMessage("die");
+                if (kvp.Key == "Gloo" || ((kvp.Key.Length>=9) && (kvp.Key).Substring(0,9)=="division_")) {
+                    // on ne reset que la position de la division et de Gloo, on le fait a la main
+                    continue;
+                }
+                if (obj == null)
+                    continue;
+                GlooGenericObject objScript = obj.GetComponent<MonoBehaviour>() as GlooGenericObject;
+                objScript.setData(kvp.Value);
+            }
+            transform.position = oldPos;
+            GameObject Gloo = GameObject.Find("Gloo");
+            Gloo.SendMessage("die");
+        }
+        else {
+            boxcoll.enabled = false;
+            rbody.isKinematic = true;
+            GameObject Gloo = GameObject.Find("Gloo");
+            Gloo.SendMessage("die");
+        }
+        
     }
 }

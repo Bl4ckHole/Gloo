@@ -76,6 +76,7 @@ public class glooScript : MonoBehaviour, GlooGenericObject {
     private bool HasJoystick=false;
     private AudioSource[] sons;
     private Collider2D[] nearbyObjects;
+    private Vector3 oldPos;
 
 
     //*****************************************************************************************************************
@@ -131,6 +132,9 @@ public class glooScript : MonoBehaviour, GlooGenericObject {
     }
 
 
+
+
+
     // Update is called once per frame
     void Update () {
         //sphereAbsorption = GameObject.Find("sphereAbsorption");
@@ -148,6 +152,7 @@ public class glooScript : MonoBehaviour, GlooGenericObject {
             int currentHash = animator.GetCurrentAnimatorStateInfo(0).shortNameHash;
             if ((Input.GetKeyDown(GlooConstants.keyDivide)|| Input.GetKey("joystick button 1")) && (currentHash == hashIdleLeft || currentHash == hashIdleRight))
             {
+                oldPos = transform.position;
                 divisionRequested=true;
             }
             bool right = Input.GetKey(GlooConstants.keyRight) || (Input.GetAxis("Horizontal")>0);
@@ -409,7 +414,8 @@ public class glooScript : MonoBehaviour, GlooGenericObject {
     {
         if (data.recording)
         {
-            resetThisRecording();
+            transform.position = oldPos;    
+
         }
         else
         {

@@ -18,6 +18,7 @@ public class KillingClass : MonoBehaviour
 
 	void OnCollisionStay2D(Collision2D coll) 
 	{
+        //Debug.Log(coll.gameObject.tag);
 		if (coll.gameObject.tag=="Gloo" || coll.gameObject.tag=="GlooDiv")
 		{
 			coll.gameObject.SendMessage ("die");
