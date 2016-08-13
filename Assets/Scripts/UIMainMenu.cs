@@ -32,17 +32,21 @@ public class UIMainMenu : MonoBehaviour
 
     void Update() {
 
-        if(Input.GetKeyDown("return")||Input.GetKeyDown("joystick button 7")) {
+        if(Input.GetKeyDown(KeyCode.Return) ||Input.GetKeyDown("joystick button 7")) {
             Time.timeScale = 1;
             SceneManager.LoadScene("CinematiqueEntreeScene");
         }
-        if (Input.GetKeyDown("joystick button 0")) {
+        if (Input.GetKeyDown(KeyCode.G) ||Input.GetKeyDown("joystick button 0")) {
             SceneManager.LoadScene("Generique");
         }
 
-        if(Input.GetKeyDown("joystick button 0")) {
+        if(Input.GetKeyDown(KeyCode.P)) {
+            controlSettings = true;
+        }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
             Time.timeScale = 1;
-            SceneManager.LoadScene("CinematiqueEntreeScene");
+            Application.Quit();
         }
 
 
@@ -134,7 +138,7 @@ public class UIMainMenu : MonoBehaviour
             if (GUI.Button(new Rect(mainPageColumnPos_x+40, mainPageStartPos_y + 3 * (mainPageButtonSize_y + 20) + 40+40, mainPageButtonSize_x, mainPageButtonSize_y+60), ""))
             {
                 Time.timeScale = 1;
-                SceneManager.LoadScene("Level1");
+                SceneManager.LoadScene("CinematiqueEntreeScene");
        
             }
 
@@ -142,7 +146,8 @@ public class UIMainMenu : MonoBehaviour
 
             if (GUI.Button(new Rect(mainPageColumnPos_x -2* mainPageButtonSize_x -40, mainPageStartPos_y + 3 * (mainPageButtonSize_y + 20) + 40 , mainPageButtonSize_x+50, mainPageButtonSize_y + 40), ""))
             {
-                //Load la cinematique
+                Time.timeScale = 1;
+                SceneManager.LoadScene("CinematiqueEntreeScene");
 
             }
 

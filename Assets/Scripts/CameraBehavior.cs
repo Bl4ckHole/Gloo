@@ -12,6 +12,7 @@ public class CameraBehavior : MonoBehaviour
     public string currenttarget;
     Vector3 targetPos;
     public float speed;
+    Vector3 offset;
     // Use this for initialization
     void Start()
     {
@@ -19,6 +20,7 @@ public class CameraBehavior : MonoBehaviour
         currenttarget = "Gloo";
         distanceMin = 1.0f;
         speed = 0.15f;
+        offset = new Vector3(0f, 0.12f, 0f);
     }
 
     // Update is called once per frame
@@ -71,7 +73,7 @@ public class CameraBehavior : MonoBehaviour
                 resultat.y = Id.y;
             }
 
-            transform.position = resultat;
+            transform.position = resultat + offset;
         }
         transform.position += move;
 
