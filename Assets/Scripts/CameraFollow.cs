@@ -16,6 +16,7 @@ public class FollowCamera : MonoBehaviour
     {
         targetPos = transform.position;
         speed = 0.5f;
+        offset = new Vector3(0f, 0f, 0f);
     }
 
     // Update is called once per frame
